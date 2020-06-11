@@ -1,25 +1,9 @@
 const fs = require('fs');
-
-const http = require('http');
-const express = require('express');
-const app = express();
-const server = http.createServer(app);
-
 const config = require('./config.json');
 
 function prettyString(string) {
  return string.replace(/_/g, " ").replace(/guild/gi, "Server").replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})
 }
-
-//#Redirecting#
-
-app.get('/', (req, res) => {
-  res.send("ok");
-})
-
-server.listen(2000, () => {
-  console.log("Listenin on port 2000")
-})
 
 //#Discord Client#
 
