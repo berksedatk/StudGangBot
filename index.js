@@ -5,6 +5,19 @@ function prettyString(string) {
  return string.replace(/_/g, " ").replace(/guild/gi, "Server").replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})
 }
 
+const http = require('http');
+const express = require('express');
+const app = express();
+const server = http.createServer(app);
+
+app.get('/', (req, res) => {
+  res.send("ok");
+})
+
+server.listen(process.env.PORT, () => {
+  console.log("Listenin on port " + process.env.PORT)
+})
+
 //#Discord Client#
 
 const Discord = require("discord.js");
