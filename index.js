@@ -17,8 +17,8 @@ app.get('/', (req, res) => {
   res.send("ok");
 })
 
-server.listen(4000, () => {
-  console.log("Listenin on port 4000")
+server.listen(2000, () => {
+  console.log("Listenin on port 2000")
 })
 
 //#Discord Client#
