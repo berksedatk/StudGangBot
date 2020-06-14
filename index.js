@@ -77,7 +77,7 @@ bot.on('ready', () => {
   msgchannels.forEach(channelid => {
     setInterval(function() {
     bot.channels.cache.get(channelid).send({embed:  {description: 'Make sure to read <#680898144195969028> before you create a ticket!\nOur staff work very hard to make sure to get to you as quick as they can!\nMake sure to add a reason to make their jobs a bit easier!\n **Commands Usage:** -new <reason>'}})
-  }, 21 600 000)
+  }, 21600000)
   })
   
   
