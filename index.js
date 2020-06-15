@@ -206,7 +206,7 @@ bot.on("message", msg => {
      msg.reply("Please do not talk in this channel!").then(m => m.delete({timeout: 5000}))
   }
   //Automessage
-  if (msg.content.toLowerCase().includes("where") && msg.content.toLowerCase().includes("nude")) msg.reply("It seems like you are looking for NSFW(nudes) channels, I suggest you to check out #🙈︱read-me channel.")
+  if (msg.content.toLowerCase().includes("where") && msg.content.toLowerCase().includes("nude")) msg.reply("It seems like you are looking for NSFW(nudes) channels, I suggest you to check out <#721635790760706079> channel.")
 
   //Attachment limiter
   if (msg.attachments.size >= 2 && !msg.guild.members.cache.get(msg.author.id).permissions.has("MANAGE_MESSAGES") && !exception.includes(msg.channel.id)) {
