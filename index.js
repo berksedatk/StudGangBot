@@ -186,6 +186,9 @@ bot.on('message', message => {
 //Attachments
 
 bot.on("message", msg => {
+  if (msg.author.bot) return;
+
+  //Blacklisted words
   const exception = ["673587338865278978"]
   const filter = ["fag"]
   filter.forEach(word => {
@@ -195,6 +198,17 @@ bot.on("message", msg => {
     }
 
   })
+  
+  //Only attachment filter
+  const channels = ["580083502867808287","635320134847954954","718972368416014367","689865780292223012"]
+  if (channels.include(msg.channel.id) && msg.attachments.size === 0) {
+     msg.delete()
+     msg.reply("Please do not talk in this channel!").then(m => m.delete({timeout: 5000}))
+  }
+  //Automessage
+  if (msg.content.toLowerCase().includes("where") && msg.content.toLowerCase().includes("nude")) msg.reply("It seems like you are looking for NSFW(nudes) channels, I suggest you to check out #🙈︱read-me channel.")
+
+  //Attachment limiter
   if (msg.attachments.size >= 2 && !msg.guild.members.cache.get(msg.author.id).permissions.has("MANAGE_MESSAGES") && !exception.includes(msg.channel.id)) {
     msg.delete({reason: "Multiple Attachments"})
     return msg.reply("Please upload **one** attachment per message.")
