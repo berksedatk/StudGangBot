@@ -77,7 +77,7 @@ bot.on('ready', () => {
   msgchannels.forEach(channelid => {
     setInterval(function() {
     bot.channels.cache.get(channelid).send({embed:  {description: 'Make sure to read <#680898144195969028> before you create a ticket!\nOur staff work very hard to make sure to get to you as quick as they can!\nMake sure to add a reason to make their jobs a bit easier!\n **Commands Usage:** -new <reason>'}})
-  }, 21600000)
+  }, 5.04e+7)
   })
   
   
@@ -206,7 +206,7 @@ bot.on("message", msg => {
      msg.reply("Please do not talk in this channel!").then(m => m.delete({timeout: 5000}))
   }
   //Automessage
-  if (msg.content.toLowerCase().includes("where") && msg.content.toLowerCase().includes("nude")) msg.reply("It seems like you are looking for NSFW(nudes) channels, I suggest you to check out <#721635790760706079> channel.")
+  if (msg.content.toLowerCase().includes("where") && msg.content.toLowerCase().includes("nude")) msg.reply("It seems like you are looking for NSFW(nude) channels, I suggest you to check out the <#721635790760706079> channel for more info.")
 
   //Attachment limiter
   if (msg.attachments.size >= 2 && !msg.guild.members.cache.get(msg.author.id).permissions.has("MANAGE_MESSAGES") && !exception.includes(msg.channel.id)) {
