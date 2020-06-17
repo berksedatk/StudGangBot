@@ -20,15 +20,15 @@ module.exports = {
         if (c.dev || c.admin || c.unstaged) {
           return;
         } else if (c.category === "General") {
-          general.push(`- ${c.name} | ${c.description}`);
+          general.push(`\${c.name}\``);
         } else if (c.category === "Fun") {
-          fun.push(`- ${c.name} | ${c.description}`);
+          fun.push(`\`${c.name}`);
         } else if (c.category === "Moderation") {
-          moderation.push(`- ${c.name} | ${c.description}`);
+          moderation.push(`\`${c.name}\``);
         } else if (c.category === "Utility") {
-          utility.push(`- ${c.name} | ${c.description}`);
+          utility.push(`\`${c.name}\``);
         } else {
-          misc.push(`- ${c.name} | ${c.description}`);
+          misc.push(`\`${c.name}\``);
         }
       });
 
@@ -38,11 +38,11 @@ module.exports = {
         .setTimestamp()
         .setFooter("Requested by " + message.author.username,message.author.avatarURL())
         .setColor("999999");
-      if (general[0]) helpEmbed.addField("General Commands:", general);
-      if (fun[0]) helpEmbed.addField("🎉 Fun Commands:", fun);
-      if (moderation[0]) helpEmbed.addField("🛠️ Moderation Commands:", moderation);
-      if (utility[0]) helpEmbed.addField("🔧 Utility Commands:", utility);
-      if (misc[0]) helpEmbed.addField("Misc. Commands:", misc);
+      if (general[0]) helpEmbed.addField("General Commands:", general.join(", "));
+      if (fun[0]) helpEmbed.addField("🎉 Fun Commands:", fun.join(", "));
+      if (moderation[0]) helpEmbed.addField("🛠️ Moderation Commands:", moderation.join(", "));
+      if (utility[0]) helpEmbed.addField("🔧 Utility Commands:", utility.join(", "));
+      if (misc[0]) helpEmbed.addField("Misc. Commands:", misc.join(", "));
       return message.author.send(helpEmbed).then(() => {
           if (message.channel.type === "dm") return;
           message.react("📩");
