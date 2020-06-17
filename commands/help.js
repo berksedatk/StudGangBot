@@ -20,9 +20,9 @@ module.exports = {
         if (c.dev || c.admin || c.unstaged) {
           return;
         } else if (c.category === "General") {
-          general.push(`\${c.name}\``);
+          general.push(`\`${c.name}\``);
         } else if (c.category === "Fun") {
-          fun.push(`\`${c.name}`);
+          fun.push(`\`${c.name}\``);
         } else if (c.category === "Moderation") {
           moderation.push(`\`${c.name}\``);
         } else if (c.category === "Utility") {
