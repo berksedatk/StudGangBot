@@ -53,36 +53,36 @@ bot.on('ready', () => {
   }, 10000);
 
   bot.user.setStatus("dnd").catch(console.error);
-  
+
   //Channel update
   bot.channels.cache.get("708151643539243018").setName(`『Members』『${bot.guilds.cache.get("548949555597803550").members.cache.size}』`)
   setInterval(function() {
     bot.channels.cache.get("708151643539243018").setName(`『Members:』『${bot.guilds.cache.get("548949555597803550").members.cache.size}』`)
   }, 300000)
-  
+
  let msgchannels = ["551217309369368625","712358040908595220","706175822297432195","697544526365065236","674791248816635914","561608898478342164"]
-  
+
   msgchannels.forEach(channelid => {
     setInterval(function() {
     bot.channels.cache.get(channelid).send({embed: {description: "Always feel free to check out our main chat <#548949556210040862>!"}})
   }, 1800000)
   })
-  
+
   console.log('Bot is ready.')
-  
+
 })
 
  let msgchannels = ["680905360613310464"]
-  
+
   msgchannels.forEach(channelid => {
     setInterval(function() {
     bot.channels.cache.get(channelid).send({embed:  {description: 'Make sure to read <#680898144195969028> before you create a ticket!\nOur staff work very hard to make sure to get to you as quick as they can!\nMake sure to add a reason to make their jobs a bit easier!\n **Commands Usage:** -new <reason>'}})
   }, 5.04e+7)
   })
-  
-  
+
+
   let msgchannel = ["556929328672145430"]
-  
+
   msgchannel.forEach(channelid => {
     setInterval(function() {
     bot.channels.cache.get(channelid).send({embed:  {description: 'Make a suggestion for it to posted in <#622983734144139295> so everyone can vote on your server ideas!\n Keep in mind that not all suggestions will happen even if you have a lot of checkmarks!\nSilly suggestions can get you wanred for wrong channel usage!\n**Command Usage** !suggest <suggestion>'}})
@@ -111,7 +111,7 @@ bot.on('messageUpdate', (oldMessage, newMessage) => {
 //#On Message-Command#
 
 bot.on('message', message => {
-  
+
   //Prefix
   if (!message.content.toLowerCase().startsWith(config.prefix)) return;
 
@@ -122,7 +122,7 @@ bot.on('message', message => {
   //Command Matching
   const command = bot.commands.get(commandName) || bot.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
   if (!command) return;
-  
+
   //Statements
   if (command.dev && !config.owners.includes(message.author.id)) {
     return message.reply(":x: | You are not allowed to use this command!");
@@ -145,7 +145,7 @@ bot.on('message', message => {
         return message.channel.send(":x: | You don't have the required permission(s) to use this command!! Missing permission(s): " + missing.join(', '));
       }
     }
-  
+
   //Cooldown
   if (!cooldowns.has(command.name)) {
     cooldowns.set(command.name, new Discord.Collection());
@@ -173,7 +173,7 @@ bot.on('message', message => {
     timestamps.set(message.author.id, now);
     setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
   }
-  
+
   try {
     command.execute(bot, message, args);
   } catch (err) {
@@ -198,7 +198,7 @@ bot.on("message", msg => {
     }
 
   })
-  
+
   //Only attachment filter
   const channels = ["580083502867808287","635320134847954954","718972368416014367","689865780292223012"]
   if (channels.includes(msg.channel.id) && msg.attachments.size === 0 && !msg.member.hasPermission("MANAGE_MESSAGES")) {
@@ -206,14 +206,14 @@ bot.on("message", msg => {
      msg.reply("Please do not talk in this channel!").then(m => m.delete({timeout: 5000}))
   }
   //Automessage
-  if (msg.content.toLowerCase().includes("where") && msg.content.toLowerCase().includes("nude")) msg.reply("It seems like you are looking for NSFW(nude) channels, I suggest you to check out the <#721635790760706079> channel for more info.")
-  if (msg.content.toLowerCase().includes("i") && msg.content.toLowerCase().includes("nude")) msg.reply("It seems like you are looking for NSFW(nude) channels, I suggest you to check out the <#721635790760706079> channel for more info.")
+  let rankroles = ["556938158416199715","556938790770311199","557223369162883082","557221724371025945","557222514909118484","584601046295379969","627101839099428864","627103275497553920","627105311584550912","627103434528784414"]
+  if ((msg.content.toLowerCase().includes("where") && msg.content.toLowerCase().includes("nude")) || (msg.content.toLowerCase().includes("i") && msg.content.toLowerCase().includes("nude")) && msg.member.roles.cache.array().some(r => rankroles.indexOf(r) !== -1)) msg.reply("It seems like you are looking for NSFW(nude) channels, I suggest you to check out the <#721635790760706079> channel for more info.")
   //Attachment limiter
   if (msg.attachments.size >= 2 && !msg.guild.members.cache.get(msg.author.id).permissions.has("MANAGE_MESSAGES") && !exception.includes(msg.channel.id)) {
     msg.delete({reason: "Multiple Attachments"})
     return msg.reply("Please upload **one** attachment per message.")
   } else if (msg.attachments.size >= 1 && !msg.guild.members.cache.get(msg.author.id).permissions.has("MANAGE_MESSAGES")) {
-    
+
     const atttimestamps = attcooldowns
     const attcooldownAmount = 15000;
     const now = Date.now();
@@ -223,7 +223,7 @@ bot.on("message", msg => {
       setTimeout(() => atttimestamps.delete(msg.author.id), attcooldownAmount);
     } else {
       let expirationTime = atttimestamps.get(msg.author.id) + attcooldownAmount;
-  
+
       if (now < expirationTime && !exception.includes(msg.channel.id)) {
         let timeLeft = (expirationTime - now) / 1000;
         msg.delete({reason: "Cooldown"})
