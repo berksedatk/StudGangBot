@@ -207,7 +207,7 @@ bot.on("message", msg => {
   }
   //Automessage
   if (msg.content.toLowerCase().includes("where") && msg.content.toLowerCase().includes("nude")) msg.reply("It seems like you are looking for NSFW(nude) channels, I suggest you to check out the <#721635790760706079> channel for more info.")
-
+  if (msg.content.toLowerCase().includes("I") && msg.content.toLowerCase().includes("nude")) msg.reply("It seems like you are looking for NSFW(nude) channels, I suggest you to check out the <#721635790760706079> channel for more info.")
   //Attachment limiter
   if (msg.attachments.size >= 2 && !msg.guild.members.cache.get(msg.author.id).permissions.has("MANAGE_MESSAGES") && !exception.includes(msg.channel.id)) {
     msg.delete({reason: "Multiple Attachments"})
