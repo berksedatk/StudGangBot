@@ -35,6 +35,16 @@ module.exports = {
       }
     }
 
-    message.channel.send(`Here is **${user.tag}**'s avatar: \n${user.avatarURL({ format: "png", dynamic: true })}`)
+    message.channel.send({
+      embed: {
+        description: `Here is **${user.tag}**'s avatar:`, 
+        image: user.avatarURL(),
+        color: "RED",
+        footer: {
+          text: `Requested by: ${message.author.tag}`,
+          icon: message.author.avatarURL()
+        }
+      }
+    })
   }
 };
