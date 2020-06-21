@@ -7,7 +7,7 @@ module.exports = {
   aliases: ["av"],
   usage: "[user]",
   cooldown: 5,
-  execute(bot, message, args) {
+  async execute(bot, message, args) {
     let user
     if (!args[0]) {
       use = message.author
