@@ -212,7 +212,7 @@ bot.on("message", msg => {
   rankroles.forEach(r => {
     if (msg.member.roles.cache.get(r)) has = true
   })
-  if (has && msg.content.toLowerCase().includes("where") && msg.content.toLowerCase().includes("nude") || msg.content.toLowerCase().includes("what") && msg.content.toLowerCase().includes("nude") || msg.content.toLowerCase().includes("i") && msg.content.toLowerCase().includes("nude"))
+  if (!has && msg.content.toLowerCase().includes("where") && msg.content.toLowerCase().includes("nude") || msg.content.toLowerCase().includes("what") && msg.content.toLowerCase().includes("nude") || msg.content.toLowerCase().includes("i") && msg.content.toLowerCase().includes("nude"))
     msg.reply("It seems like you are looking for NSFW(nude) channels, I suggest you to check out the <#721635790760706079> channel for more info.")
 
   //Attachment limiter
