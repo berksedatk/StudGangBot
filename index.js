@@ -187,11 +187,12 @@ bot.on('message', message => {
 
 bot.on("message", msg => {
   if (msg.channel.type === "dm") return;
-  if (msg.author.bot && msg.guild.members.cache.get(msg.author.id).hasPermission("MANAGE_MESSAGES")) return;
+  if (msg.author.bot) return;
+  msg.member.hasPermission("MANAGE_MESSAGES") ? return : null
 
   //Blacklisted words
   const exception = ["673587338865278978"]
-  const filter = ["fag"]
+  const filter = ["fag","nigger"]
   filter.forEach(word => {
     if (msg.content.toLowerCase().includes(word)) {
       msg.delete()
