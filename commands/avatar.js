@@ -35,6 +35,6 @@ module.exports = {
       }
     }
 
-    message.channel.send(`Here is **${user.tag}**'s avatar. \n${user.avatarURL()}`)
+    message.channel.send(`Here is **${user.tag}**'s avatar: \n${user.avatarURL({ format: "png", dynamic: true })}`)
   }
 };
