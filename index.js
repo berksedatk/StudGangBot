@@ -188,7 +188,9 @@ bot.on('message', message => {
 bot.on("message", msg => {
   if (msg.channel.type === "dm") return;
   if (msg.author.bot) return;
-  msg.member.hasPermission("MANAGE_MESSAGES") ? return : null
+  if (msg.member) {
+    if (msg.member.hasPermission("MANAGE_MESSAGES")) return;
+  }
 
   //Blacklisted words
   const exception = ["673587338865278978"]
