@@ -191,7 +191,7 @@ bot.on("message", msg => {
 
   //Blacklisted words
   const exception = ["673587338865278978"]
-  const filter = ["nigg"]
+  const filter = ["fag"]
   filter.forEach(word => {
     if (msg.content.toLowerCase().includes(word)) {
       msg.delete()
