@@ -186,6 +186,7 @@ bot.on('message', message => {
 //Attachments
 
 bot.on("message", msg => {
+  if (msg.channel.type === "dm") return;
   if (msg.author.bot  && msg.member.hasPermission("MANAGE_MESSAGES")) return;
 
   //Blacklisted words
