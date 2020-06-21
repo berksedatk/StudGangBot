@@ -31,7 +31,8 @@ module.exports = {
         user = user[collected.first().content - 1]
         msg.delete()
       } else {
-        user = bot.users.cache.get(user[0].id) || bot.users.cache.get(user.id)
+        user = args[0] || bot.users.cache.get(user.id)
+        user = bot.users.cache.get(user.id)
       }
     }
 
