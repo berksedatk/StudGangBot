@@ -186,7 +186,7 @@ bot.on('message', message => {
 //Attachments
 
 bot.on("message", msg => {
-  if (msg.author.bot) return;
+  if (msg.author.bot  && msg.member.hasPermission("MANAGE_MESSAGES")) return;
 
   //Blacklisted words
   const exception = ["673587338865278978"]
@@ -201,7 +201,7 @@ bot.on("message", msg => {
 
   //Only attachment filter
   const channels = ["580083502867808287","635320134847954954","718972368416014367","689865780292223012"]
-  if (channels.includes(msg.channel.id) && msg.attachments.size === 0 && !msg.member.hasPermission("MANAGE_MESSAGES")) {
+  if (channels.includes(msg.channel.id) && msg.attachments.size === 0) {
      msg.delete()
      msg.reply("Please do not talk in this channel!").then(m => m.delete({timeout: 5000}))
   }
@@ -216,7 +216,7 @@ bot.on("message", msg => {
     msg.reply("It seems like you are looking for NSFW(nude) channels, I suggest you to check out the <#721635790760706079> channel for more info.")
 
   //Attachment limiter
-  if (msg.attachments.size >= 2 && !msg.guild.members.cache.get(msg.author.id).permissions.has("MANAGE_MESSAGES") && !exception.includes(msg.channel.id)) {
+  if (msg.attachments.size >= 2 && !exception.includes(msg.channel.id)) {
     msg.delete({reason: "Multiple Attachments"})
     return msg.reply("Please upload **one** attachment per message.")
   } else if (msg.attachments.size >= 1 && !msg.guild.members.cache.get(msg.author.id).permissions.has("MANAGE_MESSAGES")) {
