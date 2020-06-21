@@ -10,7 +10,7 @@ module.exports = {
   async execute(bot, message, args) {
     let user
     if (!args[0]) {
-      use = message.author
+      user = message.author
     } else {
       user = message.mentions.users.first() ? message.mentions.users.first()
         : (message.guild.members.cache.get(args[0]) ? message.guild.members.cache.get(args[0])
