@@ -37,8 +37,10 @@ module.exports = {
 
     message.channel.send({
       embed: {
-        description: `Here is **${user.tag}**'s avatar:`, 
-        image: user.avatarURL(),
+        description: `Here is **${user.tag}**'s avatar:`,
+        image: {
+          url: user.avatarURL()
+        },
         color: "RED",
         footer: {
           text: `Requested by: ${message.author.tag}`,
