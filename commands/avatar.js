@@ -25,7 +25,7 @@ module.exports = {
         color: "RED",
         footer: {
           text: `Requested by: ${message.author.tag}`,
-          icon: message.author.avatarURL({format:"png",dynamic:true})
+          icon: message.author.avatarURL({dynamic:true})
         }
       }
     })
