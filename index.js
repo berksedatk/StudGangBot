@@ -214,7 +214,7 @@ bot.on("message", msg => {
   let rankroles = ["556938158416199715","556938790770311199","557223369162883082","557221724371025945","557222514909118484","584601046295379969","627101839099428864","627103275497553920","627105311584550912","627103434528784414"]
   let has = false
   rankroles.forEach(r => {
-    if (msg.member.roles.cache.get(r)) has = true
+    if (msg.member.roles.cache.has(r)) has = true
   })
   if (!has && msg.content.toLowerCase().includes("where") && msg.content.toLowerCase().includes("nude") || msg.content.toLowerCase().includes("what") && msg.content.toLowerCase().includes("nude") || msg.content.toLowerCase().includes("i") && msg.content.toLowerCase().includes("nude"))
     msg.reply("It seems like you are looking for NSFW(nude) channels, I suggest you to check out the <#721635790760706079> channel for more info.")
