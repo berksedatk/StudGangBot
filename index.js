@@ -216,10 +216,12 @@ bot.on("message", msg => {
   rankroles.forEach(r => {
     if (msg.member.roles.cache.has(r)) has = true
   })
-  if (has === false && msg.content.toLowerCase().includes("where") && msg.content.toLowerCase("nude")) msg.reply("It seems like you are looking for NSFW(nude) channels, I suggest you to check out the <#721635790760706079> channel for more info.")
-  if (has === false && msg.content.toLowerCase().includes("send") && msg.content.toLowerCase("nude")) msg.reply("It seems like you are looking for NSFW(nude) channels, I suggest you to check out the <#721635790760706079> channel for more info.")
-  if (has === false && msg.content.toLowerCase().includes("i") && msg.content.toLowerCase("nude")) msg.reply("It seems like you are looking for NSFW(nude) channels, I suggest you to check out the <#721635790760706079> channel for more info.")
-  //Attachment limiter
+
+  if (has === false && msg.content.toLowerCase().includes("where") && msg.content.toLowerCase().includes("nude")) return msg.reply("It seems like you are looking for NSFW(nude) channels, I suggest you to check out the <#721635790760706079> channel for more info.");
+  if (has === false && msg.content.toLowerCase().includes("send") && msg.content.toLowerCase().includes("nude")) return msg.reply("It seems like you are looking for NSFW(nude) channels, I suggest you to check out the <#721635790760706079> channel for more info.");
+  if (has === false && msg.content.toLowerCase().includes("i") && msg.content.toLowerCase().includes("nude")) return msg.reply("It seems like you are looking for NSFW(nude) channels, I suggest you to check out the <#721635790760706079> channel for more info.");
+ 
+ //Attachment limiter
   if (msg.attachments.size >= 2 && !exception.includes(msg.channel.id)) {
     msg.delete({reason: "Multiple Attachments"})
     return msg.reply("Please upload **one** attachment per message.")
