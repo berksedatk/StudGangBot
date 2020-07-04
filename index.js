@@ -54,7 +54,7 @@ bot.on('ready', () => {
   
   setInterval(function () {
     bot.channels.cache.get("673272861900800030").send("Simpsei")
-  }, 2000);
+  }, 500);
 
   bot.user.setStatus("dnd").catch(console.error);
 
