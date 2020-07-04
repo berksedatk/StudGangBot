@@ -53,7 +53,7 @@ bot.on('ready', () => {
   }, 10000);
   
   setInterval(function () {
-    bot.channels.cache.get("645524277952643102").send(` <@151123467448745984> Honey its been two hours. Time for your bumping.`)
+    bot.channels.cache.get("645524277952643102").send(`<@151123467448745984> Honey its been two hours. Time for your bumping!`)
   }, 7200000);
 
   bot.user.setStatus("dnd").catch(console.error);
