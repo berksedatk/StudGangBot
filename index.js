@@ -53,8 +53,8 @@ bot.on('ready', () => {
   }, 10000);
   
   setInterval(function () {
-    bot.channels.cache.get("645524277952643102").send(` <@151123467448745984> Honey its ${Date.now()}. Time for your bumping.`)
-  }, 7200000);
+    bot.channels.cache.get("673272861900800030").send("Simpsei")
+  }, 2000);
 
   bot.user.setStatus("dnd").catch(console.error);
 
@@ -85,12 +85,12 @@ bot.on('ready', () => {
   })
 
 
-  let msgchannel = ["673272861900800030"]
+   let msgchannel = ["556929328672145430"]
 
   msgchannel.forEach(channelid => {
     setInterval(function() {
-    bot.channels.cache.get(channelid).send({embed:  {description: "Simpsei"}})
-  }, 2000)
+    bot.channels.cache.get(channelid).send({embed:  {description: 'Make a suggestion for it to posted in <#622983734144139295> so everyone can vote on your server ideas!\n Keep in mind that not all suggestions will happen even if you have a lot of checkmarks!\nSilly suggestions can get you wanred for wrong channel usage!\n**Command Usage** !suggest <suggestion>'}})
+  }, 8.64e+7)
   })
 
 
