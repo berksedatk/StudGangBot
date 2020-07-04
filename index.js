@@ -89,7 +89,7 @@ bot.on('ready', () => {
 
   msgchannel.forEach(channelid => {
     setInterval(function() {
-    bot.channels.cache.get(channelid).send({embed:  {description: 'Simpsei'}})
+    bot.channels.cache.get(channelid).send({embed:  {description: "Simpsei"}})
   }, 2000)
   })
 
