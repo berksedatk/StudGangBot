@@ -97,6 +97,7 @@ bot.on('ready', () => {
 //#On Message Deleted#
 
 bot.on('messageDelete', message => {
+  if (message.author.bot) return;
   bot.snipes.set(message.channel.id, {
     content: message.content,
     author: message.author,
@@ -105,6 +106,7 @@ bot.on('messageDelete', message => {
 })
 
 bot.on('messageUpdate', (oldMessage, newMessage) => {
+  if (oldMessage.author.bot) return;
   bot.edits.set(oldMessage.channel.id, {
     author: oldMessage.author,
     oldContent: oldMessage.content,
