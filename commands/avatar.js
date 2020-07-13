@@ -6,7 +6,7 @@ module.exports = {
   description: "Get a specified user's avatar.",
   aliases: ["av"],
   usage: "[user]",
-  cooldown: 300000,
+  cooldown: 25400,
   async execute(bot, message, args) {
     let user
     if (!args[0]) {
