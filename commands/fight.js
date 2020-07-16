@@ -13,22 +13,22 @@ module.exports = {
     let reciever = message.mentions.users.first();
     if (!reciever) return message.channel.send(":x: | You need someone to fight, mention them!");
     const response = [
-      `Live view of ${author} literally killing ${reciever}.. <:SG_Worried_Kirby:662514338963390494> `,
-      `As ${author} is losing the fight with ${reciever}, ${reciever}'s whore ass slaps ${author}'s huge cock. <:SG_Flooooooshed:673264250319405064> `,
+      `Live view of ${author} literally killing ${reciever}.. <:SG_Worried_Kirby:662514338963390494>`,
+      `As ${author} is losing the fight with ${reciever}, ${reciever}'s whore ass slaps ${author}'s huge cock. <:SG_Flooooooshed:673264250319405064>`,
       `${author}'s poor ass tries to fight ${reciever} even tho they have more dino nuggets. <:(`,
     ]
     const images = [
-      `https://tenor.com/view/fight-smash-girl-fight-gif-15340791`,
-      `https://tenor.com/view/kick-anime-fight-angry-gif-16836989`,
-      `https://tenor.com/view/slap-handaseishuu-narukotoishi-barakamonanime-barakamon-gif-5509136`,
-      `https://tenor.com/view/dragonball-fight-owned-one-piece-gif-5222656`,
-      `https://tenor.com/view/bear-fight-hit-teddy-bear-kids-gif-12373244`,
-      `https://tenor.com/view/relationship-anime-fight-arguing-gif-9778017`,
-      `https://tenor.com/view/angel-beats-wrestle-baseball-fight-couple-gif-5467430`,
-      `https://tenor.com/view/anime-funny-fight-gif-11425457`,
-      `https://tenor.com/view/anime-kick-fight-gif-15460532`,
-      `https://tenor.com/view/anime-punch-fight-slam-wall-gif-5012110`,
-      `https://tenor.com/view/sword-art-online-kirito-asuna-fierce-battle-gif-5349066`,
+      `https://cdn.discordapp.com/attachments/697244050293653605/733203679049416835/animefight_1.gif`,
+      `https://cdn.discordapp.com/attachments/697244050293653605/733204952440111124/animefight_2.gif`,
+      `https://cdn.discordapp.com/attachments/697244050293653605/733203974576144384/animefight_3.gif`,
+      `https://cdn.discordapp.com/attachments/697244050293653605/733205103766667274/animefight_4.gif`,
+      `https://cdn.discordapp.com/attachments/697244050293653605/733204168298463292/animefight_5.gif`,
+      `https://cdn.discordapp.com/attachments/697244050293653605/733204323982376971/animefight_6.gif`,
+      `https://cdn.discordapp.com/attachments/697244050293653605/733204434729041980/animefight_7.gif`,
+      `https://cdn.discordapp.com/attachments/697244050293653605/733205239997661255/animefight_8.gif`,
+      `https://cdn.discordapp.com/attachments/697244050293653605/733205366032302151/animefight_9.gif`,
+      `https://cdn.discordapp.com/attachments/697244050293653605/733205447007404035/animefight_10.gif`,
+      `https://cdn.discordapp.com/attachments/697244050293653605/733205523373228072/animefight_11.gif`,
     ]
     
     const answer = response[Math.floor(Math.random() * response.length)];  
