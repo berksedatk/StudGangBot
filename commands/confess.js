@@ -16,8 +16,8 @@ module.exports = {
 
     const titleList = [
       "As I heard from a Anonymous person",
-      "A Anonymous person is confessing this"
-      "Here is the Anonymous person's truth"
+      "A Anonymous person is confessing this",
+      "Here is the Anonymous person's truth",
       "They were too shy to reveal it but here is Anonymous person's confession"
     ]
 
