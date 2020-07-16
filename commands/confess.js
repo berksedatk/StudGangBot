@@ -32,7 +32,7 @@ module.exports = {
     let confessEmbed = new Discord.MessageEmbed()
     .setTitle(titleList[Math.floor(Math.random() * titleList.length)])
     .setColor("#efefef")
-    .setDesription(confession)
+    .setDescription(confession)
 
     bot.channels.cache.get("730994932424245258").send(confessEmbed)
   }
