@@ -15,7 +15,7 @@ module.exports = {
     const response = [
       `Live view of ${author} literally killing ${reciever}.. <:SG_Worried_Kirby:662514338963390494>`,
       `As ${author} is losing the fight with ${reciever}, ${reciever}'s whore ass slaps ${author}'s huge cock. <:SG_Flooooooshed:673264250319405064>`,
-      `${author}'s poor ass tries to fight ${reciever} even tho they have more dino nuggets. <:(`,
+      `${author}'s poor ass tries to fight ${reciever} even tho they have more dino nuggets. <:(`
     ]
     const images = [
       `https://cdn.discordapp.com/attachments/697244050293653605/733203679049416835/animefight_1.gif`,
