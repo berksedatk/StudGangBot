@@ -18,17 +18,17 @@ module.exports = {
       `${author}'s poor ass tries to fight ${reciever} even tho they have more dino nuggets. <:(`,
     ]
     const images = [
-      'https://tenor.com/view/fight-smash-girl-fight-gif-15340791',
-      'https://tenor.com/view/kick-anime-fight-angry-gif-16836989',
-      'https://tenor.com/view/slap-handaseishuu-narukotoishi-barakamonanime-barakamon-gif-5509136',
-      'https://tenor.com/view/dragonball-fight-owned-one-piece-gif-5222656',
-      'https://tenor.com/view/bear-fight-hit-teddy-bear-kids-gif-12373244',
-      'https://tenor.com/view/relationship-anime-fight-arguing-gif-9778017'
-      'https://tenor.com/view/angel-beats-wrestle-baseball-fight-couple-gif-5467430',
-      'https://tenor.com/view/anime-funny-fight-gif-11425457',
-      'https://tenor.com/view/anime-kick-fight-gif-15460532',
-      'https://tenor.com/view/anime-punch-fight-slam-wall-gif-5012110',
-      'https://tenor.com/view/sword-art-online-kirito-asuna-fierce-battle-gif-5349066',
+      `https://tenor.com/view/fight-smash-girl-fight-gif-15340791`,
+      `https://tenor.com/view/kick-anime-fight-angry-gif-16836989`,
+      `https://tenor.com/view/slap-handaseishuu-narukotoishi-barakamonanime-barakamon-gif-5509136`,
+      `https://tenor.com/view/dragonball-fight-owned-one-piece-gif-5222656`,
+      `https://tenor.com/view/bear-fight-hit-teddy-bear-kids-gif-12373244`,
+      `https://tenor.com/view/relationship-anime-fight-arguing-gif-9778017`,
+      `https://tenor.com/view/angel-beats-wrestle-baseball-fight-couple-gif-5467430`,
+      `https://tenor.com/view/anime-funny-fight-gif-11425457`,
+      `https://tenor.com/view/anime-kick-fight-gif-15460532`,
+      `https://tenor.com/view/anime-punch-fight-slam-wall-gif-5012110`,
+      `https://tenor.com/view/sword-art-online-kirito-asuna-fierce-battle-gif-5349066`,
     ]
     
     const answer = response[Math.floor(Math.random() * response.length)];  
