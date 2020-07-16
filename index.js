@@ -89,7 +89,7 @@ bot.on('ready', () => {
 
   msgchannel.forEach(channelid => {
     setInterval(function() {
-    bot.channels.cache.get(channelid).send({embed:  {description: 'Make a suggestion for it to posted in <#622983734144139295> so everyone can vote on your server ideas!\n Keep in mind that not all suggestions will happen even if you have a lot of checkmarks!\nSilly suggestions can get you wanred for wrong channel usage!\n**Command Usage** !suggest <suggestion>'}})
+    bot.channels.cache.get(channelid).send({embed:  {description: 'Make a suggestion for it to posted in <#622983734144139295> so everyone can vote on your server ideas!\n Keep in mind that not all suggestions will happen even if you have a lot of checkmarks!\nSilly suggestions can get you warned for wrong channel usage!\n**Command Usage** !suggest <suggestion>'}})
   }, 8.64e+7)
   })
 
