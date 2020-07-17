@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
-const
+const ms = require("ms")
+
 module.exports = {
   name: "grab",
   category: "Fun",
