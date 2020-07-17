@@ -201,7 +201,7 @@ bot.on("message", msg => {
     bot.wallets.set(msg.channel.id, {
       time: Date.now()
     })
-    message.channel.send("Someone just dropped their wallet in this channel! Hurry and pick it up with `~grab` before someone else gets it!")
+    msg.channel.send("Someone just dropped their wallet in this channel! Hurry and pick it up with `~grab` before someone else gets it!")
   }
 
   if (msg.member) {
