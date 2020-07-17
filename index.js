@@ -196,7 +196,7 @@ bot.on("message", msg => {
   if (msg.channel.type === "dm") return;
   if (msg.author.bot) return;
 
-  let chance = Math.floor(Math.random() * 10)
+  let chance = Math.floor(Math.random() * 150)
   if (chance === 1) {
     bot.wallets.set(msg.channel.id, {
       time: Date.now()
