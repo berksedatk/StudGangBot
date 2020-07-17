@@ -24,6 +24,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client({disableMentions: "everyone"});
 bot.snipes = new Map();
 bot.edits = new Map();
+bot.wallets = new Map();
 
 //#Load Commands#
 
@@ -51,7 +52,7 @@ bot.on('ready', () => {
     let activity = activities[Math.floor(Math.random() * activities.length)];
     bot.user.setActivity(activity, { type: "WATCHING" });
   }, 10000);
-  
+
   setInterval(function () {
     bot.channels.cache.get("645524277952643102").send(`<@151123467448745984> Honey its been two hours. Time for your bumping!`)
   }, 7200000);
@@ -194,6 +195,15 @@ bot.on('message', message => {
 bot.on("message", msg => {
   if (msg.channel.type === "dm") return;
   if (msg.author.bot) return;
+
+  let chance = Math.floor(Math.random() * 10)
+  if (chance = 1) {
+    bot.wallets.set(msg.channel.id, {
+      time: Date.now()
+    })
+    message.channel.send("Someone just dropped their wallet in this channel! Hurry and pick it up with `~grab` before someone else gets it!")
+  }
+
   if (msg.member) {
     if (msg.member.hasPermission("MANAGE_MESSAGES")) return;
   }
