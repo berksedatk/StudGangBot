@@ -196,14 +196,6 @@ bot.on("message", msg => {
   if (msg.channel.type === "dm") return;
   if (msg.author.bot) return;
 
-  let chance = Math.floor(Math.random() * 150)
-  if (chance === 1) {
-    bot.wallets.set(msg.channel.id, {
-      time: Date.now()
-    })
-    msg.channel.send("Someone just dropped their wallet in this channel! Hurry and pick it up with `~grab` before someone else gets it!")
-  }
-
   if (msg.member) {
     if (msg.member.hasPermission("MANAGE_MESSAGES")) return;
   }
