@@ -65,6 +65,15 @@ bot.on('ready', () => {
     bot.channels.cache.get("708151643539243018").setName(`『Members:』『${bot.guilds.cache.get("548949555597803550").members.cache.size}』`)
   }, 300000)
 
+  setInterval(() => {
+    var date = new Date();
+    if (date.getHours() - 5 >= 0 && date.getHours() - 5 < 12){
+      if (bot.channels.cache.get("591123171504029696").name != ':spaghetti: | noodles cave') bot.channels.cache.get("591123171504029696").setName(":spaghetti: | noodles cave")
+    } else if (date.getHours() - 5 > 12){
+      if (bot.channels.cache.get("591123171504029696").name != ':smiling_imp: | noodles "sex" dungeon') bot.channels.cache.get("591123171504029696").setName(':smiling_imp: | noodles "sex" dungeon')
+    }
+  }, 60000);
+
  let msgchannels = ["551217309369368625","712358040908595220","706175822297432195","697544526365065236","674791248816635914","561608898478342164"]
 
   msgchannels.forEach(channelid => {
