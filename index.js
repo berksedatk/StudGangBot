@@ -68,9 +68,9 @@ bot.on('ready', () => {
   setInterval(() => {
     var date = new Date();
     if (date.getHours() - 5 >= 0 && date.getHours() - 5 < 12){
-      if (bot.channels.cache.get("591123171504029696").name != ':smiling_imp: | noodles "sex" dungeon') bot.channels.cache.get("591123171504029696").setName(':smiling_imp: | noodles "sex" dungeon')
+      bot.channels.cache.get("591123171504029696").setName(':smiling_imp: | noodles "sex" dungeon')
     } else if (date.getHours() - 5 > 12){
-      if (bot.channels.cache.get("591123171504029696").name != ":spaghetti: | noodles cave") bot.channels.cache.get("591123171504029696").setName(":spaghetti: | noodles cave")
+      bot.channels.cache.get("591123171504029696").setName(":spaghetti: | noodles cave")
     }
   }, 60000);
 
