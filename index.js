@@ -69,7 +69,7 @@ bot.on('ready', () => {
     var date = new Date();
     if (date.getHours() - 5 >= 0 && date.getHours() - 5 < 12){
       bot.channels.cache.get("591123171504029696").setName('😈 | noodles "sex" dungeon')
-    } else if (date.getHours() - 5 > 12){
+    } else if (date.getHours() - 5 >= 12){
       bot.channels.cache.get("591123171504029696").setName("🍝 | noodles cave")
     }
   }, 60000);
