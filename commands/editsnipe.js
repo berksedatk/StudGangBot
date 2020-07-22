@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports = {
   name: "editsnipe",
-  category: "Utility",
+  category: "Misc",
   description: "Snipe those edited messages",
   cooldown: 5,
   guildOnly: true,
