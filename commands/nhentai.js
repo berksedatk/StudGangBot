@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 
 module.exports = {
   name: "nhentai",
-  category: "Fun",
+  category: "Misc",
   description: "Search for a doujin or get a random one",
   usage: "[search/searchid/random]",
   cooldown: 5,
