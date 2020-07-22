@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports = {
   name: "guildinfo",
-  category: "Moderation",
+  category: "Utility",
   description: "Lists the information about the guild you're in.",
   aliases: ["serverinfo"],
   cooldown: 5,
