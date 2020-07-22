@@ -61,6 +61,7 @@ module.exports = {
     .setTitle("**StudGang Partnership Handlers**")
     .setDescription("Frequently Updated List")
     .setColor("GREEN")
+    .addField("Head of Partnership Managers:", modlist.partner.head[0] ? modlist.partner.head : "None", true)
     .addField("Partnership Manager(s):", modlist.partner.managers[0] ? modlist.partner.managers : "None", true)
    
         
