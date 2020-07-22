@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports = {
   name: "opsnipe",
-  category: "Utility",
+  category: "Misc",
   description: "Snipe those deleted messages, this is the op version of it",
   cooldown: 5,
   guildOnly: true,
