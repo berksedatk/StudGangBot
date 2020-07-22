@@ -6,6 +6,7 @@ module.exports = {
   description: "Troll",
   cooldown: 5,
   guildOnly: true,
+  unstaged: true,
   reqPermissions: ['MANAGE_MESSAGES'],
   execute(bot, message, args) {
     if (!args[0]) return message.channel.send(':x: | You have to mention the channel to send the embed..');
