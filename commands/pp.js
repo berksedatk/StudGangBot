@@ -4,7 +4,7 @@ module.exports = {
   name: "pp",
   category: "Fun",
   description: "Shows you your pp size.",
-  cooldown: 12,
+  cooldown: 15,
   execute(bot, message, args) {
     let ppsize = Math.floor(Math.random() * 25)
     let pp =  ""
