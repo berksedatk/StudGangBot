@@ -3,7 +3,7 @@ const ms = require("ms");
 
 module.exports = {
   name: "poll",
-  category: "Moderation",
+  category: "Utility",
   description: "Create a poll",
   usage: "[time] <poll>",
   cooldown: 5,
