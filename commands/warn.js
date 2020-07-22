@@ -34,7 +34,7 @@ module.exports = {
     
     if (user === null) return message.channel.send(":x: | You didn't provide a true user.");
     if (user.id === message.author.id) return message.channel.send(":x: | You can't warn yourself, dummy!");
-
+    if (message.guild.members.cache.get(user.id).roles.highest.position >= message.member.roles.highest.position && message.guild.owner.id != message.author.id) return message.channel.send(":x: | You can't warn this member, they are too powerful for you.")
     args.shift();
     const reason = args.join(" ");
     if (reason.length < 1) return message.channel.send(":x: | You didn't provide a reason.");
@@ -43,7 +43,7 @@ module.exports = {
        
     function sendEmbed() {
       let warnEmbed = new Discord.MessageEmbed()
-      .setColor("YELLOW")
+      .setColor("ORANGE")
       .setTimestamp()
       .setTitle("**WARNING**")
       .setAuthor(user.tag, user.avatarURL())
