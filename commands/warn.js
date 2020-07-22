@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports = {
   name: "warn",
-  category: "Moderation",
+  category: "Fun",
   description: "Ban someone.",
   usage: "<user> <reason>",
   cooldown: 5,
