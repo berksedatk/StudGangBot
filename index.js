@@ -206,7 +206,7 @@ bot.on("message", msg => {
   if (msg.author.bot) return;
 
   if (msg.member) {
-    if (msg.member.hasPermission("MANAGE_MESSAGES")) return;
+    if (msg.member.hasPermission("KICK_MEMBERS")) return;
   }
 
   //Blacklisted words
