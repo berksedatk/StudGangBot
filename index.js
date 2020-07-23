@@ -206,7 +206,7 @@ bot.on("message", msg => {
   if (msg.author.bot) return;
 
   if (msg.member) {
-    if (msg.member.hasPermission("MANAGE_MESSAGES")) return;
+    if (msg.member.hasPermission("MANAGE_SERVER")) return;
   }
 
   //Blacklisted words
@@ -218,7 +218,7 @@ bot.on("message", msg => {
   filter.forEach(word => {
     if (msg.content.toLowerCase().includes(word)) {
       msg.delete()
-      return msg.reply("No bad words!").then(m => m.delete({timeout: 2000}))
+      return msg.reply("Your message has been removed for containing innapropiate words!").then(m => m.delete({timeout: 2000}))
     }
 
   })
