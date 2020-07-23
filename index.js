@@ -245,7 +245,8 @@ bot.on("message", msg => {
   let exchannel = ["673555443406077952","673587338865278978"]
   if (msg.attachments.size >= 2 && !exchannel.includes(msg.channel.id)) {
     msg.delete({reason: "Multiple Attachments"})
-    return msg.reply("Please upload **one** attachment per message.")
+    return msg.reply("Please upload **one** attachment per message.").then(m => m.delete({timeout: 7000}))
+    
   } else if (msg.attachments.size >= 1 && !msg.guild.members.cache.get(msg.author.id).permissions.has("MANAGE_MESSAGES") && !exchannel.includes(msg.channel.id)) {
 
     const atttimestamps = attcooldowns
