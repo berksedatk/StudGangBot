@@ -224,7 +224,7 @@ bot.on("message", msg => {
   })
 
   //Only attachment filter
-  const channels = ["580083502867808287","635320134847954954","718972368416014367","689865780292223012"]
+  const channels = ["580083502867808287","635320134847954954","718972368416014367","689865780292223012","739462264720982037","739464889487065139","739463286776659969"]
   if (channels.includes(msg.channel.id) && msg.attachments.size === 0) {
      msg.delete()
      msg.reply("Please do not talk in this channel!").then(m => m.delete({timeout: 5000}))
@@ -246,7 +246,7 @@ bot.on("message", msg => {
   if (msg.attachments.size >= 2 && !exchannel.includes(msg.channel.id)) {
     msg.delete({reason: "Multiple Attachments"})
     return msg.reply("Please upload **one** attachment per message.").then(m => m.delete({timeout: 7000}))
-    
+
   } else if (msg.attachments.size >= 1 && !msg.guild.members.cache.get(msg.author.id).permissions.has("MANAGE_MESSAGES") && !exchannel.includes(msg.channel.id)) {
 
     const atttimestamps = attcooldowns
