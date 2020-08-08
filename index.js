@@ -144,7 +144,7 @@ bot.on('message', message => {
     return message.reply(":x: | You are not allowed to use this command.");
   }
   if (command.blacklisted && message.channel.id === "548949556210040862") {
-    return message.reply(":x: | This command cannot be used in this channel!") 
+    return message.reply(":x: | This command cannot be used in this channel!");
   }
   if (command.admin && !config.admins.includes(message.author.id)) {
     return message.reply(":x: | You are not allowed to use this command!");
