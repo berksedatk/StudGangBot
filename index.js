@@ -147,11 +147,7 @@ bot.on('message', message => {
     return message.reply(":x: | This command cannot be used in this channel!") {
      msg.delete();
   }
- 
-     if (command.blacklistselfie && message.channel.id === "580083502867808287","606314770546556961","709248514550530048","730994932424245258","730682637051756554","635320134847954954","718972368416014367","689865780292223012") {
-    return message.reply(":x: | This command cannot be used in this channel!") {
-     msg.delete();
-  }
+
   if (command.admin && !config.admins.includes(message.author.id)) {
     return message.reply(":x: | You are not allowed to use this command!");
   }
