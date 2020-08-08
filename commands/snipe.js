@@ -5,6 +5,7 @@ module.exports = {
   category: "Misc",
   description: "Snipe those deleted messages",
   cooldown: 5,
+  blacklistselfie: true,
   guildOnly: true,
   execute(bot, message, args) {
     const msg = bot.snipes.get(message.channel.id)
