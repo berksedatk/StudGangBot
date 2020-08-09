@@ -153,9 +153,11 @@ bot.on('message', message => {
     return message.reply(":x: | This command cannot be executed in direct messages.");
   }
   if (command.blacklistedChannels && !message.member.permissions.has("MANAGE_MESSAGES")) {
+    let e;
     command.blacklistedChannels.forEach(channel => {
-      if (message.channel.id === channel) return message.channel.send(":x: | This command cant be used in this channel!")
+      if (message.channel.id === channel) e = true
     })
+    if (e) return message.channel.send(":x: | This command cant be used in this channel!")
   }
   if (command.reqPermissions && !config.owners.includes(message.author.id)) {
       let missing = []
