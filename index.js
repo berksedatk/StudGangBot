@@ -126,7 +126,9 @@ bot.on('messageUpdate', (oldMessage, newMessage) => {
 //#On Message-Command#
 
 bot.on('message', message => {
-
+ 
+ if(message.author.bot) return;
+ 
   //Prefix
   if (!message.content.toLowerCase().startsWith(config.prefix)) return;
 
