@@ -25,7 +25,6 @@ const bot = new Discord.Client({disableMentions: "everyone"});
 bot.snipes = new Map();
 bot.edits = new Map();
 bot.wallets = new Map();
-if(message.author.bot) return;
 //#Load Commands#
 
 bot.commands = new Discord.Collection();
