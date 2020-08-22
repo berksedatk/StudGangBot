@@ -208,6 +208,7 @@ bot.on('message', message => {
 //Attachments
 
 bot.on("message", msg => {
+  if (message.author.bot) return;
   if (msg.channel.type === "dm") return;
 
   if (msg.member) {
