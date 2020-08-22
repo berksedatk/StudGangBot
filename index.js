@@ -126,7 +126,7 @@ bot.on('messageUpdate', (oldMessage, newMessage) => {
 //#On Message-Command#
 
 bot.on('message', message => {
- 
+  if (message.author.bot) return;
   //Prefix
   if (!message.content.toLowerCase().startsWith(config.prefix)) return;
 
@@ -209,7 +209,6 @@ bot.on('message', message => {
 
 bot.on("message", msg => {
   if (msg.channel.type === "dm") return;
-  if (msg.author.bot) return;
 
   if (msg.member) {
     if (msg.member.hasPermission("KICK_MEMBERS")) return;
