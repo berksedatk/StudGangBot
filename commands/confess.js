@@ -13,29 +13,17 @@ module.exports = {
     const filter = ["Niggеr","nigga","n1gg@","n1gga","negro","n¡gg3r","n¡gger","fag","nigger","retard","faggot","n i g g e r","k k k","beaner","b e a n e r","be a ner","b e a ner","be an er","be an e r",
         'niggar','niggair','wetback','w e t b a c k','wet ba ck','we tback','w e tback','wet bac k','niggèr','rëtard','rétard','retarted','retarded',
         'r.e.t.a.r.d','r3tard','nigg3rs','nigg3r','retar.d','n1gg3r','nlgger','queer','qu e e r','que e r','qu ee r','q u e e r','q-e-e-r','quuer','quer','fags']
-      const regex = /(https?:\/\/[^\s]+)/g
+ 
     const titleList = [
       "As I heard from a Anonymous person",
       "A Anonymous person is confessing this",
       "Here is the Anonymous person's truth",
       "They were too shy to reveal it but here is Anonymous person's confession"
     ]
-
-    if (!args[0]) return message.channel.send(":x: | You need a message to put in confession.")
-
-    let confession = args.join(" "
-
-    let inp = false
+    
     filter.forEach(word => {
-      if (msg.content.toLowerCase().includes(word)) inp = true
-    })
-
-    if (regex.test(msg.content)) inp = true
-
-    if (inp === true || msg.content.length > 250) {
-      snipeEmbed.setDescription('~~Inappropriate Message~~')
-    }
-
+      if (confession.includes(word)) return message.channel.send(":x: | You can't use a blacklisted word in your message.")
+    
     let confessEmbed = new Discord.MessageEmbed()
     .setTitle(titleList[Math.floor(Math.random() * titleList.length)])
     .setColor("#efefef")
