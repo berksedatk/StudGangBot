@@ -5,7 +5,7 @@ module.exports = {
   name: "stats",
   category: "General",
   description: "The status of the bot.",
-  aliases: ["status"],
+  aliases: ["status","botinfo"],
   cooldown: 5,
   async execute(bot, message, args) {
     const msg = await message.channel.send(`Just a moment...`);
@@ -37,7 +37,7 @@ module.exports = {
         "Uptime",
         `${days} days, ${hours} hours, ${mins} minutes, and ${realTotalSecs} seconds`
       )
-      .setFooter("Created by: Sax#6211 and noodle#0002 with <3")
+      .setFooter("Created by: Sax#6211 and noodle#6969 with <3")
       .setTimestamp();
     msg.edit(embed);
   }
