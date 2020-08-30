@@ -24,11 +24,11 @@ module.exports = {
     if (!args[0]) return message.channel.send(":x: | You need a message to put in confession.")
 
     let confession = args.join(" ")
-    
-   filter = Boolean(true);  
+
+    filter.forEach(word => {
       if (confession.includes(word)) return message.channel.send(":x: | You can't use a blacklisted word in your message.")
     })
-  filter = Boolean(false); 
+
     let confessEmbed = new Discord.MessageEmbed()
     .setTitle(titleList[Math.floor(Math.random() * titleList.length)])
     .setColor("#efefef")
