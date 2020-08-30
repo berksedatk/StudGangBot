@@ -20,7 +20,7 @@ module.exports = {
       "Here is the Anonymous person's truth",
       "They were too shy to reveal it but here is Anonymous person's confession"
     ]
-    
+        let confession = args.join(" ")
     filter.forEach(word => {
       if (confession.includes(word)) return message.channel.send(":x: | You can't use a blacklisted word in your message.")
     
