@@ -25,8 +25,8 @@ module.exports = {
 
     let confession = args.join(" ")
 
-    filter.forEach(word => {
-      if (confession.includes(word)) return message.channel.send(":x: | You can't use a blacklisted word in your message.")
+    	if (message.includes == "filter") {
+      message.return message.channel.send(":x: | You can't use a blacklisted word in your message.")
     })
 
     let confessEmbed = new Discord.MessageEmbed()
