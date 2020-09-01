@@ -6,7 +6,7 @@ module.exports = {
   description: "Make the bot say your favourite quotes.",
   usage: "[channel(optional)] [quote]",
   cooldown: 5,
-  reqPermissions: ["MANAGE_MESSAGES"],
+  reqPermissions: ["KICK_MEMBERS"],
   execute(bot, message, args) {
     const regex = /<#\d{18}>/g
     if (!args[0]) {
