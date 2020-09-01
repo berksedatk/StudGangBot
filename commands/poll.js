@@ -7,7 +7,7 @@ module.exports = {
   description: "Create a poll",
   usage: "[time] <poll>",
   cooldown: 5,
-  reqPermissions: ['MANAGE_MESSAGES'],
+  reqPermissions: ['KICK_MEMBERS'],
   async execute(bot, message, args) {
     if (!args[0]) return message.channel.send(":x: | You didnt provide a time or a poll.")
     let time = args[0] ? (ms(args[0]) || null) : null
