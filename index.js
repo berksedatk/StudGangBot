@@ -244,12 +244,12 @@ bot.on("message", msg => {
   if (has === false && msg.content.toLowerCase().includes("i") && msg.content.toLowerCase().includes("nude")) return msg.reply("It seems like you are looking for NSFW(nude) channels, I suggest you to check out the <#721635790760706079> channel for more info.");
 
  //Attachment limit
-  let exchannel = ["673555443406077952","673587338865278978"]
+  let exchannel = ["673555443406077952","673587338865278978","673555191026417674","704071330391261184"]
   if (msg.attachments.size >= 2 && !exchannel.includes(msg.channel.id)) {
     msg.delete({reason: "Multiple Attachments"})
     return msg.reply("Please upload **one** attachment per message.").then(m => m.delete({timeout: 7000}))
 
-  } else if (msg.attachments.size >= 1 && !msg.guild.members.cache.get(msg.author.id).permissions.has("MANAGE_MESSAGES") && !exchannel.includes(msg.channel.id)) {
+  } else if (msg.attachments.size > 1 && !msg.member.permissions.has("MANAGE_MESSAGES") && !exchannel.includes(msg.channel.id)) {
 
     const atttimestamps = attcooldowns
     const attcooldownAmount = 15000;
