@@ -37,7 +37,7 @@ module.exports = {
         "Uptime",
         `${days} days, ${hours} hours, ${mins} minutes, and ${realTotalSecs} seconds`
       )
-      .setFooter("Created by: Sax#6211 and noodle(nudel)#6969 with <3")
+      .setFooter("Created by: Sax#6211 and noodle#0002 with <3")
       .setTimestamp();
     msg.edit(embed);
   }
