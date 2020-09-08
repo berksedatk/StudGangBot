@@ -215,7 +215,7 @@ bot.on("message", msg => {
   const exception = ["556927352513363968"]
   const filter = ["niggеr",'n1gg3r','n1gger','n1gga','n!gger','n!gga','n!gg3r','nlgga','nlgger','nlgg3r','n1gg3r','n1gg@',"n1gg@","n1gga","negro","n¡gg3r","fag",
 "retard","faggot","n i g g e r","k k k","beaner","b e a n e r","be a ner","b e a ner","be an er","be an e r",'niggar','niggair','wetback','w e t b a c k','wet ba ck',
-'we tback','w e tback','wetback','rëtard','rétard','retarted','retarded',
+'we tback','w e tback','rëtard','rétard','retarted','retarded',
 'r.e.t.a.r.d','r3tard','nigg3rs','nigg3r','retar.d','n1gg3r','nlgger','queer','qu e e r','que e r','qu ee r',
 'q u e e r','qeer','quuer','quer','fags','chink','coon','dike','niggar','niggur','nigor','nigre','nigar','niggah','nig','nigguh','Niglet','nigglet','Nigra','negra','niggra',
 'nigrah','nigruh','chinki','chinky','Spic','spick','spik','spig','spigotty','whitey','nazi','Wigger','Wigga','wegro','nikker','nicker','icker','nikker','nikka','nibbah','nibba','nicka',
