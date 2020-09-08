@@ -220,7 +220,7 @@ bot.on("message", msg => {
 'q u e e r','qeer','quuer','quer','fags','chink','coon','dike','niggar','niggur','nigor','nigre','nigar','niggah','nigguh','Niglet','nigglet','Nigra','negra','niggra',
 'nigrah','nigruh','chinki','chinky','Spic','spick','spik','spig','dike','spigotty','whitey','nazi','Wigger','Wigga','wegro','nikker','nicker','icker','nikker','nikka','nibbah','nibba','nicka',
 'jews','jews','f a g g o t','f a g','queer','q u e e r','qu e e r','quee r','q u e er','quee er','quee e r','qu ee r','quee r','q ueer','queer','q ueer','q uee r','rape','rapist','molest','molester',
-'molestar','nibb','fagot','faget','c o o n','co o n','c o on','coo n','c oon']
+'molestar','nibb','fagot','faget','c o o n','co o n','c o on','coo n','c oon','kys','kill your self','k y s']
 
   filter.forEach(word => {
     if (msg.content.toLowerCase().includes(word)) {
