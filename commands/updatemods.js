@@ -17,7 +17,7 @@ module.exports = {
     
     const eventTotal = modlist.events.head.length + modlist.events.senior.length + modlist.events.junior.length + modlist.events.trial.length
     
-    const partnerTotal = modlist.partner.managers.length
+    const partnerTotal = modlist.partner.managers.length +1
     
     const mod = new Discord.MessageEmbed()
     .setImage(modBanner)
