@@ -217,10 +217,10 @@ bot.on("message", msg => {
 "retard","faggot","n i g g e r","k k k","beaner","b e a n e r","be a ner","b e a ner","be an er","be an e r",'niggar','niggair','wetback','w e t b a c k','wet ba ck',
 'we tback','w e tback','rëtard','rétard','retarted','retarded',
 'r.e.t.a.r.d','r3tard','nigg3rs','nigg3r','retar.d','n1gg3r','nlgger','queer','qu e e r','que e r','qu ee r',
-'q u e e r','qeer','quuer','quer','fags','chink','coon','dike','niggar','niggur','nigor','nigre','nigar','niggah','nigguh','Niglet','nigglet','Nigra','negra','niggra',
+'q u e e r','qeer','quuer','quer','fags','chink','dike','niggar','niggur','nigor','nigre','nigar','niggah','nigguh','Niglet','nigglet','Nigra','negra','niggra',
 'nigrah','nigruh','chinki','chinky','Spic','spick','spik','spig','dike','spigotty','whitey','nazi','Wigger','Wigga','wegro','nikker','nicker','icker','nikker','nikka','nibbah','nibba','nicka',
 'jews','jews','f a g g o t','f a g','queer','q u e e r','qu e e r','quee r','q u e er','quee er','quee e r','qu ee r','quee r','q ueer','queer','q ueer','q uee r','rape','rapist','molest','molester',
-'molestar','nibb','fagot','faget','c o o n','co o n','c o on','coo n','c oon','kys','kill your self','k y s']
+'molestar','nibb','fagot','faget','kys','kill your self','k y s']
 
   filter.forEach(word => {
     if (msg.content.toLowerCase().includes(word)) {
