@@ -222,14 +222,13 @@ bot.on("message", msg => {
 
   //Blacklisted words
   const exception = ["556927352513363968"]
-  const filter = ['nigger','n1gg3r','nigga','n1gger','raid','n1gga','n!gger','n!gga','n!gg3r','nlgga','nlgger','nlgg3r','n1gg3r','n1gg@',"n1gg@","n1gga","negro","n¡gg3r","fag",
-"retard","faggot","n i g g e r","k k k","beaner","b e a n e r","be a ner","b e a ner","be an er","be an e r",'niggar','niggair','wetback','w e t b a c k','wet ba ck',
-'we tback','w e tback','rëtard','rétard','retarted','retarded',
-'r.e.t.a.r.d','r3tard','nigg3rs','nigg3r','retar.d','n1gg3r','nlgger','queer','qu e e r','que e r','qu ee r',
-'q u e e r','qeer','quuer','quer','fags','chink','dike','niggar','niggur','nigor','nigre','nigar','niggah','nigguh','Niglet','nigglet','Nigra','negra','niggra',
-'nigrah','nigruh','chinki','chinky','Spic','spick','spik','spig','dike','spigotty','whitey','nazi','Wigger','Wigga','wegro','nikker','nicker','icker','nikker','nikka','nibbah','nibba','nicka',
-'jews','jews','f a g g o t','f a g','queer','q u e e r','qu e e r','quee r','q u e er','quee er','quee e r','qu ee r','quee r','q ueer','queer','q ueer','q uee r','rape','rapist','molest','molester',
-'molestar','nibb','fagot','faget','kys','kill your self','k y s']
+  const filter = ['nigger','n1gg3r','nigga','n1gger','raid','n1gga','n!gger','n!gga','n!gg3r','nlgga','nlgger','nlgg3r','n1gg3r',
+"n¡gg3r","fag","retard","faggot","n i g g e r","beaner","b e a n e r","be a ner","b e a ner","be an er","be an e r",
+'niggair','wetback','w e t b a c k','wet ba ck','we tback','w e tback','rëtard','rétard','retarted','retarded',
+'r.e.t.a.r.d','r3tard','nigg3rs','nigg3r','retar.d','n1gg3r','nlgger','fags','chink','niggar','niggur','nigor',
+'nigre','nigar','niggah','nigguh','Niglet','nigglet','Nigra','negra','niggra','nigrah','nigruh','chinki','chinky',
+'Spic','spick','spik','spig','spigotty','whitey','nazi','Wigger','Wigga','wegro','nikker','nikker','nikka','nibbah',
+'nibba','nicka','f a g g o t','f a g','molest','molester','molestar','fagot','faget','niggar','n1gg@',"n1gg@","n1gga","negro"]
 
   filter.forEach(word => {
     if (msg.content.toLowerCase().includes(word)) {
@@ -238,8 +237,9 @@ bot.on("message", msg => {
     }
 
   })
+//Since this code is dumb we have added "coon","coons","quer","queer","rape","rapes","raped","rapist","raping","nicker","nickers","icker","jews","jew","nibb","nib","dyke","dike","kkk", and "k k k" to another bot.
 
-  //Only attachment filter
+ //Only attachment filter
   const channels = ["580083502867808287","635320134847954954","718972368416014367","689865780292223012","739462264720982037","739464889487065139","739463286776659969"]
   if (channels.includes(msg.channel.id) && msg.attachments.size === 0) {
      msg.delete()
