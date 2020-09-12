@@ -229,14 +229,15 @@ bot.on("message", msg => {
 'nigre','nigar','niggah','nigguh','Niglet','nigglet','Nigra','negra','niggra','nigrah','nigruh','chinki','chinky',
 'spick','spik','spig','spigotty','whitey','nazi','Wigger','Wigga','wegro','nikker','nikker','nikka','nibbah',
 'nibba','nicka','f a g g o t','f a g','molest','molester','molestar','fagot','faget','niggar','n1gg@',"n1gg@","n1gga","negro"]
-
+ 
   filter.forEach(word => {
     if (msg.content.toLowerCase().includes(word)) {
       msg.delete()
       return msg.reply("Your message has been removed for containing words that may go against Discord's Terms of Service!").then(m => m.delete({timeout: 7000}))
     }
-
+ 
   })
+ 
 //Since this code is dumb we have added "coon","coons","quer","queer","rape","rapes","raped","rapist","raping","nicker","nickers","icker","jews","jew","nibb","nib","dyke","dike","kkk", and "k k k" to another bot.
 
  //Only attachment filter
