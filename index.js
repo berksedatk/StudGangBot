@@ -227,7 +227,7 @@ bot.on("message", msg => {
 'niggair','wetback','w e t b a c k','wet ba ck','we tback','w e tback','rëtard','rétard','retarted','retarded',
 'r.e.t.a.r.d','r3tard','nigg3rs','nigg3r','retar.d','n1gg3r','nlgger','fags','chink','niggar','niggur','nigor',
 'nigre','nigar','niggah','nigguh','Niglet','nigglet','Nigra','negra','niggra','nigrah','nigruh','chinki','chinky',
-'Spic','spick','spik','spig','spigotty','whitey','nazi','Wigger','Wigga','wegro','nikker','nikker','nikka','nibbah',
+'spick','spik','spig','spigotty','whitey','nazi','Wigger','Wigga','wegro','nikker','nikker','nikka','nibbah',
 'nibba','nicka','f a g g o t','f a g','molest','molester','molestar','fagot','faget','niggar','n1gg@',"n1gg@","n1gga","negro"]
 
   filter.forEach(word => {
