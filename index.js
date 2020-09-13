@@ -238,7 +238,7 @@ bot.on("message", msg => {
  
   })
  
-//Since this code is dumb we have added "coon","coons","quer","queer","rape","rapes","raped","rapist","raping","nicker","nickers","icker","jews","jew","nibb","nib","dyke","dike","kkk", and "k k k" to another bot.
+//Since this code is dumb we have added "coon","coons","quer","queer","rape","rapes","raped","rapist","raping","nicker","nickers","icker","jews","jew","nibb","nib","dyke","dike", "spik","spic", "kkk", and "k k k" to another bot.
 
  //Only attachment filter
   const channels = ["580083502867808287","635320134847954954","718972368416014367","689865780292223012","739462264720982037","739464889487065139","739463286776659969"]
