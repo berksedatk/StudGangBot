@@ -240,6 +240,18 @@ bot.on("message", msg => {
  
 //Since this code is dumb we have added "coon","coons","quer","queer","rape","rapes","raped","rapist","raping","nicker","nickers","icker","jews","jew","nibb","nib","dyke","dike", "spik","spic", "kkk", and "k k k" to another bot.
 
+ 
+   //Blacklisted words
+  const exception = ["556927352513363968"]
+  const filter = ['kia','k i a']
+ 
+  filter.forEach(word => {
+    if (msg.content.toLowerCase().includes(word)) {
+      msg.delete()
+      return msg.reply("🤫").then(m => m.delete({timeout: 7000}))
+    }
+ 
+  })
  //Only attachment filter
   const channels = ["580083502867808287","635320134847954954","718972368416014367","689865780292223012","739462264720982037","739464889487065139","739463286776659969"]
   if (channels.includes(msg.channel.id) && msg.attachments.size === 0) {
