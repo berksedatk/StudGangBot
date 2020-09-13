@@ -236,13 +236,11 @@ bot.on("message", msg => {
       return msg.reply("Your message has been removed for containing words that may go against Discord's Terms of Service!").then(m => m.delete({timeout: 7000}))
     }
  
-  })
+  });
  
 //Since this code is dumb we have added "coon","coons","quer","queer","rape","rapes","raped","rapist","raping","nicker","nickers","icker","jews","jew","nibb","nib","dyke","dike", "spik","spic", "kkk", and "k k k" to another bot.
 
  
-   //Blacklisted words
-  const exception = ["556927352513363968"]
   const filter = ['kia','k i a']
  
   filter.forEach(word => {
