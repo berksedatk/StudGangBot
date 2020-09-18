@@ -10,7 +10,7 @@ module.exports = {
   execute(bot, message, args) {
     const author = message.author;
     const reciever = message.mentions.users.first();
-    if (!reciever) return message.channel.send(":x: | You need someone to spoon, mention them!");
+    if (!reciever) return message.channel.send(":x: | You need someone to spoon, mention them! lol i ain't a simp fuck off you e-girl");
     const response = [
       `UwU ${author} starts spooning ${reciever} <:pepeOK:567778750104731648>`,
       `${author} makes ${reciever} cum from spooning so gud!`,
