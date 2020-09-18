@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports = {
-  name: "spoon",
+  name: "spank",
   category: "Fun",
   description: "Spank Someone.. :flushed:",
   usage: "[mention]",
