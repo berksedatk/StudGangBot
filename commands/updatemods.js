@@ -8,10 +8,7 @@ module.exports = {
   reqPermissions: ["MANAGE_GUILD"],
   execute(bot, message, args) {
 
-    const modBanner = "https://cdn.discordapp.com/attachments/659898976438452234/697719297509949441/Adobe_Post_20200409_1550200.7230005945244219-01.jpeg"
-    const eventBanner = "https://cdn.discordapp.com/attachments/659898976438452234/697719297211891752/Adobe_Post_20200409_1604090.1084822664302203-01.jpeg"
-    const partnerBanner = "https://cdn.discordapp.com/attachments/659898976438452234/697719297941962782/Adobe_Post_20200409_1547130.011374860602526904-02.jpeg"
-    
+
     const modTotal = modlist.moderation.owner.length + modlist.moderation.coowner.length + modlist.moderation.headadmins.length + modlist.moderation.admins.length + modlist.moderation.managers.length +
           modlist.moderation.seniormods.length + modlist.moderation.mods.length + modlist.moderation.juniormods.length + modlist.moderation.helpers.length
     
@@ -19,10 +16,7 @@ module.exports = {
     
     const partnerTotal = modlist.partner.managers.length +1
     
-    const mod = new Discord.MessageEmbed()
-    .setImage(modBanner)
-    .setColor("RED")
-    
+
     const moderationTeam = new Discord.MessageEmbed()
     .setAuthor(`Total: ${modTotal}`, message.guild.iconURL())
     .setTitle("**StudGang Moderation Teams**")
@@ -38,10 +32,7 @@ module.exports = {
     .addField("Junior Moderator(s)", modlist.moderation.juniormods[0] ? modlist.moderation.juniormods : "None", true)
     .addField("Helper(s)", modlist.moderation.helpers[0] ? modlist.moderation.helpers : "None", true)
     
-    const event = new Discord.MessageEmbed()
-    .setImage(eventBanner)
-    .setColor("ORANGE")
-    
+
     const eventTeam = new Discord.MessageEmbed()
     .setAuthor(`Total: ${eventTotal}`, message.guild.iconURL())
     .setTitle("**StudGang Event Handlers**")
@@ -52,10 +43,8 @@ module.exports = {
     .addField("Junior Events Team:", modlist.events.junior[0] ? modlist.events.junior : "None", true)
     .addField("Trial Events Team:", modlist.events.trial[0] ? modlist.events.trial : "None", true)
     
-    const partner = new Discord.MessageEmbed()
-    .setImage(partnerBanner)
-    .setColor("GREEN") //#sax is cute!
-    
+
+   
     const partnerTeam = new Discord.MessageEmbed()
     .setAuthor(`Total: ${partnerTotal}`, message.guild.iconURL())
     .setTitle("**StudGang Partnership Handlers**")
