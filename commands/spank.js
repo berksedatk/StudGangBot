@@ -13,7 +13,7 @@ module.exports = {
     if (!reciever) return message.channel.send(":x: | You need someone to spank, mention them!");
     const response = [
       `${author} starts spanking ${reciever}.. <:pepeOK:567778750104731648>`,
-      'The strange e-couple in the server, ${author} and ${reciever}, start giving eachother spanking. :sob:'
+      `The strange e-couple in the server, ${author} and ${reciever}, start giving eachother spanking. :sob:`
 
     ]
     const images = [
