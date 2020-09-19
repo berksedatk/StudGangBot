@@ -37,7 +37,8 @@ module.exports = {
       'https://cdn.discordapp.com/attachments/675728032203407387/756458200479301652/animegrin_6.gif',
       'https://cdn.discordapp.com/attachments/675728032203407387/756458254208335943/animegrin_7.gif',
       'https://cdn.discordapp.com/attachments/675728032203407387/756458322827411466/animegrin_8.gif',
-      'https://cdn.discordapp.com/attachments/675728032203407387/756458354888671333/animegrin_9.gif'
+      'https://cdn.discordapp.com/attachments/675728032203407387/756458354888671333/animegrin_9.gif',
+      'https://cdn.discordapp.com/attachments/697244050293653605/756756637401743420/animegrin_10.gif'
     ]
     
     const answer = response[Math.floor(Math.random() * response.length)];  
