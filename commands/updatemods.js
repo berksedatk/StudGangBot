@@ -55,16 +55,10 @@ module.exports = {
    
         
   message.delete().catch(O_o=>{}); 
-    message.channel.send(mod).then(() => {
       message.channel.send(moderationTeam).then(() => {
-        message.channel.send(event).then(() => {
           message.channel.send(eventTeam).then(() => {
-            message.channel.send(partner).then(() => {
-              message.channel.send(partnerTeam)
-            })
-          })
-        })
-      })
+              message.channel.send(partnerTeam)        
+       })
     })
   }
 };
