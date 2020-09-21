@@ -161,7 +161,7 @@ bot.on('message', message => {
     command.blacklistedChannels.forEach(channel => {
       if (message.channel.id === channel) e = true
     })
-    if (e) return message.channel.send(":x: | This command cant be used in this channel!")
+    if (e) return message.channel.send(":x: | This command cant be used in this channel!").then(m => m.delete({timeout: 7000}))
   }
   if (command.reqPermissions && !config.owners.includes(message.author.id)) {
       let missing = []
