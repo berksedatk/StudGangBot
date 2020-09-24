@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports = {
   name: "peg",
   category: "Fun",
-  description: "Peg Someone.. <:flooked:727298537402007572>",
+  description: "Peg Someone.. <:SG_FLOOOOOOSHED:758607101446062081>",
   aliases: ["pegg"],
   usage: "[mention]",
   cooldown: 5,
@@ -13,7 +13,7 @@ module.exports = {
     const reciever = message.mentions.users.first();
     if (!reciever) return message.channel.send(":x: | You need someone to peg, mention them!");
     const response = [
-      `${author} starts pegging ${reciever}.. <:flooked:727298537402007572>`,
+      `${author} starts pegging ${reciever}.. <:SG_FLOOOOOOSHED:758607101446062081>`,
       `The strange e-couple in the server, ${author} and ${reciever}, start pegging eachother. :sob:`
 
     ]
