@@ -11,7 +11,7 @@ module.exports = {
   execute(bot, message, args) {
     const author = message.author;
     const reciever = message.mentions.users.first();
-    if (!reciever) return message.channel.send(":x: | You need someone to peg, mention them!");
+    if (!reciever) return message.channel.send(":x: | You need someone to peg, mention them! <:SG_FLOOOOOOSHED:758607101446062081>");
     const response = [
       `${author} starts pegging ${reciever}.. <:SG_FLOOOOOOSHED:758607101446062081>`,
       `The strange e-couple in the server, ${author} and ${reciever}, start pegging eachother. :sob:`
