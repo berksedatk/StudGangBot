@@ -233,10 +233,9 @@ bot.on("message", msg => {
   filter.forEach(word => {
     if (msg.content.toLowerCase().includes(word)) {
       msg.delete()
-      return msg.reply("Your message has been removed for containing words that possibly go against StudGang or Discord's Terms!").then(m => m.delete({timeout: 7000}))
+      return msg.reply("Your message has been removed for containing words that possibly go against StudGang or Discord's Terms!")
     }
- 
-  })
+  }
  
 //Since this code is dumb we have added coon,coons, quer, qeer, rape, rapes, raped, rapist, raping, nicker, nickers, icker, jew, jews, nibb, nib, nig, dyke, dike ,kkk,
 //kys,k k k,rape,spic,spik,raid,raided, raider, jews, rapes, rape ,rapes , raped , rapist ,raid ,raided , raider to another bot.
