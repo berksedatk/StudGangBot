@@ -1,19 +1,20 @@
 const Discord = require("discord.js");
 
 module.exports = {
-  name: "spank",
+  name: "peg",
   category: "Fun",
-  description: "Spank Someone.. :flushed:",
+  description: "Peg Someone.. <:flooked:727298537402007572>",
+  aliases: ["pegg"],
   usage: "[mention]",
   cooldown: 5,
   guildOnly: true,
   execute(bot, message, args) {
     const author = message.author;
     const reciever = message.mentions.users.first();
-    if (!reciever) return message.channel.send(":x: | You need someone to spank, mention them!");
+    if (!reciever) return message.channel.send(":x: | You need someone to peg, mention them!");
     const response = [
-      `${author} starts spanking ${reciever}.. <:pepeOK:567778750104731648>`,
-      `The strange e-couple in the server, ${author} and ${reciever}, start giving eachother spankings. :sob:`
+      `${author} starts pegging ${reciever}.. <:flooked:727298537402007572>`,
+      `The strange e-couple in the server, ${author} and ${reciever}, start pegging eachother. :sob:`
 
     ]
     const images = [
@@ -32,10 +33,10 @@ module.exports = {
     const answer = response[Math.floor(Math.random() * response.length)];  
     const image = images[Math.floor(Math.random() * images.length)];
   
-    const spankEmbed = new Discord.MessageEmbed()
+    const pegEmbed = new Discord.MessageEmbed()
     .setDescription(answer)
     .setImage(image)
     .setColor('RANDOM')
-    message.channel.send(spankEmbed)
+    message.channel.send(pegEmbed)
   }
 };
