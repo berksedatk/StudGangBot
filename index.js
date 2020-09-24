@@ -233,7 +233,7 @@ bot.on("message", msg => {
   filter.forEach(word => {
     if (msg.content.toLowerCase().includes(word)) {
       msg.delete()
-      return msg.reply("Your message has been removed for containing words that may go against Discord's Terms of Service or something of the utmost inappropriate!").then(m => m.delete({timeout: 10000}))
+      return msg.reply("Your message has been removed for containing words that possibly go against StudGang's or Discord's Terms!").then(m => m.delete({timeout: 7000}))
     }
  
   })
