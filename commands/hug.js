@@ -13,7 +13,7 @@ module.exports = {
     if (message.mentions.everyone === true) {
       const everyoneEmbed = new Discord.MessageEmbed()
       .setDescription(`${message.author} HUGS EVERYONE HOLY SHIT!`)
-      .setImage(image)
+      .setImage("https://cdn.discordapp.com/emojis/758607101446062081.png")
       .setColor("RANDOM")
       message.channel.send(everyoneEmbed) 
     } else {
