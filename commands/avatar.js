@@ -20,7 +20,7 @@ module.exports = {
       embed: {
         description: `Here is **${user.tag}**'s avatar:`,
         image: {
-          url: user.avatarURL({format:"png",dynamic:true})
+          url: user.avatarURL({format:"png",dynamic:true,size:1024})
         },
         color: "RED",
         footer: {
