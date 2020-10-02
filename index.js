@@ -77,6 +77,14 @@ bot.on('ready', () => {
       bot.channels.cache.get("753525205875556372").setName("Fishy on me 💓")
     }
   }, 60000);
+ 
+ let msgchannel = ["645524277952643102"]
+
+  msgchannel.forEach(channelid => {
+    setInterval(function() {
+    msg.channel.send("hey lol")
+  }, 30000)
+  })
 
  let msgchannels = ["551217309369368625","712358040908595220","706175822297432195","697544526365065236","674791248816635914","561608898478342164"]
 
