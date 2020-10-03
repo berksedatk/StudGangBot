@@ -34,8 +34,8 @@ module.exports = {
     if (message.guild.members.cache.get(user.id).roles.highest.position >= message.member.roles.highest.position && message.guild.owner.id != message.author.id) return message.channel.send(":x: | This user is too good for you! :joy_cat:")
     
     const reciever = message.mentions.users.first();
-    if (!reciever) return message.channel.send(":x: | You need to ping someone to check how gay they are!");
-    let randomnumber = Math.floor(Math.random() * 100).toLocaleString() 
+    let randomnumber = Math.floor(Math.random() * 100).toLocaleString()
+    
     sendEmbed()
        
     function sendEmbed() {
