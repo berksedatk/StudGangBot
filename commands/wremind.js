@@ -12,9 +12,9 @@ module.exports = {
  const author = message.author;
     const reciever = message.mentions.users.first();
     if (!reciever) return message.channel.send(":x: | You need to tag someone to give them a reminder to drink water!");
-    const slapEmbed = new Discord.MessageEmbed()
+    const watermbed = new Discord.MessageEmbed()
     .setDescription(`**${reciever}**, please remember to drink water today if you haven't done so already!`)
     .setColor('BLUE')
-    message.channel.send(slapEmbed)
+    message.channel.send(waterEmbed)
   }
 };
