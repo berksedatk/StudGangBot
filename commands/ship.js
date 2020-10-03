@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports = {
   name: "ship",
   category: "Fun",
-  description: "Ship yourself or someone else to see how good of a couple it makes!/n **Custom Command**: kia.#0002",
+  description: 'Ship yourself or someone else to see how good of a couple it makes!/n **Custom Command**: kia.#0002',
   usage: "<user> [user]",
   cooldown: 5,
   async execute(bot, message, args) {
