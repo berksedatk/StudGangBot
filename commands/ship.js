@@ -10,6 +10,7 @@ module.exports = {
     if (!args[0]) return message.channel.send(":x: | You need something or someone to ship yourself with!")
 
     let randomnumber = Math.floor(Math.random() * 100)
+    console.log(randomnumber)
     let loadingbar = ""
     let custommsg = ""
     if (randomnumber = 0) {
@@ -53,7 +54,7 @@ module.exports = {
       .setTimestamp()
       .setTitle("❤️**Ship Meter**❤️")
       .setFooter(`Requested by: ${message.author.tag}`, message.author.avatarURL())
-      .addField(`${args[0]} and ${args[1]} ${randomnumber}% ${custommsg}`, loadingbar)
+      .setDescription(`${args[0]} and ${args[1]}\n${randomnumber}% - ${custommsg}\n ${loadingbar}`)
       message.channel.send(shipEmbed)
     } else if (args[0]) {
       let shipEmbed = new Discord.MessageEmbed()
@@ -61,7 +62,7 @@ module.exports = {
       .setTimestamp()
       .setTitle("❤️**Ship Meter**❤️")
       .setFooter(`Requested by: ${message.author.tag}`, message.author.avatarURL())
-      .addField(`${args[0]} and ${message.author} ${randomnumber}% ${custommsg}`, loadingbar)
+      .setDescription(`${args[0]} and ${message.author}\n${randomnumber}% - ${custommsg}\n ${loadingbar}`)
       message.channel.send(shipEmbed)
     }
   }
