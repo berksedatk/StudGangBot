@@ -53,7 +53,7 @@ module.exports = {
       .setTimestamp()
       .setTitle("❤️ **Ship Meter** ❤️")
       .setFooter(`Requested by: ${message.author.tag}`, message.author.avatarURL())
-      .setDescription(`${args[0]} and ${args[1]}\n${randomnumber}% - ${custommsg}\n ${loadingbar}`)
+      .setDescription(`${args[0]} and ${args[1]}\n${number}% - ${custommsg}\n ${loadingbar}`)
       message.channel.send(shipEmbed)
     } else if (args[0]) {
       let shipEmbed = new Discord.MessageEmbed()
@@ -61,7 +61,7 @@ module.exports = {
       .setTimestamp()
       .setTitle("❤️ **Ship Meter** ❤️")
       .setFooter(`Requested by: ${message.author.tag}`, message.author.avatarURL())
-      .setDescription(`${args[0]} and ${message.author}\n${randomnumber}% - ${custommsg}\n ${loadingbar}`)
+      .setDescription(`${args[0]} and ${message.author}\n${number}% - ${custommsg}\n ${loadingbar}`)
       message.channel.send(shipEmbed)
     }
   }
