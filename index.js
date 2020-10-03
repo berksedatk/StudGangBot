@@ -82,7 +82,7 @@ bot.on('ready', () => {
 
   msgchannel.forEach(channelid => {
     setInterval(function() {
-    msg.channel.send("hey lol")
+    msgchannel.send("hey lol")
   }, 30000)
   })
 
