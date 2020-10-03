@@ -42,9 +42,12 @@ module.exports = {
     } else if (number < 91) {
       loadingbar = ":red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::black_large_square:"
       custommsg = "Wholesome! :smiling_face_with_3_hearts:"
-    } else if (number == 100) {
+    } else if (number < 100) {
       loadingbar = ":red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square:"
       custommsg = "A match!!! :heart_eyes:"
+    } else if (number == 100) {
+      loadingbar = ":red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square:"
+      custommsg = "A perfect matchhhhh!!! :heart_eyes::smiling_face_with_3_hearts::heart_eyes:smirk_cat:::heart_eyes::heart_eyes::heart:"
     }
 
     if (args[1]) {
@@ -53,7 +56,7 @@ module.exports = {
       .setTimestamp()
       .setTitle("❤️ **Ship Meter** ❤️")
       .setFooter(`Requested by: ${message.author.tag}`, message.author.avatarURL())
-      .setDescription(`${args[0]} and ${args[1]}\n${number}% - ${custommsg}\n ${loadingbar}`)
+      .setDescription(`${args[0]} & ${args[1]}\n${number}% - ${custommsg}\n ${loadingbar}`)
       message.channel.send(shipEmbed)
     } else if (args[0]) {
       let shipEmbed = new Discord.MessageEmbed()
