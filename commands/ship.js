@@ -52,7 +52,7 @@ module.exports = {
       .setColor("PINK")
       .setTimestamp()
       .setTitle("**Ship Meter**")
-      .setAuthor(user.tag, user.avatarURL())
+      .setAuthor(message.author.tag, message.author.avatarURL())
       .addField(custommsg, loadingbar)
       message.channel.send(shipEmbed)
     }
