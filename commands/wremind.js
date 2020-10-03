@@ -1,22 +1,20 @@
-const Discord = require("discord.js");
+\const Discord = require("discord.js");
 
 module.exports = {
-  name: "water-remind",
+  name: "water-mind",
   category: "Fun",
-  description: "Remind someone to be healthy and drink water!",
-  aliases: "wremind","water","reminder",
-  cooldown: 5,
+  description: "Remind someone to drink water today!",
+  aliases: "water","remind",
   usage: "[mention]",
+  cooldown: 5,
   guildOnly: true,
-  execute(bot, message, args) {
-
+  execute(bot, message, args) {    
  const author = message.author;
     const reciever = message.mentions.users.first();
-    if (!reciever) return message.channel.send(":x: | You need to tag someone to remind to drink water!");
+    if (!reciever) return message.channel.send(":x: | You need to tag someone to give them a reminder to drink water!");
     const slapEmbed = new Discord.MessageEmbed()
-    .setDescription(`**${reciever}**, please remember to drink water today if you haven't done so today!`)
+    .setDescription(`**${reciever}**, please remember to drink water today if you haven't done so already!`)
     .setColor('BLUE')
     message.channel.send(slapEmbed)
-   message.delete(); 
   }
 };
