@@ -4,7 +4,7 @@ module.exports = {
   name: "water-remind",
   category: "Fun",
   description: "Remind someone to drink water!",
-  aliases: "remind",
+  aliases: ["remind","wremind"],
   usage: "[mention]",
   cooldown: 5,
   guildOnly: true,
