@@ -13,37 +13,37 @@ module.exports = {
     let loadingbar = ""
     let custommsg = ""
     if (number == 0) {
-      loadingbar = ":black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square:"
+      loadingbar = ":skull::skull::skull::skull::skull::skull::skull::skull::skull::skull:"
       custommsg = "No love at all! :broken_heart:"
     } else if (number < 11) {
-      loadingbar = ":red_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square:"
+      loadingbar = ":black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square:"
       custommsg = "Not a match! :person_gesturing_no:"
     } else if (number < 21) {
-      loadingbar = ":red_square::red_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square:"
+      loadingbar = ":red_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square:"
       custommsg = "Maybe a small hope. :crying_cat_face:"
     } else if (number < 31) {
-      loadingbar = ":red_square::red_square::red_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square:"
+      loadingbar = ":red_square::red_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square:"
       custommsg = "Not too much :no_mouth:"
     } else if (number < 41) {
-      loadingbar = ":red_square::red_square::red_square::red_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square:"
+      loadingbar = ":red_square::red_square::red_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square:"
       custommsg = "It has potential :thinking:"
     } else if (number < 51) {
-      loadingbar = ":red_square::red_square::red_square::red_square::red_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square:"
+      loadingbar = ":red_square::red_square::red_square::red_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square:"
       custommsg = "Might be a good match! :clap:"
     } else if (number < 61) {
-      loadingbar = ":red_square::red_square::red_square::red_square::red_square::red_square::black_large_square::black_large_square::black_large_square::black_large_square:"
+      loadingbar = ":red_square::red_square::red_square::red_square::red_square::black_large_square::black_large_square::black_large_square::black_large_square::black_large_square:"
       custommsg = "Cute together uwu :eyes:"
     } else if (number < 71) {
-      loadingbar = ":red_square::red_square::red_square::red_square::red_square::red_square::red_square::black_large_square::black_large_square::black_large_square:"
+      loadingbar = ":red_square::red_square::red_square::red_square::red_square::red_square::black_large_square::black_large_square::black_large_square::black_large_square:"
       custommsg = "More likely :yum:"
     } else if (number < 81) {
-      loadingbar = ":red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::black_large_square::black_large_square:"
+      loadingbar = ":red_square::red_square::red_square::red_square::red_square::red_square::red_square::black_large_square::black_large_square::black_large_square:"
       custommsg = "Adorable together :smirk_cat:"
     } else if (number < 91) {
-      loadingbar = ":red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::black_large_square:"
+      loadingbar = ":red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::black_large_square::black_large_square:"
       custommsg = "Wholesome! :smiling_face_with_3_hearts:"
     } else if (number < 100) {
-      loadingbar = ":red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square:"
+      loadingbar = ":red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::black_large_square:"
       custommsg = "A match!!! :heart_eyes:"
     } else if (number == 100) {
       loadingbar = ":red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square:"
