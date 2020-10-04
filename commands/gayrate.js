@@ -50,7 +50,7 @@ module.exports = {
       custommsg = "OMl ur so gAy :confounded:"
     }
 
-    if (args[1]) {
+    if (args[0]) {
       let gayEmbed = new Discord.MessageEmbed()
       .setColor("#6EA3F1")
       .setTimestamp()
@@ -58,7 +58,7 @@ module.exports = {
       .setFooter(`Requested by: ${message.author.tag}`, message.author.avatarURL())
       .setDescription(`:yum: **${args[0]}**'s Gay Rate :yum:\n\n${number}% - ${custommsg}\n ${loadingbar}`)
       message.channel.send(gayEmbed)
-    } else if (args[0]) {
+    } else if (args[1]) {
       let gayEmbed = new Discord.MessageEmbed()
       .setColor("#6EA3F1")
       .setTimestamp()
