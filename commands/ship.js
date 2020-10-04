@@ -8,7 +8,6 @@ module.exports = {
   cooldown: 5,
   async execute(bot, message, args) {
     if (!args[0]) return message.channel.send(":x: | You need something or someone to ship yourself with!");
-    if (!message.guild.members.cache.get(user.id).bannable) return message.channel.send(":x: | This user is too good for you!")
     let number = Math.floor(Math.random() * 100)
     let loadingbar = ""
     let custommsg = ""
