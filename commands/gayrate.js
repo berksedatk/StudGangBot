@@ -58,14 +58,6 @@ module.exports = {
       .setFooter(`Requested by: ${message.author.tag}`, message.author.avatarURL())
       .setDescription(`:yum: **${args[0]}**'s Gay Rate :yum:\n\n${number}% - ${custommsg}\n ${loadingbar}`)
       message.channel.send(gayEmbed)
-    } else if (args[1]) {
-      let gayEmbed = new Discord.MessageEmbed()
-      .setColor("#6EA3F1")
-      .setTimestamp()
-      .setTitle(":heart_eyes_cat: Gay Meter :heart_eyes_cat:")
-      .setFooter(`Requested by: ${message.author.tag}`, message.author.avatarURL())
-      .setDescription(`:yum: **${args[1]}** Gay Rate :yum:\n\n${number}% - ${custommsg}\n ${loadingbar}`)
-      message.channel.send(gayEmbed)
-    }
+    } 
   }
 };
