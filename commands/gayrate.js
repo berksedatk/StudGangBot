@@ -4,7 +4,7 @@ module.exports = {
   name: "gayrate",
   aliases: ["grate","gay-rate","gay"],
   category: "Fun",
-  description: 'Figure our how gay someone/something is by simply executing this command! /n(this command is just a joke btw lol it is not meant to be homophobic)',
+  description: 'Figure our how gay someone/something is by simply executing this command! \n(this command is just a joke btw lol it is not meant to be homophobic)',
   usage: "<user>",
   cooldown: 5,
   async execute(bot, message, args) {
