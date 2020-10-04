@@ -64,7 +64,7 @@ module.exports = {
       .setTimestamp()
       .setTitle(":heart_eyes_cat: Gay Meter :heart_eyes_cat:")
       .setFooter(`Requested by: ${message.author.tag}`, message.author.avatarURL())
-      .setDescription(`:yum: **${args[0]}**'s Gay Rate :yum:\n\n${number}% - ${custommsg}\n ${loadingbar}`)
+      .setDescription(`:yum: "**${args[0]}**" Gay Rate :yum:\n\n${number}% - ${custommsg}\n ${loadingbar}`)
       message.channel.send(gayEmbed)
     }
   }
