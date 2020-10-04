@@ -1,13 +1,14 @@
 const Discord = require("discord.js");
 
 module.exports = {
-  name: "gay2",
+  name: "gayrate",
+  aliases: ["grate","gay-rate","gay"],
   category: "Fun",
   description: 'testing lol',
   usage: "<user>",
   cooldown: 5,
   async execute(bot, message, args) {
-    if (!args[0]) return message.channel.send(":x: | You need someone to check how gay they are!");
+    if (!args[0]) return message.channel.send(":x: | You need to mention someone or something to check the gay-rate!");
     let number = Math.floor(Math.random() * 100)
     let loadingbar = ""
     let custommsg = ""
