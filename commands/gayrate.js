@@ -44,7 +44,7 @@ module.exports = {
       custommsg = "Hey sisters! :smirk:"
     } else if (number < 100) {
       loadingbar = ":red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::black_large_square:"
-      custommsg = "A match!!! :heart_eyes:"
+      custommsg = "Such a queen! :heart_eyes:cat:"
     } else if (number == 100) {
       loadingbar = ":red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square:"
       custommsg = "OMl ur so gAy :confounded:"
