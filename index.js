@@ -47,15 +47,6 @@ bot.on('ready', () => {
     'The StudGang',
     ];
  
-bot.on('ready', () => {
-    const channel = bot.channels.cache.get("591123171504029696");
-    if (!channel) return console.error("The channel does not exist!");
-    channel.join().then(connection => {
-        console.log("Successfully connected.");
-    }).catch(e => {
-        console.error(e);
-    });
-});
   setInterval(() => {
     let activity = activities[Math.floor(Math.random() * activities.length)];
     bot.user.setActivity(activity, { type: "WATCHING" });
