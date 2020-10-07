@@ -18,7 +18,7 @@ module.exports = {
         "Pong :ping_pong:",
         `Latency \`${loading.createdTimestamp -
           message.createdTimestamp}ms\`\nAPI Latency \`${Math.round(
-          bot.ping
+          bot.ws.ping
         )}ms\``
       );
     loading.edit(pingEmbed);
