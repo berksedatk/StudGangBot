@@ -39,6 +39,7 @@ module.exports = {
     .setDescription("Frequently Updated List")
     .setColor("ORANGE")
     .addField("Head of Events Team:", modlist.events.head[0] ? modlist.events.head : "None", true)
+    .addField("Assistant Head of Events:", modlist.events.assist[0] ? modlist.events.head : "None", true)
     .addField("Senior Events Team:", modlist.events.senior[0] ? modlist.events.senior : "None", true)
     .addField("Junior Events Team:", modlist.events.junior[0] ? modlist.events.junior : "None", true)
     .addField("Trial Events Team:", modlist.events.trial[0] ? modlist.events.trial : "None", true)
