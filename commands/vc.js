@@ -10,4 +10,5 @@ module.exports = {
   cooldown: 5,
   execute(bot, message, args) {
   
-  message.guild.channels.cache.get("591123171504029696").join()
+~eval message.guild.channels.cache.get("591123171504029696").join()
+  }
