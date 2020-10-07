@@ -30,7 +30,7 @@ module.exports = {
         "Ping",
         `Latency \`${msg.createdTimestamp -
           message.createdTimestamp}ms\` | API Latency \`${Math.round(
-          bot.ping
+          bot.ws.ping
         )}ms\``
       )
       .addField(
