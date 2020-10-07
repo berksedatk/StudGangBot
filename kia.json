@@ -1,10 +1,10 @@
 {
   "kia": {
-    "attractive": true,
-    "cool": true,
+    "attractive": false,
+    "cool": false,
     "smexy": true,
-    "gay": false,
-    "nicebutt": true,
-    "nicebobs": true
+    "gay": true,
+    "nicebutt": 'flat',
+    "nicebobs": 'flat'
   }
 }
