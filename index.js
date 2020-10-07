@@ -55,9 +55,9 @@ bot.on('ready', () => {
   bot.user.setStatus("dnd").catch(console.error);
 
   //Channel update
-  bot.channels.cache.get("708151643539243018").setName(`『Members』『${bot.guilds.cache.get("548949555597803550").members.cache.size}』`)
+  bot.channels.cache.get("708151643539243018").setName(`★Members★ ★${bot.guilds.cache.get("548949555597803550").members.cache.size}★`)
   setInterval(function() {
-    bot.channels.cache.get("708151643539243018").setName(`『Members:』『${bot.guilds.cache.get("548949555597803550").members.cache.size}』`)
+    bot.channels.cache.get("708151643539243018").setName(`★Members:★ ★${bot.guilds.cache.get("548949555597803550").members.cache.size}★`)
   }, 300000)
 
   setInterval(() => {
@@ -72,7 +72,7 @@ bot.on('ready', () => {
    setInterval(() => {
     var date = new Date();
     if (date.getHours() - 5 >= 0 && date.getHours() - 5 < 12){
-      bot.channels.cache.get("753525205875556372").setName('💞Ketchup Frapper’s Basement💞')
+      bot.channels.cache.get("753525205875556372").setName('☠️🥀Kia’s Guillotine☠️🥀')
     } else if (date.getHours() - 5 >= 12){
       bot.channels.cache.get("753525205875556372").setName("Fishy on me 💓")
     }
