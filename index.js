@@ -55,9 +55,9 @@ bot.on('ready', () => {
   bot.user.setStatus("dnd").catch(console.error);
 
   //Channel update
-  bot.channels.cache.get("708151643539243018").setName(`★Members★ ★${bot.guilds.cache.get("548949555597803550").members.cache.size}★`)
+  bot.channels.cache.get("708151643539243018").setName(`★Members ${bot.guilds.cache.get("548949555597803550").members.cache.size}★`)
   setInterval(function() {
-    bot.channels.cache.get("708151643539243018").setName(`★Members:★ ★${bot.guilds.cache.get("548949555597803550").members.cache.size}★`)
+    bot.channels.cache.get("708151643539243018").setName(`★Members: ${bot.guilds.cache.get("548949555597803550").members.cache.size}★`)
   }, 300000)
  
   setInterval(() => {
