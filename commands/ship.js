@@ -46,7 +46,7 @@ module.exports = {
       custommsg = "A match!!! :heart_eyes:"
     } else if (number == 100) {
       loadingbar = ":red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square::red_square:"
-      custommsg = "A perfect matchhhhh!!! :heart_eyes::smiling_face_with_3_hearts::heart_eyes:smirk_cat:::heart_eyes::heart_eyes::heart:"
+      custommsg = "A perfect matchhhhh!!! :heart_eyes::smiling_face_with_3_hearts::heart_eyes::smirk_cat::heart_eyes::heart_eyes::heart:"
     }
 
     if (args[1]) {
