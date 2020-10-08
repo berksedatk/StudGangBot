@@ -8,7 +8,7 @@ module.exports = {
   cooldown: 5,
   async execute(bot, message, args) {
     if (!args[0]) return message.channel.send(":x: | You need something or someone to ship yourself with!");
-    let number = Math.floor(Math.random() * 100)
+    let number = Math.floor(Math.random() * 101)
     let loadingbar = ""
     let custommsg = ""
     if (number == 0) {
