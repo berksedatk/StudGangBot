@@ -9,10 +9,8 @@ module.exports = {
   execute(bot, message, args) {
     const serverQueue = bot.queue.get(message.guild.id);
     if (message.member.voice.channel == serverQueue.voiceChannel) return message.channel.send("You have to be in the same voice channel to stop the music!");
-    if (!serverQueue)
-      return message.channel.send("There is no song that I could end!");
-      serverQueue.songs = [];
-      serverQueue.connection.dispatcher.end();
-    }
+    if (!serverQueue) return message.channel.send("There is no song that I could end!");
+    serverQueue.songs = [];
+    serverQueue.connection.dispatcher.end();
   }
 };
