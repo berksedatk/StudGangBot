@@ -25,6 +25,7 @@ const bot = new Discord.Client({disableMentions: "everyone"});
 bot.snipes = new Map();
 bot.edits = new Map();
 bot.wallets = new Map();
+bot.queue = new Map();
 //#Load Commands#
 
 bot.commands = new Discord.Collection();
@@ -46,7 +47,7 @@ bot.on('ready', () => {
     `For ~help`,
     'The StudGang',
     ];
- 
+
   setInterval(() => {
     let activity = activities[Math.floor(Math.random() * activities.length)];
     bot.user.setActivity(activity, { type: "WATCHING" });
@@ -59,7 +60,7 @@ bot.on('ready', () => {
   setInterval(function() {
     bot.channels.cache.get("708151643539243018").setName(`★Members: ${bot.guilds.cache.get("548949555597803550").members.cache.size}★`)
   }, 300000)
- 
+
   setInterval(() => {
     var date = new Date();
     if (date.getHours() - 5 >= 0 && date.getHours() - 5 < 12){
@@ -68,7 +69,7 @@ bot.on('ready', () => {
       bot.channels.cache.get("591123171504029696","752579468404719646").setName("🍝 | noodles cave")
     }
   }, 60000);
- 
+
    setInterval(() => {
     var date = new Date();
     if (date.getHours() - 5 >= 0 && date.getHours() - 5 < 12){
@@ -77,7 +78,7 @@ bot.on('ready', () => {
       bot.channels.cache.get("753525205875556372").setName("Fishy on me 💓")
     }
   }, 60000);
- 
+
 
  let msgchannels = ["551217309369368625","712358040908595220","706175822297432195","697544526365065236","674791248816635914","561608898478342164"]
 
@@ -230,15 +231,15 @@ bot.on("message", msg => {
 'nigre','nigar','niggah','nigguh','Niglet','nigglet','Nigra','negra','niggra','nigrah','nigruh','chinki','chinky',
 'spick','spig','spigotty','whitey','nazi','Wigger','Wigga','wegro','nikker','nikker','nikka','nibbah',
 'nibba','nicka','f a g g o t','f a g','molest','molester','molestar','fagot','faget','niggar','n1gg@','n1gg@','n1gga','negro','kill urself','kill yourself']
- 
+
   filter.forEach(word => {
     if (msg.content.toLowerCase().includes(word)) {
       msg.delete()
       return msg.reply("Your message has been removed for containing words that possibly go against StudGang or Discord's Terms!").then(m => m.delete({timeout: 7000}))
     }
- 
+
   })
- 
+
 //We have added coon,coons, quer, qeer, rape, rapes, raped, rapist, raping, nicker, nickers, icker, jew, jews, nibb, nib, nig, dyke, dike ,kkk,
 //kys,k k k,rape,spic,spik,raid,raided, raider, jews, rapes, rape ,rapes , raped , rapist ,raid ,raided , raider to another bot.
 
