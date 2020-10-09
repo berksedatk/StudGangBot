@@ -50,24 +50,24 @@ module.exports = {
      console.log(serverQueue.songs);
      return message.channel.send(`${song.title} has been added to the queue!`);
     }
-  }
 
-  function play(guild, song) {
-    const serverQueue = bot.queue.get(guild.id);
-    if (!song) {
-      serverQueue.voiceChannel.leave();
-      bot.queue.delete(guild.id);
-      return;
+    function play(guild, song) {
+      const serverQueue = bot.queue.get(guild.id);
+      if (!song) {
+        serverQueue.voiceChannel.leave();
+        bot.queue.delete(guild.id);
+        return;
+      }
+
+      const dispatcher = serverQueue.connection
+        .play(ytdl(song.url))
+        .on("finish", () => {
+          serverQueue.songs.shift();
+          play(guild, serverQueue.songs[0]);
+        })
+        .on("error", error => console.error(error));
+      dispatcher.setVolumeLogarithmic(serverQueue.volume / 5);
+      serverQueue.textChannel.send(`Start playing: **${song.title}**`);
     }
-
-    const dispatcher = serverQueue.connection
-      .play(ytdl(song.url))
-      .on("finish", () => {
-        serverQueue.songs.shift();
-        play(guild, serverQueue.songs[0]);
-      })
-      .on("error", error => console.error(error));
-    dispatcher.setVolumeLogarithmic(serverQueue.volume / 5);
-    serverQueue.textChannel.send(`Start playing: **${song.title}**`);
   }
 };
