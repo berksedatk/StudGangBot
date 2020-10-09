@@ -19,7 +19,7 @@ module.exports = {
       if (!message.mentions.users.first()) return message.channel.send(":x: | You have to mention a user to give them bowls of macaroni!");
       
       mncEmbed.setDescription(`**${message.mentions.users.first()}**, ${message.author} gave you ${number} bowls of macaroni! :cheese: <:)`)
-      cheeseEmbed.setColor('YELLOW')
+      mncEmbed.setColor('YELLOW')
     } else {
       if (!args[0]) return message.channel.send(":x: | You have to mention someone to give them a bowl of macaroni!");
       if (!message.mentions.users.first()) return message.channel.send(":x: | You have to mention a user to give them a bowl of macaorni!");
