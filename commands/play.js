@@ -54,10 +54,10 @@ module.exports = {
 };
 
 function play(guild, song) {
-  const serverQueue = queue.get(guild.id);
+  const serverQueue = bot.queue.get(guild.id);
   if (!song) {
     serverQueue.voiceChannel.leave();
-    queue.delete(guild.id);
+    bot.queue.delete(guild.id);
     return;
   }
 
