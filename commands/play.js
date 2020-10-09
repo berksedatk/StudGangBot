@@ -18,7 +18,7 @@ module.exports = {
 
     const songInfo = await ytdl.getInfo(args.join(" "));
     const song = {
-      title: songInfo.title,
+      title: info.videoDetails.title,
       url: songInfo.videoDetails.video_url
     }
     console.log(song)
@@ -29,6 +29,7 @@ module.exports = {
        textChannel: message.channel,
        voiceChannel: voiceChannel,
        connection: null,
+       currentSong: {},
        songs: [],
        volume: 5,
        playing: true,
@@ -62,7 +63,7 @@ module.exports = {
       const dispatcher = serverQueue.connection
         .play(ytdl(song.url))
         .on("finish", () => {
-          serverQueue.songs.shift();
+          serverQueue.currentSong = serverQueue.songs.shift();
           play(guild, serverQueue.songs[0]);
         })
         .on("error", error => console.error(error));
