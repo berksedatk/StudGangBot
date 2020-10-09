@@ -59,7 +59,7 @@ module.exports = {
       .on("error", error => console.error(error));
       dispatcher.setVolumeLogarithmic(serverQueue.volume / 5);
       serverQueue.textChannel.send(`Start playing: **${song.title}**`);
-  };
+  }
 };
 
 function play(guild, song) {
