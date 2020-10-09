@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports = {
   name: "stop",
-  category: "Utility",
+  category: "Music",
   description: "Stops the music",
   aliases: ["fuckoff"],
   cooldown: 5,

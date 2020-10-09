@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports = {
   name: "nowplaying",
-  category: "Utility",
+  category: "Music",
   description: "Current Playing song",
   aliases: ["np","currentsong","current","playing"],
   cooldown: 5,

@@ -14,6 +14,7 @@ module.exports = {
     const moderation = [];
     const utility = [];
     const misc = [];
+    const music = [];
     const { commands } = message.client;
     if (!args[0]) {
       commands.map(c => {
@@ -21,6 +22,8 @@ module.exports = {
           return;
         } else if (c.category === "General") {
           general.push(`\`${c.name}\``);
+        } else if (c.category === "Music") {
+          music.push(`\`${c.name}\``);
         } else if (c.category === "Fun") {
           fun.push(`\`${c.name}\``);
         } else if (c.category === "Moderation") {
@@ -39,6 +42,7 @@ module.exports = {
         .setFooter("Requested by " + message.author.username,message.author.avatarURL())
         .setColor("999999");
       if (general[0]) helpEmbed.addField("General Commands:", general.join(", "));
+      if (music[0]) helpEmbed.addField("Music Commands:", music.join(", "));
       if (fun[0]) helpEmbed.addField("🎉 Fun Commands:", fun.join(", "));
       if (moderation[0]) helpEmbed.addField("🛠️ Moderation Commands:", moderation.join(", "));
       if (utility[0]) helpEmbed.addField("🔧 Utility Commands:", utility.join(", "));
@@ -53,7 +57,7 @@ module.exports = {
     } else if (args[0]) {
       const name = args[0].toLowerCase();
       const command = commands.get(name) || commands.find(c => c.aliases && c.aliases.includes(name));
-      
+
       if (!command) {
         return message.reply(`This command doesn't exists! use ${config.prefix}help to get into commands.`);
       }

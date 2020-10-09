@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports = {
   name: "queue",
-  category: "Utility",
+  category: "Music",
   description: "See the current queue",
   aliases: ["q"],
   cooldown: 5,

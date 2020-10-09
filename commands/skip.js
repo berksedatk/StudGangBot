@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports = {
   name: "skip",
-  category: "Utility",
+  category: "Music",
   description: "Skip a song",
   cooldown: 5,
   execute(bot, message, args) {

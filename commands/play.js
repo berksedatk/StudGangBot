@@ -3,7 +3,7 @@ const ytdl = require('ytdl-core');
 
 module.exports = {
   name: "play",
-  category: "Utility",
+  category: "Music",
   description: "Plays something off youtube",
   usage: "[URL or search criteria]",
   cooldown: 5,
