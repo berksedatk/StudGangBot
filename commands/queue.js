@@ -11,10 +11,8 @@ module.exports = {
     if (!serverQueue) return message.channel.send("No songs in queue");
     if (message.member.voice.channel != serverQueue.voiceChannel) return message.channel.send("You have to be in the same voice channel to see the queue!");
     let queueMessage = `Now playing: **${serverQueue.currentSong.title}**\n`
-    if (serverQueue.songs.length > 0) {
-      serverQueue.songs.forEach(song => {
-        queueMessage += `-> ${song.title}`
-      })
+    for (let i; i > serverQueue.songs.length; i++;) {
+      if (i != 0) queueMessage += `<${i}> ${serverQueue.songs[i].title}\n`
     }
     message.channel.send(queueMessage)
   }
