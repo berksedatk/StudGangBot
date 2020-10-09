@@ -59,11 +59,11 @@ module.exports = {
         bot.queue.delete(guild.id);
         return;
       }
-
+      serverQueue.currentSong = serverQueue.songs[0]
       const dispatcher = serverQueue.connection
         .play(ytdl(song.url))
         .on("finish", () => {
-          serverQueue.currentSong = serverQueue.songs.shift();
+          serverQueue.songs.shift();
           play(guild, serverQueue.songs[0]);
         })
         .on("error", error => console.error(error));
