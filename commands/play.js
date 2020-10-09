@@ -21,6 +21,7 @@ module.exports = {
       title: songInfo.title,
       url: songInfo.video_url
     }
+    console.log(song)
 
     const serverQueue = bot.queue.get(message.guild.id);
     if (!serverQueue) {
