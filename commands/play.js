@@ -43,7 +43,7 @@ module.exports = {
       } catch (err) {
        console.log(err);
        bot.queue.delete(message.guild.id);
-       return message.channel.send(err);
+       return console.log(err);
       }
     } else {
      serverQueue.songs.push(song);
