@@ -18,7 +18,7 @@ module.exports = {
 
     const songInfo = await ytdl.getInfo(args.join(" "));
     const song = {
-      title: info.videoDetails.title,
+      title: songInfo.videoDetails.title,
       url: songInfo.videoDetails.video_url
     }
     console.log(song)
