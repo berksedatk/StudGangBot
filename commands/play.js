@@ -19,7 +19,7 @@ module.exports = {
     const songInfo = await ytdl.getInfo(args.join(" "));
     const song = {
       title: songInfo.title,
-      url: songInfo.video_url
+      url: songInfo.videoDetails.video_url
     }
     console.log(song)
 
@@ -33,7 +33,7 @@ module.exports = {
        volume: 5,
        playing: true,
       };
-      queue.set(message.guild.id, queueContruct);
+      bot.queue.set(message.guild.id, queueContruct);
       queueContruct.songs.push(song);
 
       try {
@@ -42,7 +42,7 @@ module.exports = {
        play(message.guild, queueContruct.songs[0]);
       } catch (err) {
        console.log(err);
-       queue.delete(message.guild.id);
+       bot.queue.delete(message.guild.id);
        return message.channel.send(err);
       }
     } else {
