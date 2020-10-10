@@ -4,6 +4,7 @@ module.exports = {
   name: "macaroni",
   category: "Fun",
   description: "Give someone macaroni! Noodle make this command so sab can gib him macaroni :pensive:",
+  admin: "true",
   usage: "[mention]",
   aliases: ["macncheese","mnc","mac"],
   cooldown: 5,
