@@ -7,7 +7,6 @@ module.exports = {
   usage: "[mention]",
   aliases: ["macncheese","mnc","mac"],
   cooldown: 5,
-  admin: "true",
   guildOnly: true,
   execute(bot, message, args) {
     
