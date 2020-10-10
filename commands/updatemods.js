@@ -5,7 +5,7 @@ module.exports = {
   name: "updatemods",
   category: "Utility",
   description: "Updates the mod list.",
-  reqPermissions: ["MANAGE_GUILD"],
+  admin: "true",
   execute(bot, message, args) {
 
 
