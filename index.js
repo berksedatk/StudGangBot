@@ -85,7 +85,7 @@ bot.on('ready', () => {
   msgchannels.forEach(channelid => {
     setInterval(function() {
     bot.channels.cache.get(channelid).send({embed: {description: "Always feel free to check out our main chat <#548949556210040862>! :)"}})
-  }, 1800000)
+  }, 7.2e+6)
   })
 
   console.log('Bot is ready.')
