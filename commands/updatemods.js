@@ -12,9 +12,9 @@ module.exports = {
     const modTotal = modlist.moderation.owner.length + modlist.moderation.coowner.length + modlist.moderation.headadmins.length + modlist.moderation.admins.length + modlist.moderation.managers.length +
           modlist.moderation.seniormods.length + modlist.moderation.mods.length + modlist.moderation.juniormods.length + modlist.moderation.helpers.length
     
-    const eventTotal = modlist.events.head.length + modlist.events.senior.length + modlist.events.junior.length + modlist.events.trial.length
+    const eventTotal = modlist.events.head.length + modlist.events.senior.length + modlist.events.junior.length + modlist.events.trial.length + modlist.events.assist.length
     
-    const partnerTotal = modlist.partner.managers.length +1
+    const partnerTotal = modlist.partner.managers.length -1 + 70("+ more")
     
 
     const moderationTeam = new Discord.MessageEmbed()
