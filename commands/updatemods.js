@@ -14,7 +14,7 @@ module.exports = {
     
     const eventTotal = modlist.events.head.length + modlist.events.senior.length + modlist.events.junior.length + modlist.events.trial.length + modlist.events.assist.length
     
-    const partnerTotal = modlist.partner.managers.length  + (" 70+ more")
+    const partnerTotal = modlist.partner.managers.length  + (" 70+ Total PM's")
     
 
     const moderationTeam = new Discord.MessageEmbed()
@@ -47,7 +47,7 @@ module.exports = {
 
    
     const partnerTeam = new Discord.MessageEmbed()
-    .setAuthor(`Total: ${partnerTotal}`, message.guild.iconURL())
+    .setAuthor(`Listed: ${partnerTotal}`, message.guild.iconURL())
     .setTitle("**StudGang Partnership Handlers**")
     .setDescription("Frequently Updated List")
     .setColor("GREEN")
