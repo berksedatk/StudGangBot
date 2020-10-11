@@ -14,7 +14,7 @@ module.exports = {
     
     const eventTotal = modlist.events.head.length + modlist.events.senior.length + modlist.events.junior.length + modlist.events.trial.length + modlist.events.assist.length
     
-    const partnerTotal = modlist.partner.managers.length -1 + 70("+ more")
+    const partnerTotal = modlist.partner.managers.length -1 + ("70+ more")
     
 
     const moderationTeam = new Discord.MessageEmbed()
