@@ -35,5 +35,6 @@ module.exports = {
           message.channel.send(inforulesEmbed).then(() => {
               message.channel.send(rulesEmbed)   
     
-    }
+  () } 
+                        }
 };
