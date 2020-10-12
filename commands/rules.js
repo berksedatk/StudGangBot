@@ -20,4 +20,3 @@ module.exports = {
     message.channel.send(rulesEmbed)
    message.delete(); 
   }
-};
