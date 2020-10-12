@@ -30,11 +30,10 @@ module.exports = {
  2) Bypassing or finding loopholes around the rules is not taken lightly. An example would be creating an alt to get out of a mute on your main account. (mute/temp-ban) /n`)
     .setColor('#f53348')
 
-    
-      message.delete().catch(O_o=>{}); 
+        message.delete().catch(O_o=>{}); 
           message.channel.send(inforulesEmbed).then(() => {
               message.channel.send(rulesEmbed)   
-    
+         )    
           })  
   }
 };
