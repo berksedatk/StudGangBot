@@ -33,7 +33,7 @@ module.exports = {
         message.delete().catch(O_o=>{}); 
           message.channel.send(inforulesEmbed).then(() => {
               message.channel.send(rulesEmbed)   
-         )    
+            
           })  
   }
 };
