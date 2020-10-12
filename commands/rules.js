@@ -17,4 +17,5 @@ module.exports = {
     .setDescription(`Thank you for joining StudGang, now we have some rules in place to ensure a safe environment for everyone here, if you notice people breaking rules, please message our [modmailbot ping] in the top right of your sidebar. \n`)
     .setColor('#1fbceb')
     message.channel.send(rulesEmbed)
-  };
+    }
+};
