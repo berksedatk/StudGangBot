@@ -61,8 +61,6 @@ bot.on('ready', () => {
 
   msgchannels.forEach(channelid => {
     setInterval(function() {
-      bot.channels.cache.get(channelid).send({embed:  {description: 'Make sure to read <#680898144195969028> before you create a ticket!\nOur staff work very hard to make sure to get to you as quick as they can!\nMake sure to add a reason to make their jobs a bit easier!\n **Commands Usage:** -new <reason>'}})
-      bot.channels.cache.get(channelid).send({embed:  {description: 'Make a suggestion for it to posted in <#622983734144139295> so everyone can vote on your server ideas!\n Keep in mind that not all suggestions will happen even if you have a lot of checkmarks!\nSilly suggestions can get you warned for wrong channel usage!\n**Command Usage** !suggest <suggestion>'}})
       bot.channels.cache.get(channelid).send({embed: {description: "Always feel free to check out our main chat <#548949556210040862>! :)"}})
     }, 7.2e+6)
   })
