@@ -5,19 +5,6 @@ function prettyString(string) {
  return string.replace(/_/g, " ").replace(/guild/gi, "Server").replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})
 }
 
-const http = require('http');
-const express = require('express');
-const app = express();
-const server = http.createServer(app);
-
-app.get('/', (req, res) => {
-  res.send("ok");
-})
-
-server.listen(process.env.PORT, () => {
-  console.log("Listenin on port " + process.env.PORT)
-})
-
 //#Discord Client#
 
 const Discord = require("discord.js");
@@ -74,31 +61,14 @@ bot.on('ready', () => {
 
   msgchannels.forEach(channelid => {
     setInterval(function() {
-    bot.channels.cache.get(channelid).send({embed: {description: "Always feel free to check out our main chat <#548949556210040862>! :)"}})
-  }, 7.2e+6)
+      bot.channels.cache.get(channelid).send({embed:  {description: 'Make sure to read <#680898144195969028> before you create a ticket!\nOur staff work very hard to make sure to get to you as quick as they can!\nMake sure to add a reason to make their jobs a bit easier!\n **Commands Usage:** -new <reason>'}})
+      bot.channels.cache.get(channelid).send({embed:  {description: 'Make a suggestion for it to posted in <#622983734144139295> so everyone can vote on your server ideas!\n Keep in mind that not all suggestions will happen even if you have a lot of checkmarks!\nSilly suggestions can get you warned for wrong channel usage!\n**Command Usage** !suggest <suggestion>'}})
+      bot.channels.cache.get(channelid).send({embed: {description: "Always feel free to check out our main chat <#548949556210040862>! :)"}})
+    }, 7.2e+6)
   })
 
   console.log('Bot is ready.')
-
 })
-
- let msgchannels = ["680905360613310464"]
-
-  msgchannels.forEach(channelid => {
-    setInterval(function() {
-    bot.channels.cache.get(channelid).send({embed:  {description: 'Make sure to read <#680898144195969028> before you create a ticket!\nOur staff work very hard to make sure to get to you as quick as they can!\nMake sure to add a reason to make their jobs a bit easier!\n **Commands Usage:** -new <reason>'}})
-  }, 5.04e+7)
-  })
-
-
-   let msgchannel = ["556929328672145430"]
-
-  msgchannel.forEach(channelid => {
-    setInterval(function() {
-    bot.channels.cache.get(channelid).send({embed:  {description: 'Make a suggestion for it to posted in <#622983734144139295> so everyone can vote on your server ideas!\n Keep in mind that not all suggestions will happen even if you have a lot of checkmarks!\nSilly suggestions can get you warned for wrong channel usage!\n**Command Usage** !suggest <suggestion>'}})
-  }, 2.484e+8) //lmao 69 hours
-  })
-
 
 //#On Message Deleted#
 
@@ -213,10 +183,7 @@ bot.on('message', message => {
 bot.on("message", msg => {
   if (msg.author.bot) return;
   if (msg.channel.type === "dm") return;
-
-  if (msg.member) {
-    if (msg.member.hasPermission("KICK_MEMBERS")) return;
-  }
+  if (msg.member) {if (msg.member.hasPermission("KICK_MEMBERS")) return;}
 
   //Blacklisted words
   const exception = ["556927352513363968"]
@@ -233,13 +200,7 @@ bot.on("message", msg => {
       msg.delete()
       return msg.reply("Your message has been removed for containing words that possibly go against StudGang or Discord's Terms!").then(m => m.delete({timeout: 7000}))
     }
-
   })
-
-//We have added coon,coons, quer, qeer, rape, rapes, raped, rapist, raping, nicker, nickers, icker, jew, jews, nibb, nib, nig, dyke, dike ,kkk,
-//kys,k k k,rape,spic,spik,raid,raided, raider, jews, rapes, rape ,rapes , raped , rapist ,raid ,raided , raider to another bot.
-
-
 
  //Only attachment filter
   const channels = ["580083502867808287","635320134847954954","718972368416014367","689865780292223012","739462264720982037","739464889487065139","739463286776659969"]
@@ -247,15 +208,6 @@ bot.on("message", msg => {
      msg.delete()
      msg.reply("Please do not talk in this channel!").then(m => m.delete({timeout: 5000}))
   }
-
-  //Automessage
-//  let rankroles = ["RID"]
-//  let has = false
-//  rankroles.forEach(r => {
-//    if (msg.member.roles.cache.has(r)) has = true
-//  })
-
-//  if (has === false && msg.content.toLowerCase().includes("context1") && msg.content.toLowerCase().includes("context2")) return msg.reply("reply");
 
  //Attachment limit
   let exchannel = ["673555443406077952","673587338865278978","673555191026417674","704071330391261184"]
