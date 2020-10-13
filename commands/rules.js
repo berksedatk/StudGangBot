@@ -40,15 +40,17 @@ Please respect the members boundaries! If a member tells you to stop doing somet
 9) Listen to what a staff member says. If they tell you to stop doing something, stop. If you feel that they abuse their powers, report it to the ModMail bot (<#747015088564731904>).`)
     .setColor('#1fbceb')
     
-        const inforulesEmbed = new Discord.MessageEmbed()
-    .setTitle("**__Server Information__**")
+        const introrulesEmbed = new Discord.MessageEmbed()
+    .setTitle("**__Server Introduction__**")
     .setDescription(`Hey, thanks for joining the server and taking the time to look at our set of rules laid out to ensure our server is a safe environment for everyone! If you see anyone breaking any of the rules, or have questions/concerns about the server, please feel free to DM our ModMail bot <@536542160703586324> to contact our support team. \n
 One thing to keep in mind when entering our chat is that we do indeed have a blacklisted words list set out. You can see a full list [here](https://pastebin.com/4BqkFZC6).
 We have implemented the blacklisted words system to make sure our server and yourself do not get in trouble for saying certain kinds of words! :smiley:`)
     .setColor('#f53348')
+        
+
 
         message.delete().catch(O_o=>{}); 
-          message.channel.send(inforulesEmbed).then(() => {
+          message.channel.send(introrulesEmbed).then(() => {
               message.channel.send(rulesEmbed).then(() => {
                 message.channel.send(rules2Embed)      
             
