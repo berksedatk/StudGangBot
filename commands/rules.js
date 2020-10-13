@@ -61,8 +61,12 @@ We have implemented the blacklisted words system to make sure our server and you
           message.channel.send(inforulesEmbed).then(() => {
               message.channel.send(rulesEmbed).then(() => {
                 message.channel.send(rules2Embed)
+                
             
           })  
             })  
+     catch (e) {
+        message.channel.send("An error occured: " + e);
+      }
   }
 };
