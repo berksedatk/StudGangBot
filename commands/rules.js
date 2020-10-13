@@ -25,8 +25,7 @@ module.exports = {
     
         const inforulesEmbed = new Discord.MessageEmbed()
     .setTitle("**__Server Information__**")
-    .setDescription(`Hey, thanks for joining the server and taking the time to look at our set of rules layed out to ensure our server is a safe environment for everyone! If you see anyone breaking any of the rules,
-please feel free to DM our ModMail bot <@536542160703586324> to contact our support team. \n
+    .setDescription(`Hey, thanks for joining the server and taking the time to look at our set of rules layed out to ensure our server is a safe environment for everyone! If you see anyone breaking any of the rules, please feel free to DM our ModMail bot <@536542160703586324> to contact our support team. \n
 One thing to keep in mind when entering our chat is that we do indeed have a blacklisted words list set out. You can see a full list [here](https://pastebin.com/4BqkFZC6).
 We have implemented the blacklisted words system to make sure our server and you do not get in trouble for saying certain kinds of words! :smiley:`)
     .setColor('#f53348')
