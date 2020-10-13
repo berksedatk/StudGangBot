@@ -29,20 +29,11 @@ module.exports = {
 5) We strictly forbid the Advertisment of other discord servers/communities, social media, third party websites, etc. This includes unsolicited DM and indirect advertisments. (warn/mute/temp-ban)
 \n**__Treat everyone including the staff, members and yourself with respect.__**
 6) We do not tolerate discrimination, harassment, hate speech, belittlement, racial slurs, pedophillia, the posting of content of other users without their consent, and extreme toxicity here. We ask you to please acknowlege that each member here is diverse and might take offense to what you say. Of course if you are only having a little fun with being toxic and the other members involved in your "joke" are fine with it then there shouldn't be a problem, however when a member tells you to stop, you stop immediately.
-Please respect the members boundaries! If a member tells you to stop doing something to them, please respect it and stop or staff will be forced to take actions such as a warn, mute, or even a temp-ban.
-\n**__Keep discussing regarding religion, suicide, and similar stuff out of chat__**
-7) We would like to limits topics like this as much as be can ass they can create uneccsary dicussion or toxicity. (warn/mute)
-\n**__Spamming/Flooding chats is not tolerated__**
-8) Spamming/Flooding is highly un-appreciated in this server! Examples of spamming would be sending the same/similar messages in a fast or slow interval. Flooding is posting content that overwhelmes a users screen. Spamming/Flooding isn't just words, it could be images, links, mentions, copypasta, etc.
-\n**__Always listen to what a staff member says__**
-9) Listen to what a staff member says. If they tell you to stop doing something, stop. If you feel that they abuse their powers, report it to the ModMail bot (<#747015088564731904>).`)
+Please respect the members boundaries! If a member tells you to stop doing something to them, please respect it and stop or staff will be forced to take actions such as a warn, mute, or even a temp-ban.`)
     .setColor('#1fbceb')
     
     const rules2Embed = new Discord.MessageEmbed()
-    .setDescription(`\n**__Treat everyone including the staff, members and yourself with respect.__**
-6) We do not tolerate discrimination, harassment, hate speech, belittlement, racial slurs, pedophillia, the posting of content of other users without their consent, and extreme toxicity here. We ask you to please acknowlege that each member here is diverse and might take offense to what you say. Of course if you are only having a little fun with being toxic and the other members involved in your "joke" are fine with it then there shouldn't be a problem, however when a member tells you to stop, you stop immediately.
-Please respect the members boundaries! If a member tells you to stop doing something to them, please respect it and stop or staff will be forced to take actions such as a warn, mute, or even a temp-ban.
-\n**__Keep discussing regarding religion, suicide, and similar stuff out of chat__**
+    .setDescription(`**__Keep discussing regarding religion, suicide, and similar stuff out of chat__**
 7) We would like to limits topics like this as much as be can ass they can create uneccsary dicussion or toxicity. (warn/mute)
 \n**__Spamming/Flooding chats is not tolerated__**
 8) Spamming/Flooding is highly un-appreciated in this server! Examples of spamming would be sending the same/similar messages in a fast or slow interval. Flooding is posting content that overwhelmes a users screen. Spamming/Flooding isn't just words, it could be images, links, mentions, copypasta, etc.
@@ -52,7 +43,7 @@ Please respect the members boundaries! If a member tells you to stop doing somet
     
         const inforulesEmbed = new Discord.MessageEmbed()
     .setTitle("**__Server Information__**")
-    .setDescription(`Hey, thanks for joining the server and taking the time to look at our set of rules layed out to ensure our server is a safe environment for everyone! If you see anyone breaking any of the rules, please feel free to DM our ModMail bot <@536542160703586324> to contact our support team. \n
+    .setDescription(`Hey, thanks for joining the server and taking the time to look at our set of rules layed out to ensure our server is a safe environment for everyone! If you see anyone breaking any of the rules, or have questions/concerns about the server, please feel free to DM our ModMail bot <@536542160703586324> to contact our support team. \n
 One thing to keep in mind when entering our chat is that we do indeed have a blacklisted words list set out. You can see a full list [here](https://pastebin.com/4BqkFZC6).
 We have implemented the blacklisted words system to make sure our server and you do not get in trouble for saying certain kinds of words! :smiley:`)
     .setColor('#f53348')
@@ -60,10 +51,7 @@ We have implemented the blacklisted words system to make sure our server and you
         message.delete().catch(O_o=>{}); 
           message.channel.send(inforulesEmbed).then(() => {
               message.channel.send(rulesEmbed).then(() => {
-                message.channel.send(rules2Embed).catch (e) {
-        message.channel.send("An error occured: " + e);
-      }
-                
+                message.channel.send(rules2Embed)      
             
           })  
             })  
