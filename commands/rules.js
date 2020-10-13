@@ -26,14 +26,13 @@ module.exports = {
 \n**__Use channels for their appropiate uses__**
 4) We would like to keep our channels neat and so should you! For example; you may only use bot commands under the "BOT GAMES" category and in the correct channel. (warn/mute)
 \n**__Do not advertise__**
-5) We strictly forbid the Advertisment of other discord servers/communities, social media, third party websites, etc. This includes unsolicited DM and indirect advertisments. (warn/mute/temp-ban)
-\n**__Treat everyone including the staff, members and yourself with respect.__**
-6) We do not tolerate discrimination, harassment, hate speech, belittlement, racial slurs, pedophillia, the posting of content of other users without their consent, and extreme toxicity here. We ask you to please acknowlege that each member here is diverse and might take offense to what you say. Of course if you are only having a little fun with being toxic and the other members involved in your "joke" are fine with it then there shouldn't be a problem, however when a member tells you to stop, you stop immediately.
-Please respect the members boundaries! If a member tells you to stop doing something to them, please respect it and stop or staff will be forced to take actions such as a warn, mute, or even a temp-ban.`)
-    .setColor('#1fbceb')
+5) We strictly forbid the Advertisment of other discord servers/communities, social media, third party websites, etc. This includes unsolicited DM and indirect advertisments. (warn/mute/temp-ban`)    .setColor('#1fbceb')
     
     const rules2Embed = new Discord.MessageEmbed()
-    .setDescription(`**__Keep discussing regarding religion, suicide, and similar stuff out of chat__**
+    .setDescription(`**__Treat everyone including the staff, members and yourself with respect.__**
+6) We do not tolerate discrimination, harassment, hate speech, belittlement, racial slurs, pedophillia, the posting of content of other users without their consent, and extreme toxicity here. We ask you to please acknowlege that each member here is diverse and might take offense to what you say. Of course if you are only having a little fun with being toxic and the other members involved in your "joke" are fine with it then there shouldn't be a problem, however when a member tells you to stop, you stop immediately.
+Please respect the members boundaries! If a member tells you to stop doing something to them, please respect it and stop or staff will be forced to take actions such as a warn, mute, or even a temp-ban.
+\n**__Keep discussing regarding religion, suicide, and similar stuff out of chat__**
 7) We would like to limits topics like this as much as be can ass they can create uneccsary dicussion or toxicity. (warn/mute)
 \n**__Spamming/Flooding chats is not tolerated__**
 8) Spamming/Flooding is highly un-appreciated in this server! Examples of spamming would be sending the same/similar messages in a fast or slow interval. Flooding is posting content that overwhelmes a users screen. Spamming/Flooding isn't just words, it could be images, links, mentions, copypasta, etc.
