@@ -64,21 +64,13 @@ bot.on('ready', () => {
   setInterval(() => {
     var date = new Date();
     if (date.getHours() - 5 >= 0 && date.getHours() - 5 < 12){
-      bot.channels.cache.get("591123171504029696","752579468404719646").setName('😈 | noodles "sex" dungeon')
-    } else if (date.getHours() - 5 >= 12){
-      bot.channels.cache.get("591123171504029696","752579468404719646").setName("🍝 | noodles cave")
-    }
-  }, 60000);
-
-   setInterval(() => {
-    var date = new Date();
-    if (date.getHours() - 5 >= 0 && date.getHours() - 5 < 12){
+      bot.channels.cache.get("591123171504029696").setName('😈 | noodles "sex" dungeon')
       bot.channels.cache.get("753525205875556372").setName('☠️🥀Kia’s Guillotine☠️🥀')
     } else if (date.getHours() - 5 >= 12){
+      bot.channels.cache.get("591123171504029696").setName("🍝 | noodles cave")
       bot.channels.cache.get("753525205875556372").setName("Fishy on me 💓")
     }
   }, 60000);
-
 
  let msgchannels = ["551217309369368625","712358040908595220","706175822297432195","697544526365065236","674791248816635914","561608898478342164"]
 
