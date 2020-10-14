@@ -12,7 +12,7 @@ module.exports = {
     if (!args[0]) return message.channel.send(`<:cross:724049024943915209> | Missing arguments. \n-Usage: \`${message.prefix}${this.name} ${this.usage}\``);
     let commandName = args[0].toLowerCase()
     if (!bot.commands.get(commandName)) return message.channel.send(" <:cross:724049024943915209> | This command does not exist.");
-    let category = bot.commands.category('commands')
+    let category = bot.commands
 
     try {
       delete require.cache[require.resolve(`../${category}/${commandName}.js`)];
