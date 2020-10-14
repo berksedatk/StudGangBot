@@ -13,7 +13,7 @@ module.exports = {
     const reciever = message.mentions.users.first();
     if (!reciever) return message.channel.send(":x: | You need to tag someone to give an L too...");
     const slapEmbed = new Discord.MessageEmbed()
-    .setDescription(`**${reciever}** has recieved an **L** from **${author}**! <:Flooooooshed:673264250319405064> `)
+    .setDescription(`cock penis`)
     .setColor('RED')
     message.channel.send(slapEmbed)
    message.delete(); 
