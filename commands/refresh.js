@@ -3,10 +3,10 @@ const fs = require('fs');
 
 module.exports = {
   name: "reload",
-  category: "Dev",
+  category: "Utility",
+  unstaged: true,
   description: "Reloads a command.",
   usage: "[command name]",
-  example: `gn!reload help`,
   dev: true,
   execute(bot, message, args) {
     if (!args[0]) return message.channel.send(`<:cross:724049024943915209> | Missing arguments. \n-Usage: \`${message.prefix}${this.name} ${this.usage}\``);
