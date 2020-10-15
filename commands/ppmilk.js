@@ -1,13 +1,10 @@
 const Discord = require("discord.js");
 
 module.exports = {
-  name: "L",
+  name: "lol",
   category: "Fun",
-  description: "Give people all the L's!",
-  aliases: "l",
-  usage: "[mention]",
+  description: "k",
   cooldown: 5,
-  guildOnly: true,
   execute(bot, message, args) {
   
   if (message.content === 'pp-milk') {
