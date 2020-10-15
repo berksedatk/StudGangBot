@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports = {
-  name: "sec",
+  name: "sex",
   category: "Fun",
   description: "seggcy time",
   cooldown: 5,
