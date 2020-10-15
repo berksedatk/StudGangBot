@@ -3,14 +3,11 @@ const Discord = require("discord.js");
 module.exports = {
   name: "sec",
   category: "Fun",
-  description: "sexcy time",
-  dev: "true",
+  description: "seggcy time",
   cooldown: 5,
-  unstaged: true,
-  guildOnly: true,
-  TTS: true,
+  dev: true,
   execute(bot, message, args) {
-    message.channel.send(`sex`)
+    message.channel.send(`considered yourself sex'd`)
    message.delete().catch(O_o=>{}); 
   }
 };
