@@ -13,4 +13,4 @@ module.exports = {
   if (message.content === 'pp-milk') {
 	message.react('722539935898271784');
 }
-};
+}
