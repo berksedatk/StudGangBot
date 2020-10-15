@@ -94,7 +94,7 @@ module.exports = {
         );
       if (command.dev)
         helpEmbed.addField(
-          "**Dev**",
+          "**Dev Only**",
           "Only bot owner can execute this command."
         );
       if (command.admin)
