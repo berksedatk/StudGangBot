@@ -4,6 +4,8 @@ module.exports = {
   name: "lol",
   category: "Fun",
   description: "k",
+  unstaged: true,
+  dev: true,
   cooldown: 5,
   execute(bot, message, args) {
   message.react('722539935898271784');
