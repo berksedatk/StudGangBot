@@ -27,8 +27,6 @@ module.exports = {
                   message.member.roles.add(role)
                      .then(member => message.channel.send("You were added to this role"))
 
-                  };
-            }
-        }
-  }
+           };  
+       }
 };
