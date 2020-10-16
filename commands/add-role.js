@@ -30,8 +30,5 @@ module.exports = {
                   };
             }
         }
-       else {
-            message.channel.send(":x: That is not a valid role or I could not find it!")
-       }
   }
 };
