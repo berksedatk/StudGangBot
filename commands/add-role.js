@@ -26,14 +26,12 @@ module.exports = {
               else {
                   message.member.roles.add(role)
                      .then(member => message.channel.send("You were added to this role"))
-                     .catch(err => {
-                      console.log(err);
-                      message.channel.send("Something went wrong. . .");
-                  });
+
+                  };
+            }
         }
        else {
             message.channel.send(":x: That is not a valid role or I could not find it!")
        }
-
   }
 };
