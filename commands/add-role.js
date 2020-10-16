@@ -10,9 +10,7 @@ module.exports = {
   cooldown: 5,
   guildOnly: true,
   execute(bot, message, args) {
-  
-  const checkPermissionRole = (role) => role.permissions.has('ADMINISTRATOR')
-       console.log(`args have been added to {$message.author}`)
+ 
        let { cache } = message.guild.roles;
        let role = cache.find(find => role.name.toLowerCase() === args);
        if (role) {
@@ -23,6 +21,7 @@ module.exports = {
               else {
                   message.member.roles.add(role)
                      .then(member => message.channel.send("You were added to this role"))
+                     console.log(`args have been added to {$message.author}`)
            }
      }
 };
