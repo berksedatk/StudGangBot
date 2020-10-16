@@ -20,13 +20,9 @@ module.exports = {
              message.channel.send(":x: You already have that role!");
              return;
        }
-          if(checkPermissionRole(role)) {
-              message.channel.send(":x: You probably don't want to give someone a role that equals your own! (Administrator)");
-              }
               else {
                   message.member.roles.add(role)
                      .then(member => message.channel.send("You were added to this role"))
-
-           };  
-       }
+           }
+     }
 };
