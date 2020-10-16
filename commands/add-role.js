@@ -27,7 +27,7 @@ module.exports = {
                   message.member.roles.add(role)
                      .then(member => message.channel.send("You were added to this role"))
                      .catch(err => {
-                      console.log(err));
+                      console.log(err);
                       message.channel.send("Something went wrong. . .");
                   });
         }
