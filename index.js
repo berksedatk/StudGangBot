@@ -41,7 +41,39 @@ bot.on('ready', () => {
   }, 10000);
 
   bot.user.setStatus("dnd").catch(console.error);
+    const moment = require('moment');
+    let user = message.mentions.users.first() || message.author;
+    const joinDiscord = moment(user.createdAt).format('llll');
+    const joinServer = moment(user.joinedAt).format('llll');
+ const channel = '564416466821316618'
+ bot.on('guildMemberAdd', message => {
+    const joinembed = new Discord.MessageEmbed()
+    .setTitle(message.author.tag, message.author.avatarURL())
+    .addField('Joined at:', `${moment.utc(user.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
+    .addField('Status:', user.presence.status, true)
+    .addField('Roles:', user.roles.map(r => `${r}`).join(' | '), true)
+    .setFooter(`ID: ${user.id}`)
+    .setTimestamp();
+    .setColor('GREEN")
+    message.channel.send(joinembed);
+  
+});
+    const moment = require('moment');
+    let user = message.mentions.users.first() || message.author;
+    const joinDiscord = moment(user.createdAt).format('llll');
+    const channel = '564416466821316618'
+bot.on('guildMemberRemove', message => {
+    const leaveembed = new Discord.MessageEmbed()
+    .setTitle(message.author.tag, message.author.avatarURL())
+    .addField('User has left the server')
+    .addField('Status:', user.presence.status, true)
+    .setFooter(`ID: ${user.id}`)
+    .setTimestamp();
+    .setColor('RED')
+    message.channel.send(leaveembed);
 
+});
+ 
   //Channel update
   bot.channels.cache.get("708151643539243018").setName(`★Members: ${bot.guilds.cache.get("548949555597803550").members.cache.size}★`)
   setInterval(function() {
