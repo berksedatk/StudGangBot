@@ -41,17 +41,12 @@ bot.on('ready', () => {
   }, 10000);
 
   bot.user.setStatus("dnd").catch(console.error);
-    const moment = require('moment');
-    let user = message.mentions.users.first() || message.author;
-    const joinDiscord = moment(user.createdAt).format('llll');
-    const joinServer = moment(user.joinedAt).format('llll');
- const channel = '564416466821316618'
+    const author = message.author;
+    const channel = '564416466821316618'
  bot.on('guildMemberAdd', message => {
     const joinembed = new Discord.MessageEmbed()
     .setTitle(message.author.tag, message.author.avatarURL())
-    .addField('Joined at:', `${moment.utc(user.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
     .addField('Status:', user.presence.status, true)
-    .addField('Roles:', user.roles.map(r => `${r}`).join(' | '), true)
     .setFooter(`ID: ${user.id}`)
     .setColor('GREEN')
     .setTimestamp();
