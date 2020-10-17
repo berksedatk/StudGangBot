@@ -53,8 +53,8 @@ bot.on('ready', () => {
     .addField('Status:', user.presence.status, true)
     .addField('Roles:', user.roles.map(r => `${r}`).join(' | '), true)
     .setFooter(`ID: ${user.id}`)
+    .setColor('GREEN')
     .setTimestamp();
-    .setColor('GREEN")
     message.channel.send(joinembed);
   
 });
@@ -68,8 +68,8 @@ bot.on('guildMemberRemove', message => {
     .addField('User has left the server')
     .addField('Status:', user.presence.status, true)
     .setFooter(`ID: ${user.id}`)
-    .setTimestamp();
     .setColor('RED')
+    .setTimestamp();
     message.channel.send(leaveembed);
 
 });
