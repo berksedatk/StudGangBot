@@ -10,14 +10,13 @@ module.exports = {
   usage: "[text]",
   dev: "true",
   async execute(bot, message, args) {
-      const msg = await message.channel.send(`Executing code...`);
+      const msg = await message.channel.send(`Uploading to Hastebin...`);
    if (!args[0]) return message.channel.send(":x: | You need to provide text for it to be uploaded to Hastebin.");
     const code = args.join(" ");
           let output = code;
           hastebin(output, { extention: 'txt' }).then(code => {
         const embed = new Discord.MessageEmbed()
-          .setTitle("Output was too long, uploaded to hastebin and logged to console!")
-          .setURL(code)
+          .setDescription(`Arguments have been uploaded to Pastebin!`,`code`)
           .setColor("#f9f9f9");
           msg.edit(embed);
           });
