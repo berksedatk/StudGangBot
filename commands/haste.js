@@ -16,7 +16,7 @@ module.exports = {
           let output = code;
           hastebin(output, { extention: 'txt' }).then(code => {
         const embed = new Discord.MessageEmbed()
-          .setTitle(`Arguments have been uploaded to Pastebin!`)
+          .setTitle(`Arguments have been uploaded to Hastebin!`)
           .setURL(code)
           .setColor("#02ff00");
           msg.edit(embed);
