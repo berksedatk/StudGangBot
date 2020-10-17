@@ -41,29 +41,6 @@ bot.on('ready', () => {
   }, 10000);
 
   bot.user.setStatus("dnd").catch(console.error);
-    const author = message.author;
-    const channel = '564416466821316618'
- bot.on('guildMemberAdd', message => {
-    const joinembed = new Discord.MessageEmbed()
-    .setTitle(message.author.tag, message.author.avatarURL())
-    .addField('Status:', user.presence.status, true)
-    .setFooter(`ID: ${user.id}`)
-    .setColor('GREEN')
-    .setTimestamp();
-    message.channel.send(joinembed).catch(console.error);;
-  
-});
-bot.on('guildMemberRemove', message => {
-    const leaveembed = new Discord.MessageEmbed()
-    .setTitle(message.author.tag, message.author.avatarURL())
-    .addField('User has left the server')
-    .addField('Status:', user.presence.status, true)
-    .setFooter(`ID: ${user.id}`)
-    .setColor('RED')
-    .setTimestamp();
-    message.channel.send(leaveembed);
-
-});
  
   //Channel update
   bot.channels.cache.get("708151643539243018").setName(`★Members: ${bot.guilds.cache.get("548949555597803550").members.cache.size}★`)
