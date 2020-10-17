@@ -58,7 +58,6 @@ bot.on('ready', () => {
     message.channel.send(joinembed);
   
 });
-    const moment = require('moment');
     let user = message.mentions.users.first() || message.author;
     const joinDiscord = moment(user.createdAt).format('llll');
     const channel = '564416466821316618'
