@@ -50,7 +50,7 @@ bot.on('ready', () => {
     .setFooter(`ID: ${user.id}`)
     .setColor('GREEN')
     .setTimestamp();
-    message.channel.send(joinembed);
+    message.channel.send(joinembed).catch(console.error);;
   
 });
 bot.on('guildMemberRemove', message => {
