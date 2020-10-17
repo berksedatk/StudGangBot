@@ -58,9 +58,6 @@ bot.on('ready', () => {
     message.channel.send(joinembed);
   
 });
-    let user = message.mentions.users.first() || message.author;
-    const joinDiscord = moment(user.createdAt).format('llll');
-    const channel = '564416466821316618'
 bot.on('guildMemberRemove', message => {
     const leaveembed = new Discord.MessageEmbed()
     .setTitle(message.author.tag, message.author.avatarURL())
