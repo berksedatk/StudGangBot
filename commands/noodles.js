@@ -6,6 +6,7 @@ module.exports = {
   description: "Noodles <3",
   blacklisted: true,
   unstaged: true,
+  dev: true,
   aliases: ["bitch"],
   cooldown: 5,
   execute(bot, message, args) {
