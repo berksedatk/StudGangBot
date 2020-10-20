@@ -3,12 +3,11 @@ const Discord = require("discord.js");
 module.exports = {
   name: "flipcoin",
   category: "Utility",
-  description: "Choose heads or tails and the bot will flip the coin!",
+  description: "Let the bot choose heads or tails for you by flipping a coin!",
   aliases: ["flip-coin","coinflip","coin-flip"],
   usage: "[heads] [tails]",
-  cooldown: 60,
+  cooldown: 20,
   async execute(bot, message, args) {
-     if (!args[0]) return message.channel.send(":x: | You need to choose heads or tails!"); 
   var flipcoin = ["heads", "tails"];
 
 exports.run = (client, message, args) =>{
