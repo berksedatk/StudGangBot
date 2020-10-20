@@ -35,7 +35,7 @@ module.exports = {
             rMember.roles.add(gRole.id).catch(console.error);
             
             try{
-                rMember.send(`You have been given the role ${gRole.name}`);
+                rMember.send(`You have been given the role ${gRole.name} in ${message.guild.name}`);
                 message.channel.send(`That user has recieved the role**${gRole.name}**.`);
             }
             catch(e){
