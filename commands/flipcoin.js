@@ -5,7 +5,6 @@ module.exports = {
   category: "Utility",
   description: "Let the bot choose heads or tails for you by flipping a coin!",
   aliases: ["flip-coin","coinflip","coin-flip"],
-  usage: "[heads] [tails]",
   cooldown: 20,
   async execute(bot, message, args) {
   var flipcoin = ["heads", "tails"];
