@@ -40,7 +40,8 @@ module.exports = {
                 console.log(e.stack);
                 message.channel.send(`User has recieved the **${gRole.name}** role.`)
             }
-         }
+          }
+        }
       }
    }
 };
