@@ -36,11 +36,11 @@ module.exports = {
             
             try{
                 rMember.send(`You have been given the role ${gRole.name}`);
-                message.channel.send(`${rMember} has been given the role ${gRole.name}`);
+                message.channel.send(`That user has recieved the role**${gRole.name}**.`);
             }
             catch(e){
                 console.log(e.stack);
-                message.channel.send(`<@${rMember.id}> has been given the role ${gRole.name}.`)
+                message.channel.send(`That user has recieved the role **${gRole.name}**.`)
             }
          }
       }
