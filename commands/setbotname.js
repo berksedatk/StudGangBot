@@ -7,7 +7,7 @@ module.exports = {
   usage: "<name>",
   dev: true,
   async execute(bot, message, args) {
-      const newName = message.content.split(' ');
+      const newName = message.content.split('');
 
     try{
         bot.user.setUsername(newName[1])
@@ -15,7 +15,7 @@ module.exports = {
             .catch(console.error);
     }
     catch(error){
-        message.channel.send("I could not set my new username :sob:");
+        message.channel.send("I could not set my new username :sob:")
         console.log(error);
     }
   }
