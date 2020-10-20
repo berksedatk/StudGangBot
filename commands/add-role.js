@@ -28,20 +28,18 @@ module.exports = {
             return message.channel.send("I Couldn't find that role.");
 
         if(rMember.roles.cache.has(gRole.id)) 
-            return message.channel.send("That user already has that role.");
-const alreadyHas = rMember.roles.cache.has(gRole.id);    
+            return message.channel.send("That user already has that role."); 
         else{
             rMember.roles.add(gRole.id).catch(console.error);
             
-            try{ if rMember.alreadyHas return;
-         else {
-                rMember.send(`You have been given the role **${gRole.name}** in **${message.guild.name}**`);
-                message.channel.send('**' + message.rMember.tag + "** " + `has recieved the **${gRole.name}** role.`);
+            try{ 
+              if(!rMember.roles.cache.has(gRole.id)) 
+            return rMember.send(`You have been given the role **${gRole.name}** in **${message.guild.name}**`);
+                message.channel.send(` User has recieved the **${gRole.name}** role.`);
             }
-               }
             catch(e){
                 console.log(e.stack);
-                message.channel.send("**" + message.rMember.tag + "** " + `has recieved the **${gRole.name}** role.`)
+                message.channel.send(`User has recieved the **${gRole.name}** role.`)
             }
          }
       }
