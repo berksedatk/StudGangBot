@@ -10,7 +10,7 @@ module.exports = {
   cooldown: 3,
   async execute(bot, message, args) {
     let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.cache.get(args[0]);
-    
+		const user = getUserFromMention(args[0]);
     if(!message.member.hasPermission("MANAGE_ROLES")){
         message.channel.send(" ");
     }
@@ -36,11 +36,11 @@ module.exports = {
             
             try{
                 rMember.send(`You have been given the role **${gRole.name}** in **${message.guild.name}**`);
-                message.channel.send('**' + message.author.tag + "** " + `has recieved the **${gRole.name}** role.`);
+                message.channel.send(`**${user.username}** has recieved the **${gRole.name}** role.`);
             }
             catch(e){
                 console.log(e.stack);
-                message.channel.send("**" + message.author.tag + "** " + `has recieved the **${gRole.name}** role.`)
+                message.channel.send(`**${user.username}** has recieved the **${gRole.name}** role.`)
             }
          }
       }
