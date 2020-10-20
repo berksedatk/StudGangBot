@@ -40,7 +40,7 @@ module.exports = {
             }
             catch(e){
                 console.log(e.stack);
-                message.channel.send("**" + message.author.tag + "**"` has recieved the role **${gRole.name}**.`)
+                message.channel.send("**" + message.author.tag + "**" `has recieved the role **${gRole.name}**.`)
             }
          }
       }
