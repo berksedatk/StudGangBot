@@ -1,12 +1,13 @@
 const Discord = require("discord.js");
 
 module.exports = {
-  name: "avatar",
+  name: "add-role",
   category: "Utility",
-  description: "Get a specified user's avatar.",
-  aliases: ["av"],
+  description: "Add roles to users!",
+  aliases: ["role add"],
   usage: "[user]",
-  cooldown: 60,
+  reqPermissions: ["MANAGE_ROLES"],
+  cooldown: 3,
   async execute(bot, message, args) {
     let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.cache.get(args[0]);
     
@@ -17,29 +18,29 @@ module.exports = {
     else{
 
         if(!rMember) 
-            return message.channel.send("Couldn't find that user!");
+            return message.channel.send("I couldn't find that user.");
 
         let role = args.join(" ").slice(23);
         if(!role) 
-            return message.channel.send("Specify a role!");
+            return message.channel.send("Please specify a role!");
 
         let gRole = message.guild.roles.cache.find(roles => roles.name === role);
         if(!gRole) 
-            return message.channel.send("Couldn't find that role.");
+            return message.channel.send("I Couldn't find that role.");
 
         if(rMember.roles.cache.has(gRole.id)) 
-            return message.channel.send("They already have that role.");
+            return message.channel.send("That user already has that role.");
 
         else{
             rMember.roles.add(gRole.id).catch(console.error);
             
             try{
-                rMember.send(`Congrats, you have been given the role ${gRole.name}`);
-                message.channel.send(`The user ${rMember} has a new role ${gRole.name}`);
+                rMember.send(`You have been given the role ${gRole.name} in ${guild.name}`);
+                message.channel.send(`${rMember} has been given the role ${gRole.name}`);
             }
             catch(e){
                 console.log(e.stack);
-                message.channel.send(`Congrats to <@${rMember.id}>, they have been given the role ${gRole.name}.`)
+                message.channel.send(`<@${rMember.id}> has been given the role ${gRole.name}.`)
             }
          }
       }
