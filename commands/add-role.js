@@ -4,8 +4,8 @@ module.exports = {
   name: "add-role",
   category: "Utility",
   description: "Add roles to users!",
-  aliases: ["role add"],
-  usage: "[user]",
+  aliases: ["role-add", "roleadd","addrole"],
+  usage: "[user] [role]",
   reqPermissions: ["MANAGE_ROLES"],
   cooldown: 3,
   async execute(bot, message, args) {
