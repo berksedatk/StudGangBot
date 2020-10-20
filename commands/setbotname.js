@@ -7,7 +7,7 @@ module.exports = {
   usage: "<name>",
   dev: true,
   async execute(bot, message, args) {
-      const newName = message.content.split('');
+      const newName = message.content.split(' ');
 
     try{
         bot.user.setUsername(newName[1])
