@@ -10,8 +10,8 @@ module.exports = {
   async execute(bot, message, args) {
   
       const setStatus = message.content.split(' ');
-
-    else if(setStatus[1] === 'idle'){
+    
+    if(setStatus[1] === 'idle'){
         client.user.setStatus('idle')
             .then(message.channel.send("My status has been set to: "+setStatus[1]))
             .catch(console.error);
