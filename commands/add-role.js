@@ -17,18 +17,18 @@ module.exports = {
     else{
 
         if(!rMember) 
-            return message.channel.send("I couldn't find that user.");
+            return message.channel.send(":x: | I couldn't find that user.");
 
         let role = args.join(" ").slice(23);
         if(!role) 
-            return message.channel.send("Please specify a role!");
+            return message.channel.send(":x: | Please specify a role!");
 
         let gRole = message.guild.roles.cache.find(roles => roles.name === role);
         if(!gRole) 
-            return message.channel.send("I Couldn't find that role.");
+            return message.channel.send(":x: | I Couldn't find that role.");
 
         if(rMember.roles.cache.has(gRole.id)) 
-            return message.channel.send("That user already has that role."); 
+            return message.channel.send(":x: | That user already has that role."); 
               
         else{
             rMember.roles.add(gRole.id).catch(console.error);
