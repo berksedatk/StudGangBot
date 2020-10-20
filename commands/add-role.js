@@ -34,8 +34,8 @@ module.exports = {
             
             try{ 
               if(!rMember.roles.cache.has(gRole.id)) 
-            return rMember.send(`You have been given the role **${gRole.name}** in **${message.guild.name}**`);
-                message.channel.send(` User has recieved the **${gRole.name}** role.`);
+            return rMember.send(`You have been given the role **${gRole.name}** in **${message.guild.name}**`)
+                message.channel.send(`User has recieved the **${gRole.name}** role.`);
             }
             catch(e){
                 console.log(e.stack);
