@@ -12,11 +12,6 @@ module.exports = {
     let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.cache.get(args[0]);
     function getUserFromMention(mention) {
 	if (!mention) return;
-
-	if (mention.startsWith('<@') && mention.endsWith('>')) {
-		mention = mention.slice(2, -1);
-		
-		}
 	    }
 	if (args[0]) {
 		const user = getUserFromMention(args[0]);
