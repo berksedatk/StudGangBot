@@ -36,7 +36,7 @@ module.exports = {
             
             try{
                 rMember.send(`The role **${gRole.name}** has been removed from you in **${message.guild.name}**.`);
-                message.channel.send(`The role **${gRole.name}** has been removed from **` + message.author.tag + "**");
+                message.channel.send(`:thumbsup:Role removed.`);
             }
             catch(e){
                 console.log(e.stack);
