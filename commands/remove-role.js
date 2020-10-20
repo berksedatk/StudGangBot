@@ -35,7 +35,7 @@ module.exports = {
             rMember.roles.remove(gRole.id).catch(console.error);
             
             try{
-                rMember.send(`Your role ${gRole.name} had been removed ${message.guild.name}.`);
+                rMember.send(`The role **${gRole.name}** has been removed from you in **${message.guild.name}**.`);
                 message.channel.send(`The role **${gRole.name}** has been removed from **` + message.author.tag + "**");
             }
             catch(e){
