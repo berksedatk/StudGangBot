@@ -36,11 +36,11 @@ module.exports = {
             
             try{
                 rMember.send(`You have been given the role **${gRole.name}** in **${message.guild.name}**`);
-                message.channel.send("**" + message.author.tag + "**" `has recieved the role **${gRole.name}**.`);
+                message.channel.send('**' + message.author.tag + "** " + `has recieved the **${gRole.name}** role.`);
             }
             catch(e){
                 console.log(e.stack);
-                message.channel.send("**" + message.author.tag + "**" `has recieved the role **${gRole.name}**.`)
+                message.channel.send("**" + message.author.tag + "** " + `has recieved the **${gRole.name}** role.`)
             }
          }
       }
