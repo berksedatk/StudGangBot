@@ -17,7 +17,7 @@ module.exports = {
     else{
 
         if(!rMember) 
-            return message.channel.send(":x: | I couldn't find that user.");
+            return message.channel.send("I couldn't find that user.");
 
         let role = args.join(" ").slice(23);
         if(!role) 
@@ -32,17 +32,16 @@ module.exports = {
               
         else{
             rMember.roles.add(gRole.id).catch(console.error);
-message.channel.send("Role added.")
             
             try{ 
               if(!rMember.roles.cache.has(gRole.id));
         rMember.roles.add(gRole.id).catch(console.error);
             return rMember.send(`You have been given the role **${gRole.name}** in **${message.guild.name}**`);
-                message.channel.send(`User has recieved the **${gRole.name}** role.`)
+                message.channel.send(`Role given.`)
             }
             catch(e){
                 console.log(e.stack);
-                message.channel.send(`User has recieved the **${gRole.name}** role.`)
+                message.channel.send(`Role recieved.`)
           }
         }
       }
