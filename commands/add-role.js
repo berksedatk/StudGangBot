@@ -15,6 +15,9 @@ module.exports = {
 
 	if (mention.startsWith('<@') && mention.endsWith('>')) {
 		mention = mention.slice(2, -1);
+		
+		}
+	    }
 	if (args[0]) {
 		const user = getUserFromMention(args[0]);
 	if (!user) {
@@ -50,8 +53,11 @@ module.exports = {
             catch(e){
                 console.log(e.stack);
                 message.channel.send(`**${user.username}** has recieved the **${gRole.name}** role.`)
+	       }
             }
          }
       }
+	  
+	  
    }
 };
