@@ -36,11 +36,11 @@ module.exports = {
             
             try{
                 rMember.send(`Your role ${gRole.name} had been removed ${message.guild.name}.`);
-                message.channel.send(`The role **${gRole.name}** has been removed from` + message.author.tag);
+                message.channel.send(`The role **${gRole.name}** has been removed from **` + message.author.tag + "**");
             }
             catch(e){
                 console.log(e.stack);
-                message.channel.send(`The role **${gRole.name}** has been removed from` + message.author.tag)
+                message.channel.send(`The role **${gRole.name}** has been removed from **` + message.author.tag + "**")
            }
         }
      }
