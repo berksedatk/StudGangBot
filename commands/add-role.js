@@ -32,6 +32,7 @@ module.exports = {
               
         else{
             rMember.roles.add(gRole.id).catch(console.error);
+message.channel.send("Role added")
             
             try{ 
               if(!rMember.roles.cache.has(gRole.id));
