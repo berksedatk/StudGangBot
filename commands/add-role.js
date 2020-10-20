@@ -34,7 +34,7 @@ const alreadyHas = rMember.roles.cache.has(gRole.id);
             rMember.roles.add(gRole.id).catch(console.error);
             
             try{ if rMember.alreadyHas return;
-                if else {
+         else {
                 rMember.send(`You have been given the role **${gRole.name}** in **${message.guild.name}**`);
                 message.channel.send('**' + message.rMember.tag + "** " + `has recieved the **${gRole.name}** role.`);
             }
