@@ -10,12 +10,13 @@ module.exports = {
       const newName = message.content.split(' ');
 
     try{
-        client.user.setUsername(newName[1])
+        bot.user.setUsername(newName[1])
             .then(user => message.channel.send(`My new username is **${user.username}**`))
             .catch(console.error);
     }
     catch(error){
         message.channel.send("I could not set my new username :sob:");
+        console.log(error);
     }
   }
 };
