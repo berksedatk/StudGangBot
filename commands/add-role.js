@@ -14,10 +14,7 @@ module.exports = {
 	if (!mention) return;
 	    }
 	if (args[0]) {
-		const user = getUserFromMention(args[0]);
-	if (!user) {
-	return message.reply('Please use a proper mention if you want to add a role to someone else');
-		}
+const user = getUserFromMention(args[0]);
     if(!message.member.hasPermission("MANAGE_ROLES")){
         message.channel.send(" ");
     }
