@@ -10,7 +10,16 @@ module.exports = {
   cooldown: 3,
   async execute(bot, message, args) {
     let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.cache.get(args[0]);
+    function getUserFromMention(mention) {
+	if (!mention) return;
+
+	if (mention.startsWith('<@') && mention.endsWith('>')) {
+		mention = mention.slice(2, -1);
+	if (args[0]) {
 		const user = getUserFromMention(args[0]);
+	if (!user) {
+	return message.reply('Please use a proper mention if you want to add a role to someone else');
+		}
     if(!message.member.hasPermission("MANAGE_ROLES")){
         message.channel.send(" ");
     }
