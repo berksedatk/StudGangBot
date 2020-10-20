@@ -10,7 +10,6 @@ module.exports = {
   cooldown: 3,
   async execute(bot, message, args) {
     let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.cache.get(args[0]);
-    
     if(!message.member.hasPermission("MANAGE_ROLES")){
         message.channel.send(" ");
     }
@@ -30,14 +29,16 @@ module.exports = {
 
         if(rMember.roles.cache.has(gRole.id)) 
             return message.channel.send("That user already has that role.");
-
+const alreadyHas = rMember.roles.cache.has(gRole.id);    
         else{
             rMember.roles.add(gRole.id).catch(console.error);
             
-            try{
+            try{ if rMember.alreadyHas return;
+                if else {
                 rMember.send(`You have been given the role **${gRole.name}** in **${message.guild.name}**`);
                 message.channel.send('**' + message.rMember.tag + "** " + `has recieved the **${gRole.name}** role.`);
             }
+               }
             catch(e){
                 console.log(e.stack);
                 message.channel.send("**" + message.rMember.tag + "** " + `has recieved the **${gRole.name}** role.`)
