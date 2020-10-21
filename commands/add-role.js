@@ -9,6 +9,7 @@ module.exports = {
   reqPermissions: ["MANAGE_ROLES"],
   cooldown: 3,
   async execute(bot, message, args) {
+    let logchannel = bot.channels.cache.get('563402253139050496');
     let reason = `Responsible Moderator: ${message.author.tag}`
     let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.cache.get(args[0]);
     if(!message.member.hasPermission("MANAGE_ROLES")){
@@ -37,7 +38,7 @@ module.exports = {
             try{ 
                 rMember.send(`You have been given the role **${gRole.name}** in **${message.guild.name}**`);
                 message.channel.send(`:thumbsup:Role given.`)
-                bot.channels.get('563402253139050496').send(`${message.author} has given ${rMember} the role ${gRole.name}!`);
+                logchannel.send(`${message.author} has given ${rMember} the role ${gRole.name}!`);
             }
             catch(e){
                 console.log(e.stack);
