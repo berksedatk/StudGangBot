@@ -34,14 +34,12 @@ module.exports = {
             rMember.roles.add(gRole.id).catch(console.error);
             
             try{ 
-              if(!rMember.roles.cache.has(gRole.id));
-        rMember.roles.add(gRole.id).catch(console.error);
-            return rMember.send(`You have been given the role **${gRole.name}** in **${message.guild.name}**`);
-                message.channel.send(`Role given.`)
+                rMember.send(`You have been given the role **${gRole.name}** in **${message.guild.name}**`);
+                message.channel.send(`:thumbsup:Role given.`)
             }
             catch(e){
                 console.log(e.stack);
-                message.channel.send(`Role recieved.`)
+                message.channel.send(`:thumbsup:Role recieved.`)
           }
         }
       }
