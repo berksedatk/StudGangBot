@@ -32,11 +32,12 @@ module.exports = {
             return message.channel.send(":x: | That user already has that role."); 
               
         else{
-            rMember.roles.add(gRole.id({reason: reason})).catch(console.error);
+            rMember.roles.add(gRole.id).catch(console.error);
             
             try{ 
                 rMember.send(`You have been given the role **${gRole.name}** in **${message.guild.name}**`);
                 message.channel.send(`:thumbsup:Role given.`)
+                bot.channels.get('563402253139050496').send(`${message.author} has given ${rMember} the role ${gRole.name}!`);
             }
             catch(e){
                 console.log(e.stack);
