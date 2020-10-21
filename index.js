@@ -194,6 +194,8 @@ bot.on("message", msg => {
   if (msg.member) {if (msg.member.hasPermission("KICK_MEMBERS")) return;}
 
   //Blacklisted words
+ 
+ 
   const exception = ["556927352513363968"]
   const filter = ['nigger','n1gg3r','nigga','n1gger','rapist','n1gga','n!gger','n!gga','n!gg3r','nlgga','nlgger','nlgg3r','n1gg3r',
 "n¡gg3r",'fag','retard','faggot',"n i g g e r",'beaner',"b e a n e r","be a ner","b e a ner","be an er","be an e r",
@@ -206,7 +208,6 @@ bot.on("message", msg => {
   filter.forEach(word => {
     if (msg.content.toLowerCase().includes(word)) {
       msg.delete()
-     console.log(`${msg.author.tag} said '${word}' in ${guild.name}`);
       return msg.reply("Your message has been removed for containing words that possibly go against StudGang or Discord's Terms!").then(m => m.delete({timeout: 7000}))
     }
   })
