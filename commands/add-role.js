@@ -9,6 +9,7 @@ module.exports = {
   reqPermissions: ["MANAGE_ROLES"],
   cooldown: 3,
   async execute(bot, message, args) {
+    let reason = `Responsible Moderator: ${message.author.tag}`)
     let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.cache.get(args[0]);
     if(!message.member.hasPermission("MANAGE_ROLES")){
         message.channel.send(" ");
@@ -31,7 +32,7 @@ module.exports = {
             return message.channel.send(":x: | That user already has that role."); 
               
         else{
-            rMember.roles.add(gRole.id).catch(console.error);
+            rMember.roles.add(gRole.id{reason: reason}).catch(console.error);
             
             try{ 
                 rMember.send(`You have been given the role **${gRole.name}** in **${message.guild.name}**`);
