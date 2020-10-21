@@ -34,7 +34,10 @@ bot.on('ready', () => {
     `For ~help`,
     'The StudGang',
     ];
-
+ 
+ let channel = bot.channels.cache.get('630515339205279774');
+    channel.send('I am ready :smirk_cat:');
+ 
   setInterval(() => {
     let activity = activities[Math.floor(Math.random() * activities.length)];
     bot.user.setActivity(activity, { type: "WATCHING" });
