@@ -9,7 +9,7 @@ module.exports = {
   reqPermissions: ["MANAGE_ROLES"],
   cooldown: 3,
   async execute(bot, message, args) {
-    let reason = `Responsible Moderator: ${message.author.tag}`)
+    let reason = `Responsible Moderator: ${message.author.tag}`
     let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.cache.get(args[0]);
     if(!message.member.hasPermission("MANAGE_ROLES")){
         message.channel.send(" ");
