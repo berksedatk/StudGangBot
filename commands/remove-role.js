@@ -9,6 +9,7 @@ module.exports = {
   reqPermissions: ["MANAGE_ROLES"],
   cooldown: 3,
   async execute(bot, message, args) {
+      let logchannel = bot.channels.cache.get('563402253139050496');
       let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.cache.get(args[0]);
 
     if(!message.member.hasPermission("MANAGE_ROLES")){
@@ -36,7 +37,8 @@ module.exports = {
             
             try{
                 rMember.send(`The role **${gRole.name}** has been removed from you in **${message.guild.name}**.`);
-                message.channel.send(`:thumbsup:Role removed.`);
+                message.channel.send(`:thumbsup:Role removed.`)
+                logchannel.send({embed: {title: "New Role-Remove Command Log!", description:`${message.author} has removed the role ${gRole.name} from user ${rMember}!`, color:'#f83e42'}});
             }
             catch(e){
                 console.log(e.stack);
