@@ -206,7 +206,7 @@ bot.on("message", msg => {
   filter.forEach(word => {
     if (msg.content.toLowerCase().includes(word)) {
       msg.delete()
-     console.log(`${message.author.tag} said '${word}' in ${guild.name}`);
+     console.log(`${msg.author.tag} said '${word}' in ${guild.name}`);
       return msg.reply("Your message has been removed for containing words that possibly go against StudGang or Discord's Terms!").then(m => m.delete({timeout: 7000}))
     }
   })
