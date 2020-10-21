@@ -18,9 +18,9 @@ module.exports = {
       const quote = args.join(" ");
       
       if (quote.length < 1 || quote.length > 512) return message.channel.send(":x: | The quote must be in rage of 1 to 512 characters.");
-      channel.send(quote).then(() => message.channel.send(`Quote message has been sent.`).then(m => m.delete({timeout: 2500})))
-      message.delete({ timeout: 2500, reason: `Quote message: ${quote}` });
-      logchannel.send({embed: {title: "Say Command Executed!", description:`${message.author} has used the say command in ${message.channel}! Quote: ${quote}`, color:'#f83e42'}});
+      channel.send(quote).then(() => message.channel.send(`Quote message has been sent.`).then(m => m.delete({timeout: 2500})));
+      logchannel.send({embed: {title: "Say Command Executed!", description:`${message.author} has used the say command in ${message.channel}! Quote: ${quote}`, color:'#f83e42'}})
+      message.delete({ timeout: 2500, reason: `Quote message: ${quote}` })
     } else {
       const quote = args.join(" ");
       
