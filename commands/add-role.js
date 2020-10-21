@@ -38,7 +38,7 @@ module.exports = {
             try{ 
                 rMember.send(`You have been given the role **${gRole.name}** in **${message.guild.name}**`);
                 message.channel.send(`:thumbsup:Role given.`)
-                logchannel.send(`${message.author} has given ${rMember} the role ${gRole.name}!`);
+                logchannel.send({embed: {title: "New Role-Add Command Log!", description:`${message.author} has given ${rMember} the role ${gRole.name}!`, color:'#f83e42'}});
             }
             catch(e){
                 console.log(e.stack);
