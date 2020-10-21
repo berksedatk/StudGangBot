@@ -32,7 +32,7 @@ module.exports = {
             return message.channel.send(":x: | That user already has that role."); 
               
         else{
-            rMember.roles.add(gRole.id{reason: reason}).catch(console.error);
+            rMember.roles.add(gRole.id({reason: reason})).catch(console.error);
             
             try{ 
                 rMember.send(`You have been given the role **${gRole.name}** in **${message.guild.name}**`);
