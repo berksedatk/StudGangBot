@@ -37,14 +37,16 @@ bot.on('ready', () => {
  
  let channel = bot.channels.cache.get('630515339205279774');
     channel.send('Log: I am ready :smirk_cat:');
- 
+
+bot.on("message", msg => { 
  let suggestchannel = '768603874189115412'
    if(message.sugggestchannel.content == '') {
       message.suggestchannel.send('').then(msg => {
         msg.react('✅')
         msg.react('❌')
       })
-}
+   }
+})
   setInterval(() => {
     let activity = activities[Math.floor(Math.random() * activities.length)];
     bot.user.setActivity(activity, { type: "WATCHING" });
