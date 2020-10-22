@@ -36,18 +36,8 @@ bot.on('ready', () => {
     ];
  
  let channel = bot.channels.cache.get('630515339205279774');
-    channel.send('Log: I am ready :smirk_cat:');
+    channel.send('e');
 
-bot.on("message", msg => { 
- let suggestchannel = '768603874189115412'
-   if(msg.sugggestchannel.content == '') {
-      msg.suggestchannel.send('lol').then(msg => {
-        msg.react('✅')
-        msg.react('❌')
-       msg.delete()
-      })
-   }
-})
   setInterval(() => {
     let activity = activities[Math.floor(Math.random() * activities.length)];
     bot.user.setActivity(activity, { type: "WATCHING" });
