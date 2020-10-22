@@ -40,10 +40,11 @@ bot.on('ready', () => {
 
 bot.on("message", msg => { 
  let suggestchannel = '768603874189115412'
-   if(message.sugggestchannel.content == '') {
-      message.suggestchannel.send('').then(msg => {
+   if(msg.sugggestchannel.content == '') {
+      msg.suggestchannel.send('lol').then(msg => {
         msg.react('✅')
         msg.react('❌')
+       msg.delete()
       })
    }
 })
