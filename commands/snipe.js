@@ -35,12 +35,11 @@ module.exports = {
 
     if (inp === true || msg.content.length > 250) {
       snipeEmbed.setDescription('~~Inappropriate Message~~')
+    } else if (blacklist.includes(msg.author.id)) {
+      snipeEmbed.setDescription('~~This person is blacklisted!~~')
     } else {
       snipeEmbed.setDescription(msg.content)
       if (msg.attachment) snipeEmbed.setImage(msg.attachment);
-    }
-    else if (blacklist.includes(msg.author.id)) {
-      snipeEmbed.setDescription('~~This person is blacklisted!~~')
     }
 
     message.channel.send(snipeEmbed)
