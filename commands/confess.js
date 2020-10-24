@@ -7,6 +7,7 @@ module.exports = {
   usage: "<message>",
   cooldown: 300,
   execute(bot, message, args) {
+    const msg = message.channel.id
     if (message.channel.type != "dm") return message.channel.send(":x: | This command can only be executed in DM's.");
     if (!bot.guilds.cache.get("548949555597803550").members.cache.get(message.author.id)) return message.channel.send(":x: | This command can only be executed by StudGang members. To join the server please use this invite: https://discord.gg/dysKCmx")
 
