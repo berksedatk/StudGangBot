@@ -25,9 +25,9 @@ module.exports = {
       "Here is the Anonymous person's truth",
       "They were too shy to reveal it but here is Anonymous person's confession"
     ]
-
     if (!args[0]) return message.channel.send(":x: | You need a message to put in confession.")
-
+    const regex = /(https?:\/\/[^\s]+)/g
+    let inp = false
     let confession = args.join(" ")
     let bad = false
     filter.forEach(word => {
@@ -35,7 +35,11 @@ module.exports = {
     })
 
     if (bad) return message.channel.send(":x: | You can't use a blacklisted word in your message.")
+    
+    if (regex.test(msg.content)) inp = true
 
+    if (inp === true) return message.channel.send(':x: | You cannot use links in your suggestion!')
+      
     let confessEmbed = new Discord.MessageEmbed()
     .setTitle(titleList[Math.floor(Math.random() * titleList.length)])
     .setColor("#efefef")
