@@ -39,7 +39,7 @@ module.exports = {
     
     if (regex.test(message.content)) inp = true
 
-    if (inp === true) return message.channel.send(':x: | You cannot use links in your suggestion!')
+    if (inp === true) return message.channel.send(':x: | You cannot use links in your confession!')
       
     let confessEmbed = new Discord.MessageEmbed()
     .setTitle(titleList[Math.floor(Math.random() * titleList.length)])
