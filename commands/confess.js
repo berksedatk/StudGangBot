@@ -37,7 +37,7 @@ module.exports = {
 
     if (bad) return message.channel.send(":x: | You can't use a blacklisted word in your message.")
     
-    if (regex.test(msg.content)) inp = true
+    if (regex.test(message.content)) inp = true
 
     if (inp === true) return message.channel.send(':x: | You cannot use links in your suggestion!')
       
