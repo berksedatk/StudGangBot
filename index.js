@@ -34,9 +34,7 @@ bot.on('ready', () => {
     `For ~help`,
     'The StudGang',
     ];
- 
- let channel = bot.channels.cache.get('630515339205279774');
-    channel.send('e');
+
 
   setInterval(() => {
     let activity = activities[Math.floor(Math.random() * activities.length)];
@@ -248,6 +246,9 @@ bot.on("message", msg => {
 
       atttimestamps.set(msg.author.id, now);
       setTimeout(() => atttimestamps.delete(msg.author.id), attcooldownAmount);
+     
+      let echannel = bot.channels.cache.get('630515339205279774');
+    echannel.send('e');
     }
   }
 })
