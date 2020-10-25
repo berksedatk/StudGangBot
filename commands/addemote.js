@@ -5,17 +5,14 @@ module.exports = {
   category: "Utility",
   description: "Add emoji's to the guild!",
   aliases: ["addemote","eadd","add-emote"],
-  usage: "[link]",
+  usage: "<emote> <link> <attachment>",
   reqPermissions: "MANAGE_ROLES"
-  cooldown: 5,
   guildOnly: true,
   execute(bot, message, args) { 
     let url = '';
     let emotename = '';
     if (message.attachments.size){
         //image attachment resolver
-        if (!message.attachments.first().width) throw ['normal', 'Attached file is not a valid image'];
-        if (message.attachments.first().filesize > 262143) throw ['normal', `Attached image is too big: ${Math.floor(message.attachments.first().filesize / 1024)}kb > 256kb`];
         url = message.attachments.first().url;
         emotename = message.attachments.first().name.split('.')[0];
     }
