@@ -24,7 +24,6 @@ module.exports = {
       .addField("Current Version", config.version, true)
       .addField("Servers", `${bot.guilds.cache.size} servers`, true)
       .addField("Channels", `${bot.channels.cache.size} channels`, true)
-      .addField("Users", `${bot.users.cache.size.toLocaleString()} users`, true)
       .addField("Prefix", config.prefix)
       .addField(
         "Ping",
