@@ -11,7 +11,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client({
   disableMentions: "everyone",
   ws: {
-    intents: ["GUILD_MEMBERS"]
+    intents: ["GUILDS","GUILD_MEMBERS"]
   }
 });
 bot.snipes = new Map();
