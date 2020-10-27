@@ -8,7 +8,12 @@ function prettyString(string) {
 //#Discord Client#
 
 const Discord = require("discord.js");
-const bot = new Discord.Client({disableMentions: "everyone"});
+const bot = new Discord.Client({
+  disableMentions: "everyone",
+  ws: {
+    intents: ["GUILD_MEMBERS"]
+  }
+});
 bot.snipes = new Map();
 bot.edits = new Map();
 bot.wallets = new Map();
