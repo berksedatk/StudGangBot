@@ -159,7 +159,6 @@ bot.on('message', message => {
   let cooldown = command.cooldown || 3
   if (command.exchannels) {
     command.exchannels.forEach(c => {
-      console.log(c)
       if (c.id === message.channel.id) cooldown = c.cooldown
     })
   }
@@ -197,8 +196,9 @@ bot.on('message', message => {
 
 bot.on("message", msg => {
   if (msg.channel.id === "768603874189115412") {
-    msg.react("772347897823625296")
-    msg.react("772347897823625296")
+    msg.react("772556972910051389")
+    msg.react("772556959718047804")
+    msg.react("772556986318717008")
   }
   if (msg.author.bot) return;
   if (msg.channel.type === "dm") return;
