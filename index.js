@@ -11,7 +11,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client({
   disableMentions: "everyone",
   ws: {
-    intents: ["GUILDS","GUILD_MEMBERS","GUILD_MESSAGES"]
+    intents: ["GUILDS","GUILD_MEMBERS","GUILD_MESSAGES","DIRECT_MESSAGES"]
   }
 });
 bot.snipes = new Map();
@@ -101,10 +101,8 @@ bot.on('messageUpdate', (oldMessage, newMessage) => {
 //#On Message-Command#
 
 bot.on('message', message => {
-  console.log("a")
   if (message.author.bot) return;
   //Prefix
-  console.log("f")
   if (!message.content.toLowerCase().startsWith(config.prefix)) return;
 
   //Arguments
@@ -114,7 +112,7 @@ bot.on('message', message => {
   //Command Matching
   const command = bot.commands.get(commandName) || bot.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
   if (!command) return;
-  console.log("g")
+
   //Statements
   if (command.dev && !config.owners.includes(message.author.id)) {
     return message.reply(":x: | You are not allowed to use this command.").then(m => m.delete({timeout: 15000}))
@@ -150,7 +148,7 @@ bot.on('message', message => {
       return message.channel.send(":x: | You don't have the required permission(s) to use this command!! Missing permission(s): " + missing.join(', '));
     }
   }
-  console.log("r")
+
   //Cooldown
   if (!cooldowns.has(command.name)) {
     cooldowns.set(command.name, new Discord.Collection());
@@ -186,7 +184,6 @@ bot.on('message', message => {
   }
 
   try {
-    console.log("ggg")
     command.execute(bot, message, args);
   } catch (err) {
     console.log(`Command Error: ${err}`);
