@@ -199,6 +199,10 @@ bot.on('message', message => {
 //Attachments
 
 bot.on("message", msg => {
+  if (msg.channel.id === "768603874189115412") {
+    msg.react("772347897823625296")
+    msg.react("772347897823625296")
+  }
   if (msg.author.bot) return;
   if (msg.channel.type === "dm") return;
   if (msg.member) {if (msg.member.hasPermission("KICK_MEMBERS")) return;}
