@@ -196,9 +196,9 @@ bot.on('message', message => {
 
 bot.on("message", msg => {
   if (msg.channel.id === "768603874189115412") {
-    msg.react("772556972910051389")
-    msg.react("772556959718047804")
-    msg.react("772556986318717008")
+    msg.react("772556511783682060")
+    msg.react("772556883214860348")
+    msg.react("772556931632988181")
   }
   if (msg.author.bot) return;
   if (msg.channel.type === "dm") return;
