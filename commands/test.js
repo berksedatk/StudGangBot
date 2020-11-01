@@ -18,7 +18,7 @@ module.exports = {
   guildOnly: true,
   exchannels: [
     {id: "1", cooldown: 1}
-  ]
+  ],
   execute(bot, message, args) {
     message.channel.send("Test");
   }
