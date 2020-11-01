@@ -140,15 +140,15 @@ bot.on('message', message => {
     if (e) return message.channel.send(":x: | This command cant be used in this channel!").then(m => m.delete({timeout: 7000}))
   }
   if (command.reqPermissions && !config.owners.includes(message.author.id)) {
-      let missing = []
-      command.reqPermissions.forEach(permission => {
-        if (!message.guild.members.cache.get(message.author.id).permissions.has(permission)) missing.push(prettyString(permission))
-      })
-      if (missing.length > 0) {
-        return message.channel.send(":x: | You don't have the required permission(s) to use this command!! Missing permission(s): " + missing.join(', '));
-      }
+    let missing = []
+    command.reqPermissions.forEach(permission => {
+      if (!message.guild.members.cache.get(message.author.id).permissions.has(permission)) missing.push(prettyString(permission))
+    })
+    if (missing.length > 0) {
+      return message.channel.send(":x: | You don't have the required permission(s) to use this command!! Missing permission(s): " + missing.join(', '));
     }
-
+  }
+  console.log("r")
   //Cooldown
   if (!cooldowns.has(command.name)) {
     cooldowns.set(command.name, new Discord.Collection());
@@ -184,6 +184,7 @@ bot.on('message', message => {
   }
 
   try {
+    console.log("ggg")
     command.execute(bot, message, args);
   } catch (err) {
     console.log(`Command Error: ${err}`);
