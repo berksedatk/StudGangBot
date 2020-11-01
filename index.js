@@ -157,7 +157,7 @@ bot.on('message', message => {
   const now = Date.now();
   const timestamps = cooldowns.get(command.name);
   let cooldown = command.cooldown || 3
-  if (command.exchannels) {
+  if (command.exchannels && message.channel.type != "dm") {
     command.exchannels.forEach(c => {
       if (c.id === message.channel.id) cooldown = c.cooldown
     })
@@ -197,8 +197,8 @@ bot.on('message', message => {
 bot.on("message", msg => {
   if (msg.channel.id === "768603874189115412") {
     msg.react("772556511783682060")
-    msg.react("772556883214860348")
     msg.react("772556931632988181")
+    msg.react("772556883214860348")
   }
   if (msg.author.bot) return;
   if (msg.channel.type === "dm") return;
