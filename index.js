@@ -101,8 +101,10 @@ bot.on('messageUpdate', (oldMessage, newMessage) => {
 //#On Message-Command#
 
 bot.on('message', message => {
+  console.log("a")
   if (message.author.bot) return;
   //Prefix
+  console.log("f")
   if (!message.content.toLowerCase().startsWith(config.prefix)) return;
 
   //Arguments
@@ -112,7 +114,7 @@ bot.on('message', message => {
   //Command Matching
   const command = bot.commands.get(commandName) || bot.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
   if (!command) return;
-
+  console.log("g")
   //Statements
   if (command.dev && !config.owners.includes(message.author.id)) {
     return message.reply(":x: | You are not allowed to use this command.").then(m => m.delete({timeout: 15000}))
