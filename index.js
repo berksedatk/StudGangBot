@@ -159,7 +159,8 @@ bot.on('message', message => {
   let cooldown = command.cooldown || 3
   if (command.exchannels) {
     command.exchannels.forEach(c => {
-      if (c.id == message.channel.id) cooldown = c.cooldown
+      console.log(c)
+      if (c.id === message.channel.id) cooldown = c.cooldown
     })
   }
   const cooldownAmount = (cooldown || 3) * 1000;
