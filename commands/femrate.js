@@ -8,12 +8,15 @@ module.exports = {
   usage: "[mention]",
   cooldown: 5,
   guildOnly: true,
+  exchannels: [
+    {id: "548949556210040862", cooldown: 10}
+  ],
   execute(bot, message, args) {
-  
+
     const reciever = message.mentions.users.first();
     if (!reciever) return message.channel.send(":x: | You need to ping someone to check how much of a femboy they are!");
-    
+
 let randomnumber = Math.floor(Math.random() * 100).toLocaleString()
-    message.channel.send(`**${message.mentions.users.first()}** is **${randomnumber}%** femboy!`); 
+    message.channel.send(`**${message.mentions.users.first()}** is **${randomnumber}%** femboy!`);
   }
 };
