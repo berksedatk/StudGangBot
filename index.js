@@ -157,9 +157,11 @@ bot.on('message', message => {
   const now = Date.now();
   const timestamps = cooldowns.get(command.name);
   let cooldown = command.cooldown || 3
-  command.exchannels.forEach(c => {
-    if (c.id == message.channel.id) cooldown = c.cooldown
-  })
+  if (command.exchannels) {
+    command.exchannels.forEach(c => {
+      if (c.id == message.channel.id) cooldown = c.cooldown
+    })
+  }
   const cooldownAmount = (cooldown || 3) * 1000;
 
   if (!timestamps.has(message.author.id)) {
