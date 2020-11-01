@@ -47,7 +47,7 @@ bot.on('ready', () => {
   }, 10000);
 
   bot.user.setStatus("dnd").catch(console.error);
- 
+
   //Channel update
   bot.channels.cache.get("708151643539243018").setName(`★Members: ${bot.guilds.cache.get("548949555597803550").members.cache.size}★`)
   setInterval(function() {
@@ -71,7 +71,7 @@ bot.on('ready', () => {
     }, 7.2e+6)
   })
 
-  console.log(`Bot is ready.`); 
+  console.log(`Bot is ready.`);
 });
 
 bot.on("guildCreate", guild => {
@@ -162,7 +162,11 @@ bot.on('message', message => {
 
   const now = Date.now();
   const timestamps = cooldowns.get(command.name);
-  const cooldownAmount = (command.cooldown || 3) * 1000;
+  let cooldown = command.cooldown || 3
+  command.exchannels.forEach(c => {
+    if (c.id == message.channel.id) cooldown = c.cooldown
+  })
+  const cooldownAmount = (cooldown || 3) * 1000;
 
   if (!timestamps.has(message.author.id)) {
     timestamps.set(message.author.id, now);
@@ -200,8 +204,8 @@ bot.on("message", msg => {
   if (msg.member) {if (msg.member.hasPermission("KICK_MEMBERS")) return;}
 
   //Blacklisted words
- 
- 
+
+
   const exception = ["556927352513363968"]
   const filter = ['nigger','n1gg3r','nigga','n1gger','rapist','n1gga','n!gger','n!gga','n!gg3r','nlgga','nlgger','nlgg3r','n1gg3r',
 "n¡gg3r",'fag','retard','faggot',"n i g g e r",'beaner',"b e a n e r","be a ner","b e a ner","be an er","be an e r",
@@ -251,7 +255,7 @@ bot.on("message", msg => {
 
       atttimestamps.set(msg.author.id, now);
       setTimeout(() => atttimestamps.delete(msg.author.id), attcooldownAmount);
-     
+
       let echannel = bot.channels.cache.get('630515339205279774');
     echannel.send('e');
     }
