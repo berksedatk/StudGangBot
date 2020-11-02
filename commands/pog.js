@@ -7,6 +7,9 @@ module.exports = {
   aliases: ["poggers"],
   cooldown: 5,
   guildOnly: true,
+  exchannels: [
+    {id: "548949556210040862", cooldown: 10}
+  ],
   execute(bot, message, args) {    
     const slapEmbed = new Discord.MessageEmbed()
     .setDescription(`**${message.author.username}** thinks this is pog af! :heart_eyes_cat:`)
