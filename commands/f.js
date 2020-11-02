@@ -7,6 +7,9 @@ module.exports = {
   aliases: ["respect","payrespect"],
   cooldown: 5,
   guildOnly: true,
+  exchannels: [
+    {id: "548949556210040862", cooldown: 5}
+  ],
   blacklistedChannels: ["580083502867808287","606314770546556961","709248514550530048","730994932424245258","730682637051756554","635320134847954954","718972368416014367","689865780292223012"],
   execute(bot, message, args) {
     message.channel.send(`**${message.author.username}** has paid their respects! :sparkling_heart:`)
