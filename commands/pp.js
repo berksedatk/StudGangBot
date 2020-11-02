@@ -5,6 +5,9 @@ module.exports = {
   category: "Fun",
   description: "Shows you your pp size.",
   cooldown: 15,
+  exchannels: [
+    {id: "548949556210040862", cooldown: 10}
+  ],
   execute(bot, message, args) {  
     let ppsize = Math.floor(Math.random() * 25)
     let pp =  ""
