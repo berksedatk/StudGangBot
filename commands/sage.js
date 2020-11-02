@@ -6,6 +6,9 @@ module.exports = {
   description: "Noodle's adorable husky named Sage! :) She is so adorable!",
   unstaged: true,
   cooldown: 5,
+  exchannels: [
+    {id: "548949556210040862", cooldown: 20}
+  ],
   execute(bot, message, args) {
     const list = [
       "https://cdn.discordapp.com/attachments/661172663334731796/707158440761360504/Snapchat-94637175.jpg",
