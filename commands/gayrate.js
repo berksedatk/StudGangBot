@@ -7,6 +7,9 @@ module.exports = {
   description: 'Figure our how gay someone/something is by simply executing this command! \n(this command is just a joke btw lol it is not meant to be homophobic)',
   usage: "<user>",
   cooldown: 5,
+  exchannels: [
+    {id: "548949556210040862", cooldown: 10}
+  ],
   async execute(bot, message, args) {
     if (!args[0]) return message.channel.send(":x: | You need to mention someone or something to check the gay-rate!");
     let number = Math.floor(Math.random() * 100)
