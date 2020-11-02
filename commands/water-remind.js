@@ -8,6 +8,9 @@ module.exports = {
   usage: "[mention]",
   cooldown: 5,
   guildOnly: true,
+  exchannels: [
+    {id: "548949556210040862", cooldown: 7}
+  ],
   execute(bot, message, args) {    
  const author = message.author;
     const reciever = message.mentions.users.first();
