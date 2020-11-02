@@ -5,6 +5,9 @@ module.exports = {
   category: "Misc",
   description: "Snipe those deleted messages",
   cooldown: 5,
+  exchannels: [
+    {id: "548949556210040862", cooldown: 10}
+  ],
   blacklistedChannels: ["580083502867808287","606314770546556961","709248514550530048","730994932424245258","730682637051756554","635320134847954954","718972368416014367","689865780292223012"],
   guildOnly: true,
   execute(bot, message, args) {
