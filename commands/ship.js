@@ -6,6 +6,9 @@ module.exports = {
   description: 'Ship yourself or someone else to see how good of a couple it makes! \n**Custom Command**: kia.#0002',
   usage: "<user> [user]",
   cooldown: 5,
+  exchannels: [
+    {id: "548949556210040862", cooldown: 15}
+  ],
   async execute(bot, message, args) {
     if (!args[0]) return message.channel.send(":x: | You need something or someone to ship yourself with!");
     let number = Math.floor(Math.random() * 101)
