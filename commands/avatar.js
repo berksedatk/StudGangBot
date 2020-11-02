@@ -6,7 +6,10 @@ module.exports = {
   description: "Get a specified user's avatar.",
   aliases: ["av"],
   usage: "[user]",
-  cooldown: 60,
+  cooldown: 10,
+  exchannels: [
+    {id: "548949556210040862", cooldown: 60}
+  ],
   blacklistedChannels: ["580083502867808287","606314770546556961","709248514550530048","730994932424245258","730682637051756554","635320134847954954","718972368416014367","689865780292223012"],
   async execute(bot, message, args) {
     let user
