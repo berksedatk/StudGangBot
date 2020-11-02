@@ -8,6 +8,9 @@ module.exports = {
   aliases: ["noodle"],
   cooldown: 5,
   guildOnly: true,
+  exchannels: [
+    {id: "548949556210040862", cooldown: 10}
+  ],
   execute(bot, message, args) {
     let number = Number(args[0])
     const noodleEmbed = new Discord.MessageEmbed()
