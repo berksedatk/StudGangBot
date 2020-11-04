@@ -17,6 +17,6 @@ module.exports = {
     if (!args[1]) return message.channel.send(":x: | You need to provide a new nickname!");
         member.setNickname(newname);
         message.channel.send(`Successfully changed ${member.user.tag}'s nickname to: ${newname}`);
-        logchannel.send({embed: {title: "User Nickname changed via command!", description:`Responsible Mod:\n ${message.author.tag}\n Targeted User:\n ${member.user.tag}\nNew Nickname:\n${newname}`, color:'#f83e42'}})
+        logchannel.send({embed: {title: "User Nickname changed via command!", description:`Responsible Mod: ${message.author.tag}\n Targeted User: ${member.user.tag}\nNew Nickname: ${newname}`, color:'#f83e42'}})
   }
 };
