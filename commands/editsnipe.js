@@ -31,10 +31,8 @@ module.exports = {
     let inp = false
     filter.forEach(word => {
       if (msg.content.toLowerCase().includes(word)) inp = true
-    })
-
+    });
     if (regex.test(msg.content)) inp = true
-
     if (inp === true || msg.content.length > 250) {
       snipeEmbed.setDescription('~~Inappropriate Message~~')
     } else snipeEmbed.setDescription(`**Old Message:** \n${msg.oldContent} \n**New Message:** \n${msg.newContent}`)
