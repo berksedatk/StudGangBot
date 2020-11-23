@@ -18,8 +18,8 @@ module.exports = {
     .setAuthor(msg.author.tag, msg.author.displayAvatarURL())
     .setColor('YELLOW')
     
-    if (msg.content.length > 250) {
-      snipeEmbed.setDescription('~~Inappropriate Message~~')
+    if (msg.oldContent.length > 500) {
+      snipeEmbed.setDescription('~~Inappropriate Edited Message~~')
     } else snipeEmbed.setDescription(`**Old Message:** \n${msg.oldContent} \n**New Message:** \n${msg.newContent}`)
     
     message.channel.send(snipeEmbed)
