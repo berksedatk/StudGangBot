@@ -43,7 +43,7 @@ module.exports = {
         const introrulesEmbed = new Discord.MessageEmbed()
     .setTitle("**__Server Introduction__**")
     .setDescription(`Hey, thanks for joining the server and taking the time to look at our set of rules laid out to ensure our server is a safe environment for everyone! If you see anyone breaking any of the rules, or have questions/concerns about the server, please feel free to DM our ModMail bot <@536542160703586324> to contact our support team. \n
-One thing to keep in mind when entering our chat is that we do indeed have a blacklisted words list set out.\n You can see a full list [here](https://pastebin.com/4BqkFZC6).
+One thing to keep in mind when entering our chat is that we do indeed have a blacklisted words list set out.\nYou can see a full list of blacklisted words [here](https://pastebin.com/4BqkFZC6).
 We have implemented the blacklisted words system to make sure our server and yourself do not get in trouble for saying certain kinds of words! :smiley:`)
     .setColor('#f53348')
         
