@@ -30,8 +30,8 @@ module.exports = {
     
     const rules2Embed = new Discord.MessageEmbed()
     .setDescription(`**__Treat everyone including the staff, members and yourself with respect.__**
-6) We do not tolerate discrimination, harassment, hate speech, belittlement, the use of racial slurs, pedophilia, the posting of content of other users without their consent, nor extreme toxicity here. We ask you to please acknowledge that each member here is diverse and might take offense to what you say. Of course if you are only having a little fun with being toxic and the other members involved in your "joke" are fine with it then there shouldn't be a problem, however when a member tells you to stop, you stop immediately.
-Please respect the members boundaries! If a member tells you to stop doing something to them, please respect it and stop or staff will be forced to take action. (warn/mute/temp-ban)
+6) We do not tolerate discrimination, harassment, hate speech, belittlement, the use of racial slurs, pedophilia, the posting of content of other users without their consent, nor extreme toxicity here. We ask you to please acknowledge that each member here is diverse and might take offense to what you say. Of course if you are only having a little fun with being toxic and the other members involved in your "joke" are fine with it then there shouldn't be a problem, however when a member tells you to stop, you should respect it and stop immediately or staff will be forced to intervene.
+(warn/mute/temp-ban)
 \n**__Keep discussing regarding religion, suicide, and similar stuff out of chat__**
 7) We would like to limit topics like this as much as we can due to the possibility of them creating unnecessary dicussions or toxicity. This includes topics about religion, politics, sucide, anything that goes against Discord's Terms of Service like gore or loli's, shaming LGBTQ+ individuals, disorders, and many other things alike. (warn/mute/temp-ban)
 \n**__Spamming/Flooding chats is not tolerated__**
