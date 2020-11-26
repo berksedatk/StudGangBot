@@ -40,7 +40,13 @@ bot.on('ready', () => {
     'The StudGang',
     ];
 
-
+bot.on('message', msg=>{
+ 
+    if(msg.content === "<@675712982139011072>"){
+ 
+        msg.channel.send(":wave:")
+    }
+ 
   setInterval(() => {
     let activity = activities[Math.floor(Math.random() * activities.length)];
     bot.user.setActivity(activity, { type: "WATCHING" });
