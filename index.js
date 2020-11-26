@@ -14,8 +14,6 @@ const bot = new Discord.Client({
     intents: ["GUILD_PRESENCES","GUILDS","GUILD_MEMBERS","GUILD_MESSAGES","DIRECT_MESSAGES","GUILD_MESSAGE_REACTIONS"]
   }
 });
-const SQLite = require("better-sqlite3");
-const sql = new SQLite('./scores.sqlite');
 bot.snipes = new Map();
 bot.edits = new Map();
 bot.wallets = new Map();
@@ -41,7 +39,8 @@ bot.on('ready', () => {
     `For ~help`,
     'The StudGang',
     ];
- 
+
+
   setInterval(() => {
     let activity = activities[Math.floor(Math.random() * activities.length)];
     bot.user.setActivity(activity, { type: "WATCHING" });
@@ -57,20 +56,6 @@ bot.on('ready', () => {
       bot.channels.cache.get("591123171504029696").setName("🍝 | noodles cave")
     }
   }, 60000);
-  // Check if the table "points" exists.
-  const table = sql.prepare("SELECT count(*) FROM sqlite_master WHERE type='table' AND name = 'scores';").get();
-  if (!table['count(*)']) {
-    // If the table isn't there, create it and setup the database correctly.
-    sql.prepare("CREATE TABLE scores (id TEXT PRIMARY KEY, user TEXT, guild TEXT, points INTEGER, level INTEGER);").run();
-    // Ensure that the "id" row is always unique and indexed.
-    sql.prepare("CREATE UNIQUE INDEX idx_scores_id ON scores (id);").run();
-    sql.pragma("synchronous = 1");
-    sql.pragma("journal_mode = wal");
-  }
-
-  // And then we have two prepared statements to get and set the score data.
-  client.getScore = sql.prepare("SELECT * FROM scores WHERE user = ? AND guild = ?");
-  client.setScore = sql.prepare("INSERT OR REPLACE INTO scores (id, user, guild, points, level) VALUES (@id, @user, @guild, @points, @level);");
 
  let msgchannels = ["551217309369368625","712358040908595220","706175822297432195","697544526365065236","674791248816635914","561608898478342164"]
 
@@ -119,21 +104,7 @@ bot.on('message', message => {
   if (message.author.bot) return;
   //Prefix
   if (!message.content.toLowerCase().startsWith(config.prefix)) return;
- 
- let score;
-  if (message.guild) {
-    score = client.getScore.get(message.author.id, message.guild.id);
-    if (!score) {
-      score = { id: `${message.guild.id}-${message.author.id}`, user: message.author.id, guild: message.guild.id, points: 0, level: 1 }
-    }
-    score.points++;
-    const curLevel = Math.floor(0.1 * Math.sqrt(score.points));
-    if(score.level < curLevel) {
-      score.level++;
-      message.reply(`You've leveled up to level **${curLevel}**! Ain't that dandy?`);
-    }
-    client.setScore.run(score);
-  }
+
   //Arguments
   const args = message.content.slice(config.prefix.length).split(/ +/);
   const commandName = args.shift().toLowerCase();
@@ -142,9 +113,6 @@ bot.on('message', message => {
   const command = bot.commands.get(commandName) || bot.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
   if (!command) return;
 
-if(command === "points") {
-  return message.reply(`You currently have ${score.points} points and are level ${score.level}!`);
-}
   //Statements
   if (command.dev && !config.owners.includes(message.author.id)) {
     return message.reply(":x: | You are not allowed to use this command.").then(m => m.delete({timeout: 15000}))
