@@ -19,6 +19,8 @@ module.exports = {
         insta += invites.get("hAwFNS7").uses;
         insta += invites.get("upq7QGe").uses;
         insta += invites.get("upq7QGe").uses;
+        insta += invites.get("parBhbwcbF").uses;
+        insta += invites.get("YyhkTRX6rf").uses;
         sendInviteEmbed(promo, insta);
       });
 
