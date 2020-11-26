@@ -39,13 +39,6 @@ bot.on('ready', () => {
     `For ~help`,
     'The StudGang',
     ];
-
-bot.on('message', msg=>{
- 
-    if(msg.content === ("<@675712982139011072>"){
- 
-        msg.channel.send(":wave:")
-    }
  
   setInterval(() => {
     let activity = activities[Math.floor(Math.random() * activities.length)];
@@ -107,6 +100,8 @@ bot.on('messageUpdate', (oldMessage, newMessage) => {
 //#On Message-Command#
 
 bot.on('message', message => {
+   if(msg.content === ("<@675712982139011072>"){ return  message.reply(":wave:")
+}
   if (message.author.bot) return;
   //Prefix
   if (!message.content.toLowerCase().startsWith(config.prefix)) return;
