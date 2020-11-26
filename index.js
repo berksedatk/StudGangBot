@@ -42,7 +42,7 @@ bot.on('ready', () => {
 
 bot.on('message', msg=>{
  
-    if(msg.content === "<@675712982139011072>"){
+    if(msg.content === ("<@675712982139011072>"){
  
         msg.channel.send(":wave:")
     }
