@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports = {
-  name: "givenoodles",
+  name: "noodles",
   category: "Fun",
   description: "Give someone a bowl of noodles!",
   usage: "[mention]",
