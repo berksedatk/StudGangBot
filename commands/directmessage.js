@@ -5,7 +5,7 @@ module.exports = {
   category: "Utility",
   description: "Direct messages a member with a fancy embed.",
   aliases: ["dm"],
-  usage: "[member id/mention] [title] | [description]",
+  usage: "[member id/mention] [title] | [description] | [color]",
   cooldown: 5,
   guildOnly: true,
   reqPermissions: ['MANAGE_GUILD'],
@@ -24,19 +24,24 @@ module.exports = {
     args.shift()
     const msg = args.join(' ')
     const sliced = msg.indexOf('|')
+    const color1 = args.join('#')
     let title = msg
     let description = false
     let footer = false
+    let color = color1
     if (sliced != -1) {
       let array = msg.split("|")
       title = array[0]
       description = array[1]
       footer = array[2]
+      color = array[3]
     }
-    
+    if (!args[3]) {
+      color = "RED"
+    }
     const dmEmbed = new Discord.MessageEmbed()
     .setTitle(title)
-    .setColor('RED')
+    .setColor(color)
     if (description) dmEmbed.setDescription(description)
     if (footer) dmEmbed.setFooter(footer)
     bot.users.cache.get(member).send(dmEmbed).then(() => {
