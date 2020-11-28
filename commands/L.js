@@ -4,7 +4,6 @@ module.exports = {
   name: "L",
   category: "Fun",
   description: "Give people all the L's!",
-  aliases: "l",
   usage: "[mention]",
   cooldown: 5,
   guildOnly: true,
