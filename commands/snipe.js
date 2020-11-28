@@ -5,6 +5,7 @@ module.exports = {
   category: "Misc",
   description: "Snipe those deleted messages",
   cooldown: 5,
+  sped: true,
   exchannels: [
     {id: "548949556210040862", cooldown: 5}
   ],
