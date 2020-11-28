@@ -39,6 +39,9 @@ module.exports = {
     if (!args[3]) {
       color = "RED"
     }
+    if (color.includes("#")) {
+        let color1 = ''
+      }
     const dmEmbed = new Discord.MessageEmbed()
     .setTitle(title)
     .setColor(color)
