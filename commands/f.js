@@ -6,6 +6,7 @@ module.exports = {
   description: "Pay your respects, brother!",
   aliases: ["respect","payrespect"],
   cooldown: 5,
+  sped: true,
   guildOnly: true,
   exchannels: [
     {id: "548949556210040862", cooldown: 15}
