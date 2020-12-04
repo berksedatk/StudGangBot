@@ -30,7 +30,16 @@ module.exports = {
       'https://cdn.discordapp.com/attachments/652681168994697236/700013966881062993/giphy.gif',
       'https://cdn.discordapp.com/attachments/652681168994697236/700013967346499734/tenor_3.gif',
       'https://cdn.discordapp.com/attachments/652681168994697236/700013967552151572/tumblr_4b73c9ce37c2c8d34a97641f8fd97338_be4510db_500.gif',
-      'https://cdn.discordapp.com/attachments/652681168994697236/700013967858335834/tenor_2.gif'
+      'https://cdn.discordapp.com/attachments/652681168994697236/700013967858335834/tenor_2.gif',
+      'https://media.discordyui.net/reactions/hug/23523532.gif',
+      'https://media.discordyui.net/reactions/hug/N4CPwjr.gif',
+      'https://media.discordyui.net/reactions/hug/f4BRs7v.gif',
+      'https://media.discordyui.net/reactions/hug/372894.gif',
+      'https://media.discordyui.net/reactions/hug/dsfksopd.gif',
+      'https://media.discordyui.net/reactions/hug/aisudsioa.gif',
+      'https://media.discordyui.net/reactions/hug/N4CPwjr.gif',
+      'https://media.discordyui.net/reactions/hug/asoidjasiod.gif',
+      'https://media.discordyui.net/reactions/hug/6bJxUOb.gif'
     ]
     
     const image = images[Math.floor(Math.random() * images.length)];
