@@ -27,7 +27,15 @@ module.exports = {
       'https://cdn.discordapp.com/attachments/687865931938136109/700471793307353118/animekiss7.gif',
       'https://cdn.discordapp.com/attachments/687865931938136109/700472565239513228/animekiss8.gif',
       'https://cdn.discordapp.com/attachments/687865931938136109/700473665774419998/animekiss9.gif',
-      'https://cdn.discordapp.com/attachments/652681168994697236/700014025391472741/c2e2d217850896f642facdb2488943f7.gif'
+      'https://cdn.discordapp.com/attachments/652681168994697236/700014025391472741/c2e2d217850896f642facdb2488943f7.gif',
+      'https://media.discordyui.net/reactions/kiss/I6cANgF.gif',
+      'https://media.discordyui.net/reactions/kiss/zAVG8ov.gif',
+      'https://media.discordyui.net/reactions/kiss/234082934.gif',
+      'https://media.discordyui.net/reactions/kiss/Xrxhow8.gif',
+      'https://media.discordyui.net/reactions/kiss/GpyA4H5.gif',
+      'https://media.discordyui.net/reactions/kiss/IaHHwD7.gif',
+      'https://media.discordyui.net/reactions/kiss/723805.gif',
+      'https://media.discordyui.net/reactions/kiss/I6cANgF.gif'
     ]
     
     const image = images[Math.floor(Math.random() * images.length)];
