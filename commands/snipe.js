@@ -15,7 +15,7 @@ module.exports = {
     const msg = bot.snipes.get(message.channel.id)
     if (!msg) return message.channel.send('Theres nothing to snipe!');
 
-    const blacklist = ["474231127163404289","642589313988558897","495248175808905226","401873000053342208","194666207440273408","761733935210168370","355722984637464590"]//if youre seeing this ur seci :flooshed: - no u - NO U - k
+    const blacklist = ["474231127163404289","577600533851013141","642589313988558897","495248175808905226","401873000053342208","194666207440273408","761733935210168370","355722984637464590"]//if youre seeing this ur seci :flooshed: - no u - NO U - k
     const filter = ['n1gg3r','nigga','n1gger','raid','n1gga','niggеr','niggers','n!gger','nigger','n!gga','n!gg3r','nlgga','nlgger','nlgg3r','n1gg3r','n1gg@',"n1gg@","n1gga","negro","n¡gg3r","fag",
 "retard","faggot","n i g g e r","k k k","beaner","b e a n e r","be a ner","b e a ner","be an er","be an e r",'niggar','niggair','wetback','w e t b a c k','wet ba ck',
 'we tback','w e tback','rëtard','rétard','retarted','retarded',
