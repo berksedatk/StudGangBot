@@ -232,9 +232,8 @@ bot.on("message", msg => {
      msg.delete()
      msg.reply("Please do not talk in this channel!").then(m => m.delete({timeout: 5000}))
   }
- //Automessage
-if (msg.content.toLowerCase().includes("why") && msg.content.toLowerCase().includes("ping")) msg.reply("https://cdn.discordapp.com/attachments/610944916650066146/781942643357122620/literally_just.png")
- //Attachment limit
+ 
+//Attachment limit
   let exchannel = ["673555443406077952","673587338865278978","673555191026417674","704071330391261184"]
   if (msg.attachments.size >= 2 && !exchannel.includes(msg.channel.id)) {
     msg.delete({reason: "Multiple Attachments"})
