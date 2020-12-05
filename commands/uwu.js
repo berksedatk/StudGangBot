@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
 
 module.exports = {
-  name: "mute",
+  name: "uwu",
   category: "Utility",
   unstaged: true,
-  description: "Add a role to a user! :)",
-  aliases: ["uwu","fuck"],
+  description: "Add a special role to a user! :)",
+  aliases: ["fuck"],
   usage: "[user]",
   reqPermissions: ["MANAGE_GUILD"],
   cooldown: 3,
@@ -18,7 +18,7 @@ module.exports = {
     else{
 
         if(!rMember) 
-            return message.channel.send("I couldn't find that user.");
+            return message.channel.send(":x: | I couldn't find that user.");
             
         let role = message.member.guild.roles.cache.find(role => role.name === `Mutedd with two d's`);
         
@@ -26,7 +26,7 @@ module.exports = {
             return message.channel.send("owo whats this lol!");
 
         if(rMember.roles.cache.has(role)) 
-            return message.channel.send(":x: | That user already has that role."); 
+            return message.channel.send(":x: | That user already is fucked"); 
 
         else{
             rMember.roles.add(role).catch(console.error);
