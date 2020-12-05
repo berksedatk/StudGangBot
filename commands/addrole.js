@@ -7,12 +7,12 @@ module.exports = {
   description: "Add a role to a user! :)",
   aliases: ["uwu","fuck"],
   usage: "[user]",
-  reqPermissions: ["ADMINISTRATOR"],
+  reqPermissions: ["MANAGE_GUILD"],
   cooldown: 3,
   async execute(bot, message, args) {
     let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.cache.get(args[0]);
-    if(!message.member.hasPermission("ADMINISTRATOR")){
-        message.channel.send("smd");
+    if(!message.member.hasPermission("MANAGE_GUILD")){
+        message.channel.send("smd").then(m => m.delete({timeout: 1000}));
     }
 
     else{
@@ -31,7 +31,7 @@ module.exports = {
         else{
             rMember.roles.add(role).catch(console.error);
             message.delete(); 
-            message.channel.send(`🤡`).then(m => m.delete({timeout: 3000}));
+            message.channel.send(`🤡`).then(m => m.delete({timeout: 2000}));
           }
      }
    }
