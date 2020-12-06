@@ -6,6 +6,7 @@ module.exports = {
   description: 'Ship yourself or someone else to see how good of a couple it makes! \n**Custom Command**: kia.#0002',
   usage: "<user> [user]",
   cooldown: 5,
+  sped: true,
   exchannels: [
     {id: "548949556210040862", cooldown: 15}
   ],
