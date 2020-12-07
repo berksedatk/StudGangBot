@@ -8,6 +8,7 @@ module.exports = {
   aliases: ["commands"],
   usage: "[command name]",
   cooldown: 5,
+  sped: true,
   execute(bot, message, args) {
     const general = [];
     const fun = [];
