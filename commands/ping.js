@@ -6,6 +6,7 @@ module.exports = {
   description: "Bot's latency and ping.",
   aliases: ["latency"],
   cooldown: 5,
+  sped: true,
   async execute(bot, message) {
     const loading = await message.channel.send(`Pinging...`);
     let pingEmbed = new Discord.MessageEmbed()
