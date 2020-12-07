@@ -7,6 +7,7 @@ module.exports = {
   usage: "[channel(optional)] [quote]",
   cooldown: 5,
   reqPermissions: ["KICK_MEMBERS"],
+  sped: true,
   execute(bot, message, args) {
     let logchannel = bot.channels.cache.get('563402253139050496');
     const regex = /<#\d{18}>/g
