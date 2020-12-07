@@ -7,6 +7,7 @@ module.exports = {
   description: "Plays something off youtube",
   usage: "[URL or search criteria]",
   cooldown: 5,
+  sped: true,
   async execute(bot, message, args) {
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) return message.channel.send(":x: | You need to be in a voice channel to play music!");
