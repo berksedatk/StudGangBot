@@ -8,6 +8,7 @@ module.exports = {
   aliases: ["givecheese"],
   cooldown: 5,
   guildOnly: true,
+  sped: true,
   execute(bot, message, args) {
     
     let number = Number(args[0])
