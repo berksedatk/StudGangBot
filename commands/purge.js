@@ -8,6 +8,7 @@ module.exports = {
   usage: "[range] [user(optional)]",
   cooldown: 10,
   guildOnly: true,
+  sped: true,
   reqPermissions: ["MANAGE_MESSAGES"],
   execute(bot, message, args) {
     const amount = Number(args[0]);
