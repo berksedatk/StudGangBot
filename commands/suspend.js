@@ -6,6 +6,7 @@ module.exports = {
   description: "Suspend someone for being a dummy boy/gorl.",
   cooldown: 5,
   guildOnly: true,
+  sped: true,
   execute(bot, message, args) {   
 
     const author = message.author;
