@@ -7,6 +7,7 @@ module.exports = {
   usage: "<user> <reason>",
   cooldown: 5,
   guildOnly: "true",
+  sped: true,
   reqPermissions: ["MANAGE_MESSAGES"],
   async execute(bot, message, args) {
     if (!args[0]) return message.channel.send(":x: | You need to provide a user to warn.");
