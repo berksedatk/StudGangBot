@@ -11,6 +11,7 @@ module.exports = {
   unstaged: true,
   vip: "true",
   guildOnly: true,
+  sped: true,
   execute(bot, message, args) {    
     const rulesEmbed = new Discord.MessageEmbed()
     .setTitle("**__Server Rules__**")
