@@ -7,6 +7,7 @@ module.exports = {
   cooldown: 5,
   guildOnly: true,
   reqPermissions: ["MANAGE_GUILD"],
+  sped: true,
   execute(bot, message, args) {
     const msg = bot.snipes.get(message.channel.id)
     if (!msg) return message.channel.send('Theres nothing to op snipe!');
