@@ -6,6 +6,7 @@ module.exports = {
   description: "Puts a message anon into the confession channel.",
   usage: "<message>",
   cooldown: 300,
+  sped: true,
   execute(bot, message, args) {
     const msg = message.channel.id
     if (message.channel.type != "dm") return message.channel.send(":x: | This command can only be executed in DM's! Send me a DM using the command `~confess [confession]`. The brackets are where you would put your confession to be posted in this channel.");
