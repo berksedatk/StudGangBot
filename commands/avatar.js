@@ -6,6 +6,7 @@ module.exports = {
   description: "Get a specified user's avatar.",
   aliases: ["av"],
   usage: "[user]",
+  sped: true,
   cooldown: 10,
   exchannels: [
     {id: "548949556210040862", cooldown: 60}
