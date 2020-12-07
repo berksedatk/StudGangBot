@@ -5,6 +5,7 @@ module.exports = {
   category: "Fun",
   description: "Demote someone for being a dummy head.",
   cooldown: 5,
+  sped: true,
   guildOnly: true,
   execute(bot, message, args) {
 
