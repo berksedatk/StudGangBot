@@ -8,6 +8,7 @@ module.exports = {
   cooldown: 5,
   guildOnly: true,
   aliases: "pat",
+  sped: true,
   exchannels: [
     {id: "548949556210040862", cooldown: 20}
   ],
