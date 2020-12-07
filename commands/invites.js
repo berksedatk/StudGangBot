@@ -5,6 +5,7 @@ module.exports = {
   category: "Utility",
   description: "Shows the invite chart.",
   guildOnly: true,
+  sped: true,
   execute(bot, message, args) {
     bot.guilds.cache
       .get("548949555597803550")
