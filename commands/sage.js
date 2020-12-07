@@ -6,6 +6,7 @@ module.exports = {
   description: "Noodle's adorable husky named Sage! :) She is so adorable!",
   unstaged: true,
   cooldown: 5,
+  sped: true,
   exchannels: [
     {id: "548949556210040862", cooldown: 20}
   ],
