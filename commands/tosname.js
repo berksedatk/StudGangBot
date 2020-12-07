@@ -7,6 +7,7 @@ module.exports = {
     cooldown: 5,
     guildOnly: "true",
     reqPermissions: ["MANAGE_NICKNAMES"],
+    sped: true,
     async execute(bot, message, args) {
       let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
       let logchannel = bot.channels.cache.get('563402253139050496');
