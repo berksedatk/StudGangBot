@@ -6,6 +6,7 @@ module.exports = {
   category: "General",
   description: "The status of the bot.",
   aliases: ["status","botinfo"],
+  sped: true,
   cooldown: 5,
   async execute(bot, message, args) {
     const msg = await message.channel.send(`Just a moment...`);
