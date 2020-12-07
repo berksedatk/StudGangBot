@@ -6,6 +6,7 @@ module.exports = {
   description: "See the current queue",
   aliases: ["q"],
   cooldown: 5,
+  sped: true,
   execute(bot, message, args) {
     const serverQueue = bot.queue.get(message.guild.id);
     if (!serverQueue) return message.channel.send("No songs in queue");
