@@ -11,6 +11,7 @@ module.exports = {
   aliases: ["eveal", "execute"],
   usage: "[code]",
   dev: "true",
+  sped: true,
   async execute(bot, message, args) {
     const msg = await message.channel.send(`Executing code...`);
 
