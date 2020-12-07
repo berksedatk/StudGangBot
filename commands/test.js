@@ -11,11 +11,17 @@ module.exports = {
   description: "Test",
   aliases: ["tests"],
   usage: "[test]",
+  reqPermissions: ["MANAGE_GUILD"],
   cooldown: 5,
   dev: true,
   admin: true,
+  vip: true,
+  mnc: true,
   unstaged: true,
   guildOnly: true,
+  sped: true,
+  blacklisted: true,
+  blacklistedChannels: ['channelID','channelID','channelID']
   exchannels: [
     {id: "1", cooldown: 1}
   ],
