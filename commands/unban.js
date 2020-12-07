@@ -6,6 +6,7 @@ module.exports = {
   description: "Unban the naughty people!",
   cooldown: 5,
   guildOnly: true,
+  sped: true,
   execute(bot, message, args) {   
 
     const author = message.author;
