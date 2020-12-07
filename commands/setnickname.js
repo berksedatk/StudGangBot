@@ -8,6 +8,7 @@ module.exports = {
   usage: ["<mention> <nickname>"],
   reqPermissions: ['MANAGE_NICKNAMES'],
   cooldown: 5,
+  sped: true,
   execute(bot, message, args) {
     let logchannel = bot.channels.cache.get('563402253139050496');
     let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
