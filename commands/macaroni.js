@@ -9,6 +9,7 @@ module.exports = {
   aliases: ["macncheese","mnc","mac"],
   cooldown: 5,
   guildOnly: true,
+  sped: true,
   exchannels: [
     {id: "548949556210040862", cooldown: 10}
   ],
