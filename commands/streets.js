@@ -10,6 +10,7 @@ module.exports = {
   dev: "true",
   cooldown: 5,
   guildOnly: true,
+  sped: true,
   execute(bot, message, args) {    
  const author = message.author;
     const reciever = message.mentions.users.first();
