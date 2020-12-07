@@ -7,6 +7,7 @@ module.exports = {
   description: 'Figure our how gay someone/something is by simply executing this command! \n(this command is just a joke btw lol it is not meant to be homophobic)',
   usage: "<user>",
   cooldown: 5,
+  sped: true,
   exchannels: [
     {id: "548949556210040862", cooldown: 10}
   ],
