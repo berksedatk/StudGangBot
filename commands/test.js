@@ -21,7 +21,7 @@ module.exports = {
   guildOnly: true,
   sped: true,
   blacklisted: true,
-  blacklistedChannels: ['channelID','channelID','channelID']
+  blacklistedChannels: ['channelID','channelID','channelID'],
   exchannels: [
     {id: "1", cooldown: 1}
   ],
