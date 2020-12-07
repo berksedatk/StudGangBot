@@ -5,6 +5,7 @@ module.exports = {
   category: "Music",
   description: "Skip a song",
   cooldown: 5,
+  sped: true,
   execute(bot, message, args) {
     const serverQueue = bot.queue.get(message.guild.id);
     if (message.member.voice.channel != serverQueue.voiceChannel) return message.channel.send("You have to be in the same voice channel to stop the music!");
