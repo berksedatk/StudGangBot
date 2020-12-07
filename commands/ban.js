@@ -6,6 +6,7 @@ module.exports = {
   description: "Ban someone.",
   usage: "<user> <reason>",
   cooldown: 5,
+  sped: true,
   guildOnly: "true",
   reqPermissions: ["BAN_MEMBERS"],
   async execute(bot, message, args) {
