@@ -9,6 +9,7 @@ module.exports = {
   usage: "[user]",
   reqPermissions: ["MANAGE_GUILD"],
   cooldown: 3,
+  sped: true,
   async execute(bot, message, args) {
     let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.cache.get(args[0]);
     if(!message.member.hasPermission("MANAGE_GUILD")){
