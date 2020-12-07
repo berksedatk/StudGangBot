@@ -9,6 +9,7 @@ module.exports = {
   cooldown: 5,
   guildOnly: true,
   reqPermissions: ['MANAGE_GUILD'],
+  sped: true,
   execute(bot, message, args) {
     if (!args[0]) return message.channel.send(':x: | You have to mention or provide a id to direct message a user.');
     if (!args[1]) return message.channel.send(':x: | You have to provide a title for the embed.');
