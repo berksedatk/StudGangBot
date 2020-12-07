@@ -6,7 +6,8 @@ module.exports = {
   description: "Lists the information about the guild you're in.",
   aliases: ["serverinfo"],
   cooldown: 5,
-  guildOnly: "true",
+  guildOnly: true,
+  sped: true,
   execute(bot, message, args) {
     const guild = message.guild;
 
