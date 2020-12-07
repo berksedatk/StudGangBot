@@ -6,6 +6,7 @@ module.exports = {
   category: "Utility",
   description: "Updates the mod list.",
   admin: "true",
+  sped: true,
   execute(bot, message, args) {
 
 
