@@ -28,7 +28,8 @@ module.exports = {
       if (quote.length < 1 || quote.length > 512) return message.channel.send(":x: | The quote must be in rage of 1 to 512 characters.");
       message.channel.send(quote);
       message.delete({reason: `Quote message: ${quote}` });
-    } 
-      if (message.guild.id = (stud)) return logchannel.send({embed: {title: "Say Command Executed!", description:`${message.author} has used the say command in ${message.channel}! Quote: ${quote}`, color:'#f83e42'}})
+ } 
+      if (message.guild.id = (stud)) return logchannel.send({embed: {title: "Say Command Executed!", description:`${message.author} has used the say command in ${message.channel}!`, color:'#f83e42'}})
+
   }
 };
