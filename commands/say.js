@@ -21,7 +21,6 @@ module.exports = {
       
       if (quote.length < 1 || quote.length > 512) return message.channel.send(":x: | The quote must be in rage of 1 to 512 characters.");
       channel.send(quote).then(() => message.channel.send(`Quote message has been sent.`).then(m => m.delete({timeout: 2500})));
-      if (message.channel.guild.id = stud) return logchannel.send({embed: {title: "(To Specific Channel) Say Command Executed!", description:`${message.author} has used the say command in ${message.channel} to ${channel}! Quote: ${quote}`, color:'#f83e42'}})
       message.delete({ timeout: 2500, reason: `Quote message: ${quote}` })
     } else {
       const quote = args.join(" ");
@@ -29,7 +28,7 @@ module.exports = {
       if (quote.length < 1 || quote.length > 512) return message.channel.send(":x: | The quote must be in rage of 1 to 512 characters.");
       message.channel.send(quote);
       message.delete({reason: `Quote message: ${quote}` });
-      if (message.guild.id = stud) return logchannel.send({embed: {title: "Say Command Executed!", description:`${message.author} has used the say command in ${message.channel}! Quote: ${quote}`, color:'#f83e42'}})
     } 
+      if (message.guild.id = (stud)) return logchannel.send({embed: {title: "Say Command Executed!", description:`${message.author} has used the say command in ${message.channel}! Quote: ${quote}`, color:'#f83e42'}})
   }
 };
