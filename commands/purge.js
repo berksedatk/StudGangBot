@@ -7,7 +7,7 @@ module.exports = {
   aliases: ["prune"],
   usage: "[range] [user(optional)]",
   cooldown: 10,
-  guildOnly: false,
+  guildOnly: true,
   sped: true,
   reqPermissions: ["MANAGE_MESSAGES"],
   execute(bot, message, args) {
