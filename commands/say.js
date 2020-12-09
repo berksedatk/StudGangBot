@@ -21,15 +21,13 @@ module.exports = {
       
       if (quote.length < 1 || quote.length > 512) return message.channel.send(":x: | The quote must be in rage of 1 to 512 characters.");
       channel.send(quote).then(() => message.channel.send(`Quote message has been sent.`).then(m => m.delete({timeout: 2500})));
-      message.delete({ timeout: 2500, reason: `Quote message: ${quote}` })
+      message.delete({ timeout: 2500, reason: `${message.author.tag} Quote message: ${quote}` })
     } else {
       const quote = args.join(" ");
       
       if (quote.length < 1 || quote.length > 512) return message.channel.send(":x: | The quote must be in rage of 1 to 512 characters.");
       message.channel.send(quote);
-      message.delete({reason: `Quote message: ${quote}` });
- } 
-      if (message.guild.id = (stud)) return logchannel.send({embed: {title: "Say Command Executed!", description:`${message.author} has used the say command in ${message.channel}!`, color:'#f83e42'}})
-
+      message.delete({reason: `${message.author.tag} Quote message: ${quote}` });
+    } 
   }
 };
