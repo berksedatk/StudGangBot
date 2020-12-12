@@ -24,23 +24,18 @@ module.exports = {
     if (!reciever) return message.channel.send(":x: | You need someone to hug, mention them!");
 
     const images = [
-      'https://cdn.discordapp.com/attachments/652681168994697236/700013861511757885/7f76102bedf6de4e34065709d16a9ef8.gif',
-      'https://cdn.discordapp.com/attachments/652681168994697236/700013861105041408/giphy_2.gif',
-      'https://cdn.discordapp.com/attachments/652681168994697236/700013966352449576/tenor_4.gif',
-      'https://cdn.discordapp.com/attachments/652681168994697236/700013966587330590/f9e934cddfd6fefe0079ab559ef32ab4.gif',
-      'https://cdn.discordapp.com/attachments/652681168994697236/700013966881062993/giphy.gif',
-      'https://cdn.discordapp.com/attachments/652681168994697236/700013967346499734/tenor_3.gif',
-      'https://cdn.discordapp.com/attachments/652681168994697236/700013967552151572/tumblr_4b73c9ce37c2c8d34a97641f8fd97338_be4510db_500.gif',
-      'https://cdn.discordapp.com/attachments/652681168994697236/700013967858335834/tenor_2.gif',
-      'https://media.discordyui.net/reactions/hug/23523532.gif',
-      'https://media.discordyui.net/reactions/hug/N4CPwjr.gif',
-      'https://media.discordyui.net/reactions/hug/f4BRs7v.gif',
-      'https://media.discordyui.net/reactions/hug/372894.gif',
-      'https://media.discordyui.net/reactions/hug/dsfksopd.gif',
-      'https://media.discordyui.net/reactions/hug/aisudsioa.gif',
-      'https://media.discordyui.net/reactions/hug/N4CPwjr.gif',
-      'https://media.discordyui.net/reactions/hug/asoidjasiod.gif',
-      'https://media.discordyui.net/reactions/hug/6bJxUOb.gif'
+'https://noodle.is-big.gay/yZwGput4p.gif', 
+'https://noodle.is-big.gay/QEKyI9QiO.gif',
+'https://noodle.is-big.gay/BrGpGu2TF.gif',
+'https://noodle.is-big.gay/bkGN89pNv.gif',
+'https://noodle.is-big.gay/y-rO1Uej1.gif',
+'https://noodle.is-big.gay/mD14RayzC.gif',
+'https://noodle.is-big.gay/4iPq8y0Yq.gif',
+'https://noodle.is-big.gay/-9nr86ren.gif',
+'https://noodle.is-big.gay/PtfWkOvOb.gif',
+'https://noodle.is-big.gay/Q11B2GkDB.gif',
+'https://noodle.is-big.gay/DEZ_a9t6N.gif',
+'https://noodle.is-big.gay/WdG78nleH.gif'
     ]
     
     const image = images[Math.floor(Math.random() * images.length)];
