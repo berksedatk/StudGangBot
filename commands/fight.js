@@ -22,17 +22,17 @@ module.exports = {
       `${author}'s poor ass tries to fight ${reciever} even tho they have more dino nuggets. <:(`
     ]
     const images = [
-      `https://cdn.discordapp.com/attachments/697244050293653605/733203679049416835/animefight_1.gif`,
-      `https://cdn.discordapp.com/attachments/697244050293653605/733204952440111124/animefight_2.gif`,
-      `https://cdn.discordapp.com/attachments/697244050293653605/733203974576144384/animefight_3.gif`,
-      `https://cdn.discordapp.com/attachments/697244050293653605/733205103766667274/animefight_4.gif`,
-      `https://cdn.discordapp.com/attachments/697244050293653605/733204168298463292/animefight_5.gif`,
-      `https://cdn.discordapp.com/attachments/697244050293653605/733204323982376971/animefight_6.gif`,
-      `https://cdn.discordapp.com/attachments/697244050293653605/733204434729041980/animefight_7.gif`,
-      `https://cdn.discordapp.com/attachments/697244050293653605/733205239997661255/animefight_8.gif`,
-      `https://cdn.discordapp.com/attachments/697244050293653605/733205366032302151/animefight_9.gif`,
-      `https://cdn.discordapp.com/attachments/697244050293653605/733205447007404035/animefight_10.gif`,
-      `https://cdn.discordapp.com/attachments/697244050293653605/733205523373228072/animefight_11.gif`,
+'https://noodle.is-big.gay/2LLeIFwc2.gif',
+'https://noodle.is-big.gay/xXTPX6ynm.gif',
+'https://noodle.is-big.gay/1pahfhG4D.gif',
+'https://noodle.is-big.gay/E3mL07xKr.gif',
+'https://noodle.is-big.gay/4CoCOhG9K.gif',
+'https://noodle.is-big.gay/Rxs0577MQ.gif',
+'https://noodle.is-big.gay/FOIQ6oZMB.gif',
+'https://noodle.is-big.gay/eQvVE2ncr.gif',
+'https://noodle.is-big.gay/USlpIkF1y.gif',
+'https://noodle.is-big.gay/-RCxTQDMc.gif',
+'https://noodle.is-big.gay/bzpDRIEVu.gif'
     ]
     
     const answer = response[Math.floor(Math.random() * response.length)];  
