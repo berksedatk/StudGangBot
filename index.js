@@ -225,7 +225,7 @@ bot.on("message", msg => {
         let logEmbed = new Discord.MessageEmbed()
         .setAuthor(msg.author.tag, msg.author.displayAvatarURL())
         .setDescription(`**Message sent by ${msg.author.tag} deleted in ${msg.channel}**`)
-        .addField("Message Content", msg.content())
+        .addField("Message Content", msg.content)
         .addField("Reason","Banned words")
         .setColor('RED')
         bot.channels.cache.get("563402253139050496").send(logEmbed)
