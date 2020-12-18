@@ -221,6 +221,13 @@ bot.on("message", msg => {
 
   filter.forEach(word => {
     if (msg.content.toLowerCase().includes(word)) {
+      let logEmbed = new Discord.MessageEmbed()
+      .setAuthor(msg.author.tag, msg.author.displayAvatarURL())
+      .setDescription(`**Message sent by ${msg.author.tag} deleted in ${msg.channel}**`)
+      .addField("Message Content", msg.content())
+      .addField("Reason","Banned words")
+      .setColor('RED')
+      bot.channels.cache.get("563402253139050496").send(logEmbed)
       msg.delete()
       return msg.reply("Your message has been removed for containing words that possibly go against StudGang or Discord's Terms!").then(m => m.delete({timeout: 7000}))
     }
@@ -232,7 +239,7 @@ bot.on("message", msg => {
      msg.delete()
      msg.reply("Please do not talk in this channel!").then(m => m.delete({timeout: 5000}))
   }
- 
+
 //Attachment limit
   let exchannel = ["673555443406077952","673587338865278978","673555191026417674","704071330391261184"]
   if (msg.attachments.size >= 2 && !exchannel.includes(msg.channel.id)) {
