@@ -221,7 +221,7 @@ bot.on("message", msg => {
 
   filter.forEach(word => {
     if (msg.content.toLowerCase().includes(word)) {
-      if (message.guild.id == "548949555597803550") {
+      if (msg.guild.id == "548949555597803550") {
         let logEmbed = new Discord.MessageEmbed()
         .setAuthor(msg.author.tag, msg.author.displayAvatarURL())
         .setDescription(`**Message sent by ${msg.author.tag} deleted in ${msg.channel}**`)
