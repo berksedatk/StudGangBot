@@ -221,13 +221,15 @@ bot.on("message", msg => {
 
   filter.forEach(word => {
     if (msg.content.toLowerCase().includes(word)) {
-      let logEmbed = new Discord.MessageEmbed()
-      .setAuthor(msg.author.tag, msg.author.displayAvatarURL())
-      .setDescription(`**Message sent by ${msg.author.tag} deleted in ${msg.channel}**`)
-      .addField("Message Content", msg.content())
-      .addField("Reason","Banned words")
-      .setColor('RED')
-      bot.channels.cache.get("563402253139050496").send(logEmbed)
+      if (message.guild.id == "548949555597803550") {
+        let logEmbed = new Discord.MessageEmbed()
+        .setAuthor(msg.author.tag, msg.author.displayAvatarURL())
+        .setDescription(`**Message sent by ${msg.author.tag} deleted in ${msg.channel}**`)
+        .addField("Message Content", msg.content())
+        .addField("Reason","Banned words")
+        .setColor('RED')
+        bot.channels.cache.get("563402253139050496").send(logEmbed)
+      }
       msg.delete()
       return msg.reply("Your message has been removed for containing words that possibly go against StudGang or Discord's Terms!").then(m => m.delete({timeout: 7000}))
     }
