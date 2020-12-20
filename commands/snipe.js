@@ -29,6 +29,7 @@ module.exports = {
     let snipeEmbed = new Discord.MessageEmbed()
     .setAuthor(msg.author.tag, msg.author.displayAvatarURL())
     .setColor('RANDOM')
+    .setFooter(`Requested by ${message.author.tag}`)
 
     let inp = false
     filter.forEach(word => {
