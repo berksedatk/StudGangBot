@@ -123,7 +123,7 @@ bot.on('message', message => {
   if (command.admin && !config.admins.includes(message.author.id)) {
     return message.reply(":x: | You are not allowed to use this command!");
   }
-  if (command.sped && !config.sped.includes(message.author.id) {
+  if (command.sped && !config.sped.includes(message.author.id)) {
     return message.reply(":x: | You are not allowed to use this command! <:(").then(m => m.delete({timeout: 7000}));
   }
    if (command.vip && !config.vip.includes(message.author.id)) {
