@@ -225,7 +225,7 @@ bot.on("message", msg => {
         .addField("Message Content", msg.content)
         .addField("Reason","Banned words")
         .setColor('RED')
-        bot.channels.cache.get("563402253139050496").send(logEmbed)
+        //bot.channels.cache.get("563402253139050496").send(logEmbed)
       }
       msg.delete()
       return msg.reply("Your message has been removed for containing words that possibly go against StudGang or Discord's Terms!").then(m => m.delete({timeout: 7000}))
@@ -266,7 +266,7 @@ bot.on("message", msg => {
       atttimestamps.set(msg.author.id, now);
       setTimeout(() => atttimestamps.delete(msg.author.id), attcooldownAmount);
 
-      let echannel = bot.channels.cache.get('630515339205279774');
+      //let echannel = bot.channels.cache.get('630515339205279774');
     echannel.send('e');
     }
   }
