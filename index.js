@@ -61,7 +61,7 @@ bot.on('ready', () => {
 
   msgchannels.forEach(channelid => {
     setInterval(function() {
-      //bot.channels.cache.get(channelid).send({embed: {description: "Always feel free to check out our main chat <#548949556210040862>! :)"}})
+      bot.channels.cache.get(channelid).send({embed: {description: "Always feel free to check out our main chat <#791297870565343232>! :)"}})
     }, 4.32e+7)
   })
 
@@ -207,7 +207,7 @@ bot.on("message", msg => {
   //Blacklisted words
 
 
-  const exception = ["556927352513363968"]
+  //const exception = ["556927352513363968"]
   const filter = ['nigger','n1gg3r','nigga','wigga','n1gger','rapist','n1gga','n!gger','n!gga','n!gg3r','nlgga','nlgger','nlgg3r','n1gg3r',
 "n¡gg3r",'fag','retard','faggot',"n i g g e r",'beaner',"b e a n e r","be a ner","b e a ner","be an er","be an e r",
 'niggair','wetback','w e t b a c k','wet ba ck','we tback','w e tback','rëtard','rétard','retarted',
