@@ -117,7 +117,7 @@ bot.on('message', message => {
   if (command.dev && !config.owners.includes(message.author.id)) {
     return message.reply(":x: | You are not allowed to use this command.").then(m => m.delete({timeout: 15000}))
   }
-  if (command.blacklisted && message.channel.id === "548949556210040862") {
+  if (command.blacklisted && message.channel.id === "791297870565343232") {
     return message.reply(":x: | This command cannot be used in this channel!").then(m => m.delete({timeout: 7000}));
   }
   if (command.admin && !config.admins.includes(message.author.id)) {
