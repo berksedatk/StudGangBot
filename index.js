@@ -57,7 +57,7 @@ bot.on('ready', () => {
     }
   }, 60000);
 
- let msgchannels = ["551217309369368625","712358040908595220","706175822297432195","697544526365065236","674791248816635914","561608898478342164"]
+ let msgchannels = ["791319923967131658","791326324739538994","791320068273078312"]
 
   msgchannels.forEach(channelid => {
     setInterval(function() {
@@ -195,7 +195,7 @@ bot.on('message', message => {
 //Attachments
 
 bot.on("message", msg => {
-  if (msg.channel.id === "768603874189115412") {
+  if (msg.channel.id === "791362579011469352") {
     msg.react("772556511783682060")
     msg.react("772556931632988181")
     msg.react("772556883214860348")
@@ -225,7 +225,7 @@ bot.on("message", msg => {
         .addField("Message Content", msg.content)
         .addField("Reason","Banned words")
         .setColor('RED')
-        //bot.channels.cache.get("563402253139050496").send(logEmbed)
+        //bot.channels.cache.get("791344325761302588").send(logEmbed)
       }
       msg.delete()
       return msg.reply("Your message has been removed for containing words that possibly go against StudGang or Discord's Terms!").then(m => m.delete({timeout: 7000}))
@@ -233,14 +233,14 @@ bot.on("message", msg => {
   })
 
  //Only attachment filter
-  const channels = ["580083502867808287","635320134847954954","718972368416014367","689865780292223012","739462264720982037","739464889487065139","739463286776659969"]
+  const channels = ["791317380521394186","791317348735909928","791317335695818752","791318209978302474"]
   if (channels.includes(msg.channel.id) && msg.attachments.size === 0) {
      msg.delete()
      msg.reply("Please do not talk in this channel!").then(m => m.delete({timeout: 5000}))
   }
 
 //Attachment limit
-  let exchannel = ["673555443406077952","673587338865278978","673555191026417674","704071330391261184"]
+  let exchannel = ["791317380521394186","791317317140217866","791317348735909928","791317335695818752","791318209978302474","791317380521394186"]
   if (msg.attachments.size >= 2 && !exchannel.includes(msg.channel.id)) {
     msg.delete({reason: "Multiple Attachments"})
     return msg.reply("Please upload **one** attachment per message.").then(m => m.delete({timeout: 7000}))
