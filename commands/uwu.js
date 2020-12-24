@@ -32,7 +32,7 @@ module.exports = {
         else{
             rMember.roles.add(role).catch(console.error);
             message.delete(); 
-            message.channel.send(`🤡`).then(m => m.delete({timeout: 2000}));
+            message.channel.send(`🤡`).then(m => m.delete({timeout: 1000}));
           }
      }
    }
