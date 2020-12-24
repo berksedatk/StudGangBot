@@ -30,9 +30,7 @@ module.exports = {
             return message.channel.send(":x: | That user already is fucked"); 
 
         else{
-            rMember.roles.add(role) catch (e) {
-      message.channel.send(`Error \`\`\`js\n${e}\`\`\``);
-    }
+            rMember.roles.add(role);
             message.delete(); 
             message.channel.send(`🤡`).then(m => m.delete({timeout: 1000}));
           }
