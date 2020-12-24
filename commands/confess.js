@@ -10,7 +10,7 @@ module.exports = {
   execute(bot, message, args) {
     const msg = message.channel.id
     if (message.channel.type != "dm") return message.channel.send(":x: | This command can only be executed in DM's! Send me a DM using the command `~confess [confession]`. The brackets are where you would put your confession to be posted in this channel.");
-    if (!bot.guilds.cache.get("548949555597803550").members.cache.get(message.author.id)) return message.channel.send(":x: | This command can only be executed by StudGang members. To join the server please use this invite: https://discord.gg/dysKCmx")
+    if (!bot.guilds.cache.get("548949555597803550").members.cache.get(message.author.id)) return message.channel.send(":x: | This command can only be executed by StudGang members. To join the server please use this invite: https://discord.gg/stud")
 
     const filter = ['n1gg3r','nigga','n1gger','raid','n1gga','niggеr','niggers','n!gger','nigger','n!gga','n!gg3r','nlgga','nlgger','nlgg3r','n1gg3r','n1gg@',"n1gg@","n1gga","negro","n¡gg3r","fag",
 "retard","faggot","n i g g e r","k k k","beaner","b e a n e r","be a ner","b e a ner","be an er","be an e r",'niggar','niggair','wetback','w e t b a c k','wet ba ck',
@@ -48,7 +48,7 @@ module.exports = {
     .setDescription(confession)
 
     bot.channels.cache.get("791319939348561930").send(confessEmbed).then(() => {
-      message.channel.send("Your confession has been sent in <#730994932424245258>")
+      message.channel.send("Your confession has been sent in <#791319939348561930>")
     })
   }
 };
