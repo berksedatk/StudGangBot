@@ -21,7 +21,7 @@ module.exports = {
         if(!rMember) 
             return message.channel.send(":x: | I couldn't find that user.");
             
-        let role = message.member.guild.roles.cache.find(role => role.name === `Mutedd with two d's`);
+        let role = message.member.guild.roles.cache.find(role => role.id === "791333448928460831");
         
         if(!role) 
             return message.channel.send("owo whats this lol!");
