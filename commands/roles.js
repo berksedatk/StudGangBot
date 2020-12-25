@@ -80,7 +80,7 @@ module.exports = {
 :fire: [@] Events
 :hammer_pick: Updates
 :handshake: Partnerships
-:smiling_imp: Ping Me Daddy~`
+:smiling_imp: [@] Ping Me Daddy~`
 
     const gamingEmbed = new Discord.MessageEmbed()
     .setTitle("Gaming Channel Access")
