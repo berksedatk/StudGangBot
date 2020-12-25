@@ -26,6 +26,7 @@ module.exports = {
 :woman: Female 
 :repeat: Transgender
 :no_entry_sign: Non-Binary`
+
     const ageEmbed = new Discord.MessageEmbed()
     .setTitle("Age Roles")
     .setDescription(`
@@ -90,8 +91,8 @@ module.exports = {
     
     const gamingMessage = `c!rr add ${message.channel.id} MESSGAE_ID_HERE :video_game: Gaming`
 
-        message.delete().catch(O_o=>{}); 
-          message.channel.send(genderEmbed).then(() =>
+          message.delete().catch(O_o=>{}); 
+          message.channel.send(genderEmbed).then(() => {
           message.channel.send('${genderMessage}`)then(() => {
               message.channel.send(ageEmbed).then(() => {
               message.channel.send(`${ageMessage}`)then(() => {
