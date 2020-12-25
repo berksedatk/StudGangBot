@@ -75,9 +75,9 @@ module.exports = {
     .setColor('#5E9BF7')
     
     const pingMessage = `c!rr addmany ${message.channel.id} MESSGAE_ID_HERE 
-:bangbang: [@]Announcements
-:tada: [@]Giveaways
-:fire: [@]Events
+:bangbang: [@] Announcements
+:tada: [@] Giveaways
+:fire: [@] Events
 :hammer_pick: Updates
 :handshake: Partnerships
 :smiling_imp: Ping Me Daddy~`
