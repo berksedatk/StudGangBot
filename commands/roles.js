@@ -104,7 +104,7 @@ module.exports = {
 message.channel.send(`${genderMessage}`).then(() => {
 message.channel.send(`${ageMessage}`).then(() => {
 message.channel.send(`${sexualityMessage}`).then(() => {
-message.channel.send(`${pingMessags}`).then(() => {
+message.channel.send(`${pingMessage}`).then(() => {
 message.channel.send(`${gamingMessage}`)
                        
             
@@ -119,6 +119,7 @@ message.channel.send(`${gamingMessage}`)
                   })
                    })
                     })
+                     })
                 
                  
   }
