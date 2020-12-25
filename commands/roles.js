@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports = {
   name: "roles",
   category: "Utility",
-  description: "",
+  description: "e bro",
   aliases: "funroles",
   reqPermissions: ["MANAGE_GUILD"],
   cooldown: 5,
@@ -13,7 +13,7 @@ module.exports = {
   sped: true,
   execute(bot, message, args) {    
     const genderEmbed = new Discord.MessageEmbed()
-    .setTitle("Age Roles")
+    .setTitle("Gender Roles")
     .setDescription(`
 :man: **Male
 :woman: Female
