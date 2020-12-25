@@ -93,24 +93,29 @@ module.exports = {
 
           message.delete().catch(O_o=>{}); 
           message.channel.send(genderEmbed).then(() => {
-          message.channel.send('${genderMessage}`)then(() => {
+          
               message.channel.send(ageEmbed).then(() => {
-              message.channel.send(`${ageMessage}`)then(() => {
+              
                 message.channel.send(sexualityEmbed).then(() => {
-                message.channel.send(`${sexualityMessage}`)then(() => {  
+                
                     message.channel.send(pingEmbed).then(() => {
-                    message.channel.send(`${pingMessage}`)then(() => { 
-                       message.channel.send(gamingEmbed)then(() => {
-                       message.channel.send(`${gamingMessage}`)
+                    
+                       message.channel.send(gamingEmbed)
+message.channel.send(`${genderMessage}`)
+message.channel.send(`${ageMessage}`)
+message.channel.send(`${sexualityMessage}`)
+message.channel.send(`${pingMessags}`)
+message.channel.send(`${gamingMessage}`)
+                       
             
           })  
-          })
+          
             })  
-            })
+            
               })
-              })
+              
                 })
-                })
-                 })
+                
+                 
   }
 };
