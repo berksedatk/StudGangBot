@@ -18,16 +18,16 @@ module.exports = {
     if (!reciever) return message.channel.send(":x: | You need someone to pet pet pet pet pet pet pet pet pet pet pet pet pet pet!");
 
     const images = [
-      'https://cdn.discordapp.com/attachments/687865931938136109/700733282735620116/Animeheadpat.gif',
-      'https://cdn.discordapp.com/attachments/687865931938136109/700733984484622408/Animeheadpat1.gif',
-      'https://cdn.discordapp.com/attachments/687865931938136109/700734272608272515/Animeheadpat2.gif',
-      'https://cdn.discordapp.com/attachments/687865931938136109/700735109552275466/Animeheadpat3.gif',
-      'https://cdn.discordapp.com/attachments/687865931938136109/700735377287282718/Animeheadpat4.gif',
-      'https://cdn.discordapp.com/attachments/687865931938136109/700735690228498492/Animeheadpat5.gif',
-      'https://cdn.discordapp.com/attachments/687865931938136109/700736191539970129/Animeheadpat7.gif',
-      'https://cdn.discordapp.com/attachments/687865931938136109/700736271945040012/Animeheadpat6.gif',
-      'https://cdn.discordapp.com/attachments/687865931938136109/700737309829759047/Animeheadpat8.gif',
-      'https://cdn.discordapp.com/attachments/687865931938136109/700739323120844851/Animeheadpat9.gif'
+'https://noodle.is-big.gay/NdtSTyVT6.gif',
+'https://noodle.is-big.gay/Xc9ysDWpq.gif',
+'https://noodle.is-big.gay/0nsYGN2hb.gif',
+'https://noodle.is-big.gay/joG9ZZB9y.gif',
+'https://noodle.is-big.gay/WgyaYRLyG.gif',
+'https://noodle.is-big.gay/kpu3R_zzm.gif',
+'https://noodle.is-big.gay/l0tkSZeXz.gif',
+'https://noodle.is-big.gay/XE-EnFCft.gif',
+'https://noodle.is-big.gay/H3ffI3VxS.gif',
+'https://noodle.is-big.gay/s9OnSCXoh.gif'
     ]
     
     const image = images[Math.floor(Math.random() * images.length)];
