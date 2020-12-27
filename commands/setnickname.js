@@ -10,7 +10,7 @@ module.exports = {
   cooldown: 5,
   sped: true,
   execute(bot, message, args) {
-    let logchannel = bot.channels.cache.get('563402253139050496');
+    let logchannel = bot.channels.cache.get('791344325761302588');
     let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
     const newname = args.slice(1).join(' ');
     if(!member)
