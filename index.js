@@ -75,7 +75,7 @@ bot.on("guildCreate", guild => {
 
 bot.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
-  bot.channels.cache.get("792442072040079400").send({embed: {title: 'Guild Left', description: `${guild.name} (id: ${guild.id})\nOwner's ID: ${guild.ownerID}\nThis Guild had ${guild.memberCount} members!`,thumbnail: `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.webp`, thumbnail: `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.webp`, color: 'ff0000'}});
+  bot.channels.cache.get("792442072040079400").send({embed: {title: 'Guild Left', description: `${guild.name} (id: ${guild.id})\nOwner's ID: ${guild.ownerID}\nThis Guild has ${guild.memberCount} members!`,thumbnail: `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.webp`, color: 'ff0000'}});
 });
 
 //#On Message Deleted#
