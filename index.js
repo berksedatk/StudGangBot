@@ -76,11 +76,11 @@ bot.on("guildCreate", guild => {
        .addField(`Guild ID`,`${guild.id}`)
        .addField(`Guild Member Count`,`${guild.memberCount}`)
        .addField(`Owner ID`,`${guild.ownerID}`)
-       if (guild.description != null) joinGuild.addField(`Guild Description`,`${guild.description}`);
-       if (guild.description = null) joinGuild.addField(`Guild Description`,`None Detected`);
        .setThumbnail(`https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.webp`)
        .setColor(`67eb3d`)
        .setTimestamp()
+       if (guild.description != null) joinGuild.addField(`Guild Description`,`${guild.description}`)
+       if (guild.description = null) joinGuild.addField(`Guild Description`,`None Detected`)
   bot.channels.cache.get("792442072040079400").send(joinGuild)
 });
 
@@ -92,11 +92,11 @@ bot.on("guildDelete", guild => {
        .addField(`Guild ID`,`${guild.id}`)
        .addField(`Guild Member Count`,`${guild.memberCount}`)
        .addField(`Owner ID`,`${guild.ownerID}`)
-       if (guild.description != null) leftGuild.addField(`Guild Description`,`${guild.description}`)
-       if (guild.description = null) leftGuild.addField(`Guild Description`,`None`)
        .setThumbnail(`https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.webp`)
        .setColor(`fa3d3d`)
        .setTimestamp()
+       if (guild.description != null) leftGuild.addField(`Guild Description`,`${guild.description}`)
+       if (guild.description = null) leftGuild.addField(`Guild Description`,`None`)
   bot.channels.cache.get("792442072040079400").send(leftGuild);
 });
 
