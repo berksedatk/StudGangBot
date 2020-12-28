@@ -72,11 +72,13 @@ bot.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
      const joinGuild = new Discord.MessageEmbed()
        .setTitle(`Guild Joined`)
-       .addField(`Guild Name`,`${guild.name} (id: ${guild.id})`)
+       .addField(`Guild Name`,`${guild.name}`)
+       .addField(`Guild ID`,`${guild.id}`)
        .addField(`Guild Member Count`,`${guild.memberCount}`)
        .addField(`Owner ID`,`${guild.ownerID}`)
        .setThumbnail(`https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.webp`)
-       .setColor(`5bff14`)
+       .setColor(`67eb3d`)
+       .setTimestamp()
   bot.channels.cache.get("792442072040079400").send(joinGuild)
 });
 
@@ -84,11 +86,13 @@ bot.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
       const leftGuild = new Discord.MessageEmbed()
        .setTitle(`Guild Left`)
-       .addField(`Guild Name`,`${guild.name} (id: ${guild.id})`)
+       .addField(`Guild Name`,`${guild.name}`)
+       .addField(`Guild ID`,`${guild.id}`)
        .addField(`Guild Member Count`,`${guild.memberCount}`)
        .addField(`Owner ID`,`${guild.ownerID}`)
        .setThumbnail(`https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.webp`)
-       .setColor(`ff0000`)
+       .setColor(`fa3d3d`)
+       .setTimestamp()
   bot.channels.cache.get("792442072040079400").send(leftGuild);
 });
 
