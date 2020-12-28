@@ -76,8 +76,8 @@ bot.on("guildCreate", guild => {
        .addField(`Guild ID`,`${guild.id}`)
        .addField(`Guild Member Count`,`${guild.memberCount}`)
        .addField(`Owner ID`,`${guild.ownerID}`)
-       if (guild.description != null) joinGuild.addField(`Guild Description`,`${guild.description}`)
-       if (guild.description = null) joinGuild.addField(`Guild Description`,`None`)
+       if (guild.description != null) joinGuild.addField(`Guild Description`,`${guild.description}`);
+       if (guild.description = null) joinGuild.addField(`Guild Description`,`None Detected`);
        .setThumbnail(`https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.webp`)
        .setColor(`67eb3d`)
        .setTimestamp()
