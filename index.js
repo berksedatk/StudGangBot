@@ -51,9 +51,9 @@ bot.on('ready', () => {
   setInterval(() => {
     var date = new Date();
     if (date.getHours() - 6 >= 0 && date.getHours() - 6 < 12){
-      //bot.channels.cache.get("791472714376151050").setName('😈 noodles sex dungeon')
+      bot.channels.cache.get("792441809858199552").setName('😈┃noodles sex dungeon')
     } else if (date.getHours() - 6 >= 12){
-      //bot.channels.cache.get("791472714376151050").setName("🍝 noodles cave")
+      bot.channels.cache.get("792441809858199552").setName("🍝┃noodles cave")
     }
   }, 60000);
 
