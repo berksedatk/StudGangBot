@@ -70,12 +70,26 @@ bot.on('ready', () => {
 
 bot.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
-  bot.channels.cache.get("792442072040079400").send({embed: {title: `Guild Joined`, description: `${guild.name} (id: ${guild.id}).\nOwner's ID: ${guild.ownerID} \nThis Guild has ${guild.memberCount} members.`,  thumbnail: `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.webp`, color: '5bff14'}});
+     const joinGuild = new Discord.MessageEmbed()
+       .setTitle(`Guild Joined`)
+       .addField(`Guild Name`,`${guild.name} (id: ${guild.id})`)
+       .addField(`Guild Member Count`,`${guild.memberCount}`)
+       .addField(`Owner ID`,`${guild.ownerID}`)
+       .setThumbnail(`https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.webp`)
+       .setColor(`5bff14`)
+  bot.channels.cache.get("792442072040079400").send(joinGuild)
 });
 
 bot.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
-  bot.channels.cache.get("792442072040079400").send({embed: {title: 'Guild Left', description: `${guild.name} (id: ${guild.id})\nOwner's ID: ${guild.ownerID}\nThis Guild has ${guild.memberCount} members!`,thumbnail: `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.webp`, color: 'ff0000'}});
+      const leftGuild = new Discord.MessageEmbed()
+       .setTitle(`Guild Left`)
+       .addField(`Guild Name`,`${guild.name} (id: ${guild.id})`)
+       .addField(`Guild Member Count`,`${guild.memberCount}`)
+       .addField(`Owner ID`,`${guild.ownerID}`)
+       .setThumbnail(`https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.webp`)
+       .setColor(`ff0000`)
+  bot.channels.cache.get("792442072040079400").send(leftGuild);
 });
 
 //#On Message Deleted#
