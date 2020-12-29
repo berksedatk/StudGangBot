@@ -31,7 +31,7 @@ module.exports = {
     .setFooter("React with the emote beside the role you want!")
     .setColor('#5E9BF7')
 
-    const sexualityMessage = `c!rr addmany ${message.channel.id} MESSGAE_ID_HERE \n:kiss_woman_man: **Heterosexual\n:kiss_mm: Homosexual\n:kiss_ww: Lesbian\n:man_shrugging: Bisexual\n:woman_gesturing_no: Other(Ask-Me!)\n:smiling_imp: Homiesexual`
+    const sexualityMessage = `c!rr addmany ${message.channel.id} MESSGAE_ID_HERE \n:kiss_woman_man: Sexuality:Heterosexual\n:kiss_mm: Sexuality:Homosexual\n:kiss_ww: Sexuality:Lesbian\n:man_shrugging: Sexulity:Bisexual\n:woman_gesturing_no: Sexuality:Other(Ask-Me!)\n:smiling_imp: Sexuality:Homiesexual`
 
     const pingEmbed = new Discord.MessageEmbed()
     .setTitle("Ping Roles")
