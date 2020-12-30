@@ -36,7 +36,7 @@ for (const file of commandFiles) {
 bot.on('ready', () => {
 
   const activities = [
-    `Thank You, Talon!`,
+    `you😳 | ~help`,
     'The StudGang | ~help',
     ];
 
