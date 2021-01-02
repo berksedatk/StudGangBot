@@ -43,7 +43,13 @@ bot.on('ready', () => {
 
   setInterval(() => {
     let activity = activities[Math.floor(Math.random() * activities.length)];
-    bot.user.setActivity(activity, { type: "WATCHING" });
+    bot.user.setPresence({
+        status: 'DND',
+        activity: {
+            name: activity,
+            type: "WATCHING"
+        }
+    });
   }, 10000);
 
   bot.user.setStatus("dnd").catch(console.error);
