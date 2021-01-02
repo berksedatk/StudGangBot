@@ -35,13 +35,9 @@ for (const file of commandFiles) {
 
 bot.on('ready', () => {
  
-    bot.user.setPresence({
-        status: 'dnd',
-        activity: {
-            name: "The StudGang | ~help",
-            type: "WATCHING"
-        }
-    });
+    bot.user.setActivity("The StudGang | ~help", {
+    type: "WATCHING"
+  });
 
   setInterval(() => {
     var date = new Date();
