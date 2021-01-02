@@ -44,14 +44,6 @@ bot.on('ready', () => {
     });
   },
 
-    bot.user.setPresence({
-        status: 'idle',
-        activity: {
-            name: "For Errors..",
-            type: "WATCHING"
-        }
-    });
-
   setInterval(() => {
     var date = new Date();
     if (date.getHours() - 6 >= 0 && date.getHours() - 6 < 12){
