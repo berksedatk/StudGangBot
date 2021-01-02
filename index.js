@@ -34,25 +34,23 @@ for (const file of commandFiles) {
 //#On Ready#
 
 bot.on('ready', () => {
-
-  const activities = [
-    `you😳 | ~help`,
-    'The StudGang | ~help',
-    ];
-
-
-  setInterval(() => {
-    let activity = activities[Math.floor(Math.random() * activities.length)];
+ 
     bot.user.setPresence({
         status: 'dnd',
         activity: {
-            name: activity,
+            name: "The StudGang | ~help",
             type: "WATCHING"
         }
     });
-  }, 10000);
+  },
 
-  bot.user.setStatus("idle").catch(console.error);
+    bot.user.setPresence({
+        status: 'idle',
+        activity: {
+            name: "For Errors..",
+            type: "WATCHING"
+        }
+    });
 
   setInterval(() => {
     var date = new Date();
