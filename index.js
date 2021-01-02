@@ -42,7 +42,6 @@ bot.on('ready', () => {
             type: "WATCHING"
         }
     });
-  },
 
   setInterval(() => {
     var date = new Date();
