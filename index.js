@@ -36,7 +36,8 @@ for (const file of commandFiles) {
 bot.on('ready', () => {
  
     bot.user.setActivity("The StudGang | ~help", {
-    type: "WATCHING"
+    type: "WATCHING",
+    status: "dnd"
   });
 
   setInterval(() => {
