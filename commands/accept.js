@@ -24,8 +24,8 @@ module.exports = {
             message.channel.send(success)
 
             const acceptance = new Discord.MessageEmbed()
-            .setTitle(":tada:Your Application Has Been Accepted By An Admin!:tada:")
-            .setDescription(`Congratulations, We are welcoming you with open arms into our Support Team as one of our newest Trial-Support Team Member! :tada:\nAlthough you do not receive any roles in the main server, we have a seperate support server with all the information and rules needed to get started!`)
+            .setTitle("Your Application Has Been Accepted By An Admin!")
+            .setDescription(`Congratulations, We are welcoming you with open arms into our Support Team as one of our newest Trial-Support Team Member!\nUnfortunately you do not receive any roles in the main server but we have an exclusive support server where all the magic happens and the information/rules needed to get started are located!`)
             .addField("Permanent Support Server Invite:","[Click Here!](https://discord.gg/WGMrkqhuYb)")
             .addField("Questions/Concerns?","Ask noodle anything! He will try his best to give you the answer you need")
             .setColor('#42f12c')
