@@ -30,6 +30,7 @@ module.exports = {
             .addField("Questions/Concerns?","Ask noodle anything! He will try his best to give you the answer you need")
             .setColor('#42f12c')
             .setTimestamp()
+            .setThumbnail("https://cdn.discordapp.com/avatars/536542160703586324/bbf97de08ae62d4d4eb801c956bedeba.png?size=1024")
             rMember.send(acceptance)
      }
    }
