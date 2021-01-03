@@ -31,7 +31,6 @@ module.exports = {
             .setColor('#42f12c')
             .setTimestamp()
             rMember.send(acceptance)
-        }
      }
    }
 };
