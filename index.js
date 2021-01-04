@@ -34,12 +34,19 @@ for (const file of commandFiles) {
 //#On Ready#
 
 bot.on('ready', () => {
- 
-    bot.user.setActivity("The StudGang | ~help", {
-    type: "WATCHING",
-    status: "DND"
-  });
 
+  const activities = [
+    `you😳 | ~help`,
+    'The StudGang | ~help',
+    ];
+
+
+  setInterval(() => {
+    let activity = activities[Math.floor(Math.random() * activities.length)];
+    bot.user.setActivity(activity, { type: "WATCHING" });
+  }, 10000);
+
+  bot.user.setStatus("dnd").catch(console.error);
   setInterval(() => {
     var date = new Date();
     if (date.getHours() - 6 >= 0 && date.getHours() - 6 < 12){
