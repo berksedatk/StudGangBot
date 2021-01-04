@@ -14,6 +14,7 @@
     "ffmpeg": "0.0.4",
     "fluent-ffmpeg": "^2.1.2",
     "hastebin-gen": "^2.0.5",
+    "relevant-urban": "^2.0.0",
     "instagram-web-api": "^2.2.0",
     "cheerio": "^1.0.0-rc.3",
     "request": "^2.88.2",
