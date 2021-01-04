@@ -8,7 +8,6 @@ module.exports = {
   cooldown: 10,
   guildOnly: true,
   aliases: ["frog"]
-  sped: true,
   exchannels: [
     {id: "548949556210040862", cooldown: 25}
   ],
