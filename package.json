@@ -19,7 +19,8 @@
     "request": "^2.88.2",
     "ms": "^2.1.2",
     "nhentai-js": "^3.3.0",
-    "ytdl-core": "^3.3.0"
+    "ytdl-core": "^3.3.0",
+    "relevant-urban": "^2.0.0"
   },
   "engines": {
     "node": "12.x"
