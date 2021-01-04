@@ -5,6 +5,7 @@ module.exports = {
   category: "General",
   description: 'Bot\'s uptime.',
   cooldown: 5,
+  sped: true,
   async execute(bot, message) {
     const msg = await message.channel.send(`Just a moment...`);
 

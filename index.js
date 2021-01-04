@@ -73,8 +73,8 @@ bot.on("guildCreate", guild => {
        .setTitle(`Guild Joined`)
        .addField(`Guild Name`,`${guild.name}`)
        .addField(`Guild ID`,`${guild.id}`)
-       .addField(`Guild Member Count`,`${guild.memberCount}`)
        .addField(`Owner ID`,`${guild.ownerID}`)
+       .addField(`Guild Member Count`,`${guild.memberCount}`)
        .setThumbnail(`https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.webp`)
        .setColor(`67eb3d`)
        .setTimestamp()
@@ -89,8 +89,8 @@ bot.on("guildDelete", guild => {
        .setTitle(`Guild Left`)
        .addField(`Guild Name`,`${guild.name}`)
        .addField(`Guild ID`,`${guild.id}`)
-       .addField(`Guild Member Count`,`${guild.memberCount}`)
        .addField(`Owner ID`,`${guild.ownerID}`)
+       .addField(`Guild Member Count`,`${guild.memberCount}`)
        .setThumbnail(`https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.webp`)
        .setColor(`fa3d3d`)
        .setTimestamp()
@@ -125,7 +125,9 @@ bot.on('message', message => {
   if (message.author.bot) return;
   //Prefix
   if (!message.content.toLowerCase().startsWith(config.prefix)) return;
-
+  if(message.content.startsWith(`<@675712982139011072>`)) {
+      message.react(':wave:');
+    }
   //Arguments
   const args = message.content.slice(config.prefix.length).split(/ +/);
   const commandName = args.shift().toLowerCase();
@@ -147,6 +149,9 @@ bot.on('message', message => {
    if (command.vip && !config.vip.includes(message.author.id)) {
     return message.reply(":x: | You are not allowed to use this command!");
   }
+   if (command.sped && !config.speds.includes(message.author.id)) {
+    return message.reply(":x: | You are not allowed to use this command!");
+ }
     if (command.mnc && !config.mnc.includes(message.author.id)) {
     return message.reply(":x: | You are not cool enough to use this command!");
   }
