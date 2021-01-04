@@ -149,9 +149,6 @@ bot.on('message', message => {
    if (command.vip && !config.vip.includes(message.author.id)) {
     return message.reply(":x: | You are not allowed to use this command!");
   }
-   if (command.sped && !config.speds.includes(message.author.id)) {
-    return message.reply(":x: | You are not allowed to use this command!");
- }
     if (command.mnc && !config.mnc.includes(message.author.id)) {
     return message.reply(":x: | You are not cool enough to use this command!");
   }
