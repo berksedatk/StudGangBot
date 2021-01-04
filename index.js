@@ -37,7 +37,7 @@ bot.on('ready', () => {
  
     bot.user.setActivity("The StudGang | ~help", {
     type: "WATCHING",
-    status: "dnd"
+    status: "DND"
   });
 
   setInterval(() => {
