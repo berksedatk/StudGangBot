@@ -9,7 +9,7 @@ module.exports = {
   guildOnly: true,
   aliases: ["frog"]
   exchannels: [
-    {id: "548949556210040862", cooldown: 25}
+    {id: "791297870565343232", cooldown: 25}
   ],
   execute(bot, message, args) {
      Image(message);
