@@ -5,12 +5,9 @@ module.exports = {
   name: "phrog",
   category: "Fun",
   description: "Get phrog pics",
-  cooldown: 10,
+  cooldown: 20,
   guildOnly: true,
-  aliases: ["frog"]
-  exchannels: [
-    {id: "791297870565343232", cooldown: 25}
-  ],
+  aliases: ["frog"],
   execute(bot, message, args) {
      Image(message);
     function Image(message){
