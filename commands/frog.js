@@ -8,7 +8,8 @@ module.exports = {
   cooldown: 20,
   guildOnly: true,
   aliases: ["frog"],
-  execute(bot, message, args) {
+  async execute(bot, message, args) {
+    const msg = await message.channel.send(`Generating Phrog Pics...`);
      Image(message);
     function Image(message){
     const options = {
@@ -40,12 +41,12 @@ module.exports = {
     }
      
     const frog = new Discord.MessageEmbed()
-    .setTitle('Here is your phrog!')
+    .setAuthor(message.author.tag, message.author.displayAvatarURL())
     .setColor('#56FA85')
     .setImage(urls[Math.floor(Math.random() * urls.length)])
     .setTimestamp()
-    .setFooter(`Phrog Requested By: ${message.author.tag}`, message.author.avatarURL)
-    message.channel.send(frog)
+    .setFooter("Here is your frog :)")
+    msg.edit(' ',frog)
     })
     }
   }
