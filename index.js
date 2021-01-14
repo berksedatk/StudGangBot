@@ -251,7 +251,7 @@ bot.on("message", msg => {
         bot.channels.cache.get("791344325761302588").send(logEmbed)
       }
       msg.delete()
-      return msg.reply("Your message has been removed for containing words that possibly go against StudGang or Discord's Terms!").then(m => m.delete({timeout: 7000}))
+      return msg.author.send("Your message has been removed for containing words that possibly go against StudGang or Discord's Terms!")
     }
   })
 
