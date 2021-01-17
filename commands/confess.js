@@ -47,8 +47,8 @@ module.exports = {
     .setColor("#efefef")
     .setDescription(confession)
 
-    bot.channels.cache.get("791319939348561930").send(confessEmbed).then(() => {
-      message.channel.send("Your confession has been sent in <#791319939348561930>")
+    bot.channels.cache.get("791319900550725643").send(confessEmbed).then(() => {
+      message.channel.send("Your confession has been sent in <#791319900550725643>")
     })
   }
 };
