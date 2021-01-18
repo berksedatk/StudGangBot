@@ -71,31 +71,33 @@ bot.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
      const joinGuild = new Discord.MessageEmbed()
        .setTitle(`Guild Joined`)
-       .addField(`Guild Name`,`${guild.name}`)
-       .addField(`Guild ID`,`${guild.id}`)
-       .addField(`Owner ID`,`${guild.ownerID}`)
-       .addField(`Guild Member Count`,`${guild.memberCount}`)
+       .addField(`Name:`,`${guild.name}`)
+       .addField(`ID:`,`${guild.id}`)
+       .addField(`Owner:`,`${guild.owner.user.username}#${guild.owner.user.discriminator} (${guild.ownerID})`)
+       .addField('Region:',`${guild.region}`)
+       .addField(`Member Counts:`,`Total: ${guild.members.cache.size}\nHumans: ${guild.members.cache.filter(member => !member.user.bot).size}\nBots:${guild.members.cache.filter(member => member.user.bot).size}`)
+       .addField('Created:',`${guild.createdAt.toUTCString().substr(0, 16)}`)
        .setThumbnail(`https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.webp`)
-       .setColor(`67eb3d`)
-       .setTimestamp()
-       if (guild.description != undefined) joinGuild.addField(`Guild Description`,`${guild.description}`)
-       else joinGuild.addField(`Guild Description`,`None Detected`)
-  bot.channels.cache.get("792442072040079400").send(joinGuild)
+       .setColor('3ff539')
+       .setFooter(bot.user.username, bot.user.avatarURL())
+       .setTimestamp();
+  bot.channels.cache.get("792442072040079400").send(joinGuild);
 });
 
 bot.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
       const leftGuild = new Discord.MessageEmbed()
        .setTitle(`Guild Left`)
-       .addField(`Guild Name`,`${guild.name}`)
-       .addField(`Guild ID`,`${guild.id}`)
-       .addField(`Owner ID`,`${guild.ownerID}`)
-       .addField(`Guild Member Count`,`${guild.memberCount}`)
+       .addField(`Name:`,`${guild.name}`)
+       .addField(`ID:`,`${guild.id}`)
+       .addField(`Owner:`,`${guild.owner.user.username}#${guild.owner.user.discriminator} (${guild.ownerID})`)
+       .addField('Region:',`${guild.region}`)
+       .addField(`Member Counts:`,`Total: ${guild.members.cache.size}\nHumans: ${guild.members.cache.filter(member => !member.user.bot).size}\nBots:${guild.members.cache.filter(member => member.user.bot).size}`)
+       .addField('Created:',`${guild.createdAt.toUTCString().substr(0, 16)}`)
        .setThumbnail(`https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.webp`)
-       .setColor(`fa3d3d`)
-       .setTimestamp()
-       if (guild.description != undefined) leftGuild.addField(`Guild Description`,`${guild.description}`)
-       else leftGuild.addField(`Guild Description`,`None`)
+       .setColor(`ff4839`)
+       .setFooter(bot.user.username, bot.user.avatarURL())
+       .setTimestamp();
   bot.channels.cache.get("792442072040079400").send(leftGuild);
 });
 
