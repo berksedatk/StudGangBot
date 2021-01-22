@@ -127,7 +127,7 @@ bot.on('message', message => {
   if (message.author.bot) return;
   //Prefix
   if (!message.content.toLowerCase().startsWith(config.prefix)) return;
-  if(message.content.startsWith(`<@675712982139011072>`)) {
+  if(message.content.includes(`<@675712982139011072>`)) {
       message.react(':wave:');
     }
   //Arguments
@@ -233,7 +233,7 @@ bot.on("message", msg => {
 
 
   //const exception = ["556927352513363968"]
-  const filter = ['nigger','n1gg3r','nigga','wigga','n1gger','rapist','n1gga','n!gger','n!gga','n!gg3r','nlgga','nlgger','nlgg3r','n1gg3r',
+  const filter = ['nigger','n¡gga','n1gg3r','nigga','wigga','n1gger','rapist','n1gga','n!gger','n!gga','n!gg3r','nlgga','nlgger','nlgg3r','n1gg3r',
 "n¡gg3r",'fag','retard','faggot',"n i g g e r",'beaner',"b e a n e r","be a ner","b e a ner","be an er","be an e r",
 'niggair','wetback','w e t b a c k','wet ba ck','we tback','w e tback','rëtard','rétard','retarted',
 'r.e.t.a.r.d','r3tard','nigg3rs','nigg3r','retar.d','n1gg3r','queer','nlgger','fags','chink','niggar','niggur','nigor',
