@@ -56,13 +56,19 @@ module.exports = {
     if (!urls.length) {     
          return;
     }
-     
+    const f1 = "Here is your frog :)"
+    const f2 = "Here is your phrog ;)"
+    const footers = [
+        f1,
+        f2
+    ]
+    const footerpicker = Math.floor(Math.random() * footers.length);
     const frog = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.displayAvatarURL())
     .setColor('#56FA85')
     .setImage(urls[Math.floor(Math.random() * urls.length)])
     .setTimestamp()
-    .setFooter("Here is your frog :)")
+    .setFooter(footers[footerpicker])
     msg.edit(' ',frog)
     })
     }
