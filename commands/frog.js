@@ -1,4 +1,22 @@
-phatforg = "http://results.dogpile.com/serp?qc=images&q=" + "fat frogs"
+const Discord = require("discord.js");
+const cheerio = require('cheerio');
+const request = require('request');
+module.exports = {
+  name: "phrog",
+  category: "Fun",
+  description: "Get phrog pics",
+  cooldown: 20,
+  guildOnly: true,
+  aliases: ["frog"],
+  async execute(bot, message, args) {
+    const msg = await message.channel.send(`Generating Phrog Pics...`);
+    const forg = "http://results.dogpile.com/serp?qc=images&q=" + "frog",
+    const lollmeme = "http://results.dogpile.com/serp?qc=images&q=" + "frog meme",
+    const phorg = "http://results.dogpile.com/serp?qc=images&q=" + "phrog",
+    const cutiefrogs = "http://results.dogpile.com/serp?qc=images&q=" + "cute frogs",
+    const thiccforgs = "http://results.dogpile.com/serp?qc=images&q=" + "thick frogs",
+    const babieforgs = "http://results.dogpile.com/serp?qc=images&q=" + "baby frogs",
+    const phatforg = "http://results.dogpile.com/serp?qc=images&q=" + "fat frogs"
     const choices = [
       forg,
       lollmeme,
