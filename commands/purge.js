@@ -6,7 +6,6 @@ module.exports = {
   description: "Purges the amount of messages you want(plus your message).",
   aliases: ["prune"],
   usage: "[range] [user(optional)]",
-  cooldown: 10,
   guildOnly: true,
   sped: true,
   reqPermissions: ["MANAGE_MESSAGES"],
