@@ -124,7 +124,7 @@ bot.on('messageUpdate', (oldMessage, newMessage) => {
 //#On Message-Command#
 
 bot.on('message', message => {
-  if (message.author.bot) return;
+  if (message.author.bot && message.author.id != bot.user.id) return;
   //Prefix
   if (!message.content.toLowerCase().startsWith(config.prefix)) return;
   if(message.content.includes(`<@675712982139011072>`)) {
