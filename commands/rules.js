@@ -27,7 +27,7 @@ module.exports = {
 \n**__Use channels for their appropiate uses__**
 4) We would like to keep our channels neat and so should you! We recommend that you try your best to limit the use of bot commands in channels that bot commands are allowed in. <#551217309369368625> is the best place to use commands! (warn/mute)
 \n**__Do not advertise__**
-5) We strictly forbid the advertisement of other discord servers/communities, social media (<#657318283967725588> is the only exception), third party websites, etc. This includes unsolicited DM and indirect advertisements. (warn/mute/temp-ban)`)    .setColor('#1fbceb')
+5) We strictly forbid the advertisement of other discord servers/communities, social media (<#791357406965399592> is the only exception), third party websites, etc. This includes unsolicited DM and indirect advertisements. (warn/mute/temp-ban)`)    .setColor('#1fbceb')
     
     const rules2Embed = new Discord.MessageEmbed()
     .setDescription(`**__Treat everyone including the staff, members and yourself with respect.__**
@@ -38,7 +38,7 @@ module.exports = {
 \n**__Spamming/Flooding chats is not tolerated__**
 8) Spamming/Flooding is highly unappreciated in this server! Examples of spamming would be sending the same/similar messages in a fast or slow interval. Flooding is posting content that overwhelms a users screen. Spamming/Flooding isn't just words, it could be images, links, mentions, copy pasta, etc. (warn/mute)
 \n**__Always listen to what a staff member says__**
-9) Listen to what a staff member says. If they tell you to stop doing something, stop. If you feel that they abuse their powers, report it to the ModMail bot (<#747015088564731904>). (warn/mute)`)
+9) Listen to what a staff member says. If they tell you to stop doing something, stop. If you feel that they abuse their powers, report it to the ModMail bot (<@536542160703586324>). (warn/mute)`)
     .setColor('#1fbceb')
     
         const introrulesEmbed = new Discord.MessageEmbed()
