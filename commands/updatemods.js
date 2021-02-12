@@ -13,7 +13,7 @@ module.exports = {
     const modTotal = modlist.moderation.owner.length + modlist.moderation.coowner.length + modlist.moderation.headadmins.length + modlist.moderation.admins.length + modlist.moderation.managers.length +
           modlist.moderation.seniormods.length + modlist.moderation.mods.length + modlist.moderation.juniormods.length + modlist.moderation.helpers.length
     
-    const eventTotal = modlist.events.head.length + modlist.events.senior.length + modlist.events.junior.length + modlist.events.trial.length + modlist.events.assist.length
+    const eventTotal = modlist.events.head.length + modlist.events.senior.length + modlist.events.junior.length + modlist.events.trial.length
     
     const partnerTotal = modlist.partner.managers.length
     
@@ -40,7 +40,6 @@ module.exports = {
     .setDescription("Frequently Updated List")
     .setColor("ORANGE")
     .addField("Head of Events Team:", modlist.events.head[0] ? modlist.events.head : "None", true)
-    .addField("Assistant Head of Events:", modlist.events.assist[0] ? modlist.events.assist : "None", true)
     .addField("Senior Events Team:", modlist.events.senior[0] ? modlist.events.senior : "None", true)
     .addField("Junior Events Team:", modlist.events.junior[0] ? modlist.events.junior : "None", true)
     .addField("Trial Events Team:", modlist.events.trial[0] ? modlist.events.trial : "None", true)
