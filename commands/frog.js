@@ -11,18 +11,14 @@ module.exports = {
   async execute(bot, message, args) {
     const msg = await message.channel.send(`Generating Phrog Pics...`);
     const forg = "http://results.dogpile.com/serp?qc=images&q=" + "frog"
-    const lollmeme = "http://results.dogpile.com/serp?qc=images&q=" + "frog meme"
     const phorg = "http://results.dogpile.com/serp?qc=images&q=" + "phrog"
     const cutiefrogs = "http://results.dogpile.com/serp?qc=images&q=" + "cute frogs"
-    const thiccforgs = "http://results.dogpile.com/serp?qc=images&q=" + "thick frogs"
     const babieforgs = "http://results.dogpile.com/serp?qc=images&q=" + "baby frogs"
     const phatforg = "http://results.dogpile.com/serp?qc=images&q=" + "fat frogs"
     const choices = [
       forg,
-      lollmeme,
       phorg,
       cutiefrogs,
-      thiccforgs,
       babieforgs,
       phatforg
       ]
