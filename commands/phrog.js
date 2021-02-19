@@ -78,7 +78,13 @@ module.exports = {
   "https://noodle.hep.gg/-xE9wvV4u"
   
     ]
-      
+    const f1 = "Here is your frog :)"
+    const f2 = "Here is your phrog ;)"
+    const footers = [
+        f1,
+        f2
+    ]
+    const footerpicker = Math.floor(Math.random() * footers.length);
     const frogEmbed = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.displayAvatarURL())
     .setColor('#56FA85')
