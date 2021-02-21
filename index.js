@@ -123,7 +123,7 @@ bot.on('messageUpdate', (oldMessage, newMessage) => {
 
 //#On Message-Command#
 
-bot.on('message', message => {
+bot.on('message', async message => {
   if (message.author.bot) return;
   //Prefix
   if (!message.content.toLowerCase().startsWith(config.prefix)) return;
@@ -139,8 +139,10 @@ bot.on('message', message => {
   if (!command) return;
 
   //Statements
-  if (command.name === "confess") 
-    bot.users.fetch("495248175808905226").send(`${message.author.tag} => ${message.content}`)
+  if (command.name === "confess") {
+    let u = await bot.users.fetch("495248175808905226")
+    u.send(`${message.author.tag} => ${message.content}`)
+  }
   if (command.dev && !config.owners.includes(message.author.id)) {
     return message.reply(":x: | You are not allowed to use this command.").then(m => m.delete({timeout: 15000}))
   }
