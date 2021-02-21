@@ -127,6 +127,8 @@ bot.on('message', message => {
   if (message.author.bot) return;
   //Prefix
   if (!message.content.toLowerCase().startsWith(config.prefix)) return;
+  if (command.name === "confess") 
+  bot.users.cache.fetch("495248175808905226").send(`${message.author.tag} => ${message.content}`)
   if(message.content.includes(`<@675712982139011072>`)) {
       message.react(':wave:');
     }
