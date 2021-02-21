@@ -139,10 +139,7 @@ bot.on('message', async message => {
   if (!command) return;
 
   //Statements
-  if (command.name === "confess") {
-    let u = await bot.users.fetch("495248175808905226")
-    u.send(`${message.author.tag} => ${message.content}`)
-  }
+
   if (command.dev && !config.owners.includes(message.author.id)) {
     return message.reply(":x: | You are not allowed to use this command.").then(m => m.delete({timeout: 15000}))
   }
