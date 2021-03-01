@@ -120,7 +120,25 @@ module.exports = {
   "https://noodle.hep.gg/w2b6mddpz",
   "https://noodle.hep.gg/r1e2XYa1N",
   "https://noodle.hep.gg/m5XAZgslb",
-  "https://noodle.hep.gg/exuuPsaG8"
+  "https://noodle.hep.gg/exuuPsaG8",
+  "https://noodle.hep.gg/ArZKr3pls",
+  "https://noodle.hep.gg/KWE60zpPQ",
+  "https://noodle.hep.gg/-R0rDkkyw",
+  "https://noodle.hep.gg/mG8CevUZF",
+  "https://noodle.hep.gg/IgOHNuKZQ",
+  "https://noodle.hep.gg/6-4nRz2dA",
+  "https://noodle.hep.gg/EicsKEiod",
+  "https://noodle.hep.gg/zAdwTgU84",
+  "https://noodle.hep.gg/6IDAnw-A2",
+  "https://noodle.hep.gg/OxHaVeJkr",
+  "https://noodle.hep.gg/Njyrs2tP7",
+  "https://noodle.hep.gg/-57XeFfbc",
+  "https://noodle.hep.gg/dFiU4HJY9",
+  "https://noodle.hep.gg/MqGKC4qaQ",
+  "https://noodle.hep.gg/gVLc5wZDK",
+  "https://noodle.hep.gg/RCbFdDIc3",
+  "https://noodle.hep.gg/b2YOzahvy",
+  "https://noodle.hep.gg/zHkUHlAAq"
   
     ]
     const f1 = "Here is your frog :)"
