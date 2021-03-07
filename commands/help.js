@@ -38,7 +38,7 @@ module.exports = {
 
       let helpEmbed = new Discord.MessageEmbed()
         .setTitle("Here are the commands:")
-        .setDescription(`You can provide a command to get into details. ${config.prefix}help <command name>`)
+        .setDescription(`You can provide a command to get into details. ${config.prefix}help <command name>\nStill stuck? Join our [Support Server!](discord.gg/Se6tgufK25)`)
         .setTimestamp()
         .setFooter("Requested by " + message.author.username,message.author.avatarURL())
         .setColor("999999");
