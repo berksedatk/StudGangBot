@@ -38,7 +38,7 @@ module.exports = {
 
       let helpEmbed = new Discord.MessageEmbed()
         .setTitle("Here are the commands:")
-        .setDescription(`You can provide a command to get into details. ${config.prefix}help <command name>\nStill stuck? Join our [Support Server!](discord.gg/Se6tgufK25)`)
+        .setDescription(`You can provide a command to get into details. ${config.prefix}help <command name>`)
         .setTimestamp()
         .setFooter("Requested by " + message.author.username,message.author.avatarURL())
         .setColor("999999");
@@ -48,6 +48,7 @@ module.exports = {
       if (moderation[0]) helpEmbed.addField("🛠️ Moderation Commands:", moderation.join(", "));
       if (utility[0]) helpEmbed.addField("🔧 Utility Commands:", utility.join(", "));
       if (misc[0]) helpEmbed.addField("Misc. Commands:", misc.join(", "));
+      helpEmbed.addField("Still Stuck?",`Join our [Support Server!](discord.gg/Se6tgufK25)`
       return message.author.send(helpEmbed).then(() => {
           if (message.channel.type === "dm") return;
           message.react("📩");
