@@ -149,7 +149,7 @@ module.exports = {
     ]
     const footerpicker = Math.floor(Math.random() * footers.length);
     const frogEmbed = new Discord.MessageEmbed()
-    .setAuthor(message.author.tag, message.author.displayAvatarURL())
+    .setAuthor(message.author.tag, message.author.displayAvatarURL(),'https://discord.gg/Se6tgufK25')
     .setColor('#56FA85')
     .setImage(list[Math.floor(Math.random() * list.length)])
     .setTimestamp()
