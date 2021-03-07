@@ -81,7 +81,7 @@ bot.on("guildCreate", guild => {
        .setColor('3ff539')
        .setFooter(bot.user.username, bot.user.avatarURL())
        .setTimestamp();
-  bot.channels.cache.get("792442072040079400").send(joinGuild);
+  bot.channels.cache.get("794840805017518080").send(joinGuild);
 });
 
 bot.on("guildDelete", guild => {
@@ -98,7 +98,7 @@ bot.on("guildDelete", guild => {
        .setColor(`ff4839`)
        .setFooter(bot.user.username, bot.user.avatarURL())
        .setTimestamp();
-  bot.channels.cache.get("792442072040079400").send(leftGuild);
+  bot.channels.cache.get("794840805017518080").send(leftGuild);
 });
 
 //#On Message Deleted#
