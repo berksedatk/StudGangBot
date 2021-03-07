@@ -18,8 +18,7 @@ module.exports = {
     const mins = Math.floor((totalSeconds / 60) % 60);
 
     const embed = new Discord.MessageEmbed()
-      .setAuthor(bot.user.username, bot.user.avatarURL())
-      .setURL("https://discord.gg/Se6tgufK25")
+      .setAuthor(bot.user.username, bot.user.avatarURL(),'https://discord.gg/Se6tgufK25')
       .setColor("#cc0c0c")
       .setThumbnail(bot.user.avatarURL())
       .addField("Born On", bot.user.createdAt)
