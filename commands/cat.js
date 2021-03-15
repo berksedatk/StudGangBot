@@ -5,8 +5,8 @@ module.exports = {
   description: "Get kitty pics",
   cooldown: 20,
   aliases: ["kitty","pussy"],
-  async execute(bot, message, args) {
-    const list [
+  execute(bot, message, args) {
+    const list = [
       "https://noodle.hep.gg/1ln3xfYFG",
       "https://noodle.hep.gg/KHSqXIqXK",
       "https://noodle.hep.gg/pC2waKlFR",
@@ -101,11 +101,10 @@ module.exports = {
       "https://noodle.hep.gg/VvMM1UcoL",
       "https://noodle.hep.gg/1BKzEq69w"
       ]
-    const pussypicker = list[Math.floor(Math.random() * list.length)]
     const pussyEmbed = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.displayAvatarURL(),'https://discord.gg/Se6tgufK25')
     .setColor('BLUE')
-    .setImage(pussypicker)
+    .setImage(list[Math.floor(Math.random() * list.length)])
     .setTimestamp()
     .setFooter('Here is some puss')
       message.channel.send(pussyEmbed)
