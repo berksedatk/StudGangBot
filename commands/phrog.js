@@ -138,7 +138,29 @@ module.exports = {
   "https://noodle.hep.gg/gVLc5wZDK",
   "https://noodle.hep.gg/RCbFdDIc3",
   "https://noodle.hep.gg/b2YOzahvy",
-  "https://noodle.hep.gg/zHkUHlAAq"
+  "https://noodle.hep.gg/zHkUHlAAq",
+  "https://noodle.hep.gg/oBvrp76u2",
+  "https://noodle.hep.gg/NonCTVbNM",
+  "https://noodle.hep.gg/2Yb0IOqyp",
+  "https://noodle.hep.gg/e8gxtao3s",
+  "https://noodle.hep.gg/BA1bArpIB",
+  "https://noodle.hep.gg/iatzPxuKc",
+  "https://noodle.hep.gg/gNFZyh4J0",
+  "https://noodle.hep.gg/U6PtC8nyj",
+  "https://noodle.hep.gg/avmYVB51S",
+  "https://noodle.hep.gg/RBWJZ_HSX",
+  "https://noodle.hep.gg/uPzmXNuhM",
+  "https://noodle.hep.gg/WCcYgjeqH",
+  "https://noodle.hep.gg/qESFYH9Xg",
+  "https://noodle.hep.gg/cpHZgrIxX",
+  "https://noodle.hep.gg/xje_eFCtn",
+  "https://noodle.hep.gg/X8oxDr8zF",
+  "https://noodle.hep.gg/uiy82b9eS",
+  "https://noodle.hep.gg/2ZiVdGxkk",
+  "https://noodle.hep.gg/uR8e8uBfj",
+  "https://noodle.hep.gg/ybB1EytU7",
+  "https://noodle.hep.gg/JCkLYGYBo",
+  "https://noodle.hep.gg/afBxbeFON"
   
     ]
     const f1 = "Here is your frog :)"
