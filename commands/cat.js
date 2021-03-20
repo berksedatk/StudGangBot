@@ -2,9 +2,9 @@ const Discord = require("discord.js");
 module.exports = {
   name: "cat",
   category: "Fun",
-  description: "Get kitty pics",
+  description: "Get ~~pussy~~ kitty pics",
   cooldown: 20,
-  aliases: ["kitty","pussy"],
+  aliases: ["kitty"],
   execute(bot, message, args) {
     const list = [
       "https://noodle.hep.gg/1ln3xfYFG",
