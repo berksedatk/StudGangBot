@@ -297,5 +297,5 @@ bot.on("message", msg => {
 })
 
 //#Login as bot#
-
-bot.login(process.env.BOT_TOKEN)
+//disabled due payment not made 16 05 2021
+//bot.login(process.env.BOT_TOKEN)
