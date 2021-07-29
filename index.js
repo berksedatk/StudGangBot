@@ -259,7 +259,7 @@ bot.on("message", msg => {
   })
 
  //Only attachment filter
-  const channels = ["791317380521394186","791317348735909928","791317335695818752","791318209978302474"]
+  const channels = ["791317380521394186","791317348735909928","791317335695818752","791318209978302474","870401825524817980"]
   if (channels.includes(msg.channel.id) && msg.attachments.size === 0) {
      msg.delete()
      msg.reply("Please do not talk in this channel!").then(m => m.delete({timeout: 5000}))
