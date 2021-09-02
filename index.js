@@ -47,14 +47,6 @@ bot.on('ready', () => {
   }, 10000);
 
   bot.user.setStatus("dnd").catch(console.error);
-  setInterval(() => {
-    var date = new Date();
-    if (date.getHours() - 6 >= 0 && date.getHours() - 6 < 12){
-      bot.channels.cache.get("792441809858199552").setName('😈┃noodles sex dungeon')
-    } else if (date.getHours() - 6 >= 12){
-      bot.channels.cache.get("792441809858199552").setName("🍝┃noodles cave")
-    }
-  }, 60000);
 
  let msgchannels = ["791319923967131658","791326324739538994","791320068273078312"]
 
