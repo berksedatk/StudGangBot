@@ -40,7 +40,7 @@ module.exports = {
           .setColor("#f9f9f9");
         msg.edit(embed);
       } else {
-        hastebin(output, { extention: 'txt' }).then(code => {
+        hastebin(output, { url: "https://paste.hep.gg", extention: 'txt' }).then(code => {
         const embed = new Discord.MessageEmbed()
           .setTitle("Output was too long, uploaded to hastebin and logged to console!")
           .setURL(code)
